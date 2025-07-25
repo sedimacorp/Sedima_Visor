@@ -35,7 +35,7 @@ Solid2_22;"VÁLVULA DE BOLA 2 CUERPOS 4"" ";Equipos;;;Génerico;;;;RF - ANSI 300
 Solid1_464;"TUBO 4""";Tubería;;;Acero,Carbono;;;; SCH. STD. API 5L Gr. B;;;
 Sólido1_13;"BASE FILTRO 10 """;Equipos;;;Génerico;;;;;;;Activos\Imagenes\Filtros\FLT01.png
 Solid1_467;"TUBO ROSCADO 2""";Tubería;;;Acero,Carbono;;;;;;;
-Solid1_468;"CODO 2""";Accesorios soldados;;;Acero;;;;#3000, DIMENSIONES SEGÚN ASME B16.11;;;Activos\Imagenes\Codos\CON-02.png
+Solid1_468;"CODO 2""";Accesorios soldados;;;Acero;;;;#3000, DIMENSIONES SEGÚN ASME B16.11;;;Activos\Imagenes\Codos\CODO-02.png
 Solid1_469;"TUBO 2""";Tubería;;;Acero,Carbono;;;;2 MNPT, API 5L Gr. B, Sch. Std;;;
 Srf1_3;VÁLVULA DE COMPUERTA 2;;;;Génerico;;;;;;;
 Solid1_470;"TUBO 2""";Tubería;;;Acero,Carbono;;;;2 MNPT, API 5L Gr. B, Sch. Std;;;
@@ -301,7 +301,7 @@ Sólido2_5;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;;;;;
 Solid1_22;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
 Solid1_625; ss-4-wvcr-6-400_02;;;;Génerico;;;;;;;
 Sólido3_1;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;;;;;
-Sólido1_17;COMPUTADOR DE FLUJO EAGLE RESEARCH XARTU;Equipos;;;Génerico;;;;;;;
+Sólido1_17;REGISTRADOR ANALOGICO DE PRESIÓN;Equipos;;;Génerico;;;;;;;Activos\Imagenes\REGISTRADOR\CTRL-01.png
 Solid1_30;"CONECTOR RECTO 1/4""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/4"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
 Solid2_18;"VÁLVULA DE BOLA  2 CUERPOS 4""";Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid2_16;"VÁLVULA DE BOLA  2 CUERPOS 4""";Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
@@ -331,9 +331,9 @@ Solid1_522;MANIFOLD 3 VIAS;Equipos;;;Génerico;;;;;;;
 Solid1_525;"TAPÓN 1/2"" ";Tornillería;;;Acero;;;;ASME B16.11 Tapón de cabeza hexagonal 1/2;;;Activos\Imagenes\Esparrágo\TAPON01.png
 Solid1_676;MANIJA GAUGE VALVE;Accesorios roscados;;;Acero inoxidable;;;;;;;Activos\Imagenes\Manija\MAN01.png
 Solid2;"NIPLE ROSCADO 1/2""-2""";Accesorios roscados;;;Génerico;;;;"MNPT API 5L Gr.B,NIPLE 1/2"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
-Sólido1_20;COMPUTADOR DE FLUJO;Equipos;;;Génerico;;;;;;;
-Sólido1_19;COMPUTADOR DE FLUJO;Equipos;;;Génerico;;;;;;;
-Sólido1_21;COMPUTADOR DE FLUJO;Equipos;;;Génerico;;;;;;;
+Sólido1_20;TRANSMISOR DE PRESIÓN;Equipos;;;Génerico;;;;;;;Activos\Imagenes\REGISTRADOR\PIT-01.png
+Sólido1_19;TRANSMISOR DE PRESIÓN;Equipos;;;Génerico;;;;;;;Activos\Imagenes\REGISTRADOR\PIT-01.png
+Sólido1_21;TRANSMISOR DE PRESIÓN;Equipos;;;Génerico;;;;;;;Activos\Imagenes\REGISTRADOR\PIT-01.png
 Solid1_125;TAPÓN DE CABEZA HEXAGONAL AVELLANADO;Tornillería;;;Latón,amarrillo claro;;;; Tapón de cabeza hexagonal avellanado 219P de Parker 219P-8;;;Activos\Imagenes\Esparrágo\TAPON01.png
 Solid1_126;TAPÓN DE CABEZA HEXAGONAL AVELLANADO;Tornillería;;;Latón,amarrillo claro;;;; Tapón de cabeza hexagonal avellanado 219P de Parker 219P-9;;;Activos\Imagenes\Esparrágo\TAPON01.png
 Solid1_127;TAPÓN DE CABEZA HEXAGONAL AVELLANADO;Tornillería;;;Latón,amarrillo claro;;;; Tapón de cabeza hexagonal avellanado 219P de Parker 219P-10;;;Activos\Imagenes\Esparrágo\TAPON01.png
