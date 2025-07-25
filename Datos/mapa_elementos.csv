@@ -19,15 +19,15 @@ Solid2_23;"VÁLVULA DE BOLA 2 CUERPOS 4""";Equipos;;;Génerico;;;;RF - ANSI 300;
 484D215-1-solid1;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 EXPY45DialEtch-1-solid1_5;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 302C209-1-solid1;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
-Solid1_660;"VÁLVULA DE AGUJA 1/2""";Accesorios soldados;;;Génerico;;;; #3000 CON DRENAJE SS 316;;;
+Solid1_660;"VÁLVULA DE AGUJA 1/2""";Accesorios soldados;;;Génerico;;;; #3000 CON DRENAJE SS 316;;;Activos\Imagenes\Valvulas\VN02.png
 Solid1_643;"NIPLE ROSCADO 1/2""-2""";Accesorios roscados;;;Génerico;;;;" MNPT API 5L Gr.B , NIPLE 1/2"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
 Solid1_154;"TUBO 4""";Tubería;;;Acero,Carbono;;;; SCH. STD. API 5L Gr. B;;;
 Solid1_4;"CODO 4""-90°";Accesorios soldados;;;Acero,Carbono;;;;RL. SCH. STD. ASTM A860 WPHY 52;;;Activos\Imagenes\Codos\CODO-02.png
 Solid1_148;"TUBO 4""";Tubería;;;Acero,Carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid1_645;"HALF COUPLING 3/4""";Accesorios roscados;;;Génerico;;;;FNNP #3000 ASTM A105 Gr.II ASME B16.12;;;Activos\Imagenes\Half coupling\Half01.png
 Solid2_7;"NIPLE ROSCADO 3/4""-2""";Accesorios roscados;;;Génerico;;;;" MNPT API 5L Gr.B,  NIPLE 3/4"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
-����������6_14;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
-�����3_9;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A106;;;
+����������6_14;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
+�����3_9;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A106;;;Activos\Imagenes\Valvulas\VB03.png
 Solid1_123;"TAPÓN 1/2"" ";Tornillería;;;Acero, forjado;;;;Cabeza hexagonal, #3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Esparrágo\TAPON01.png
 Solid7_5;"TEE RECTA 4""";Accesorios soldados;;;Acero,Carbono;;;;SCH STD ASTM 234;;;
 Solid3_331;"BRIDA WN 4""";Accesorios soldados;;;Acero,Carbono;;;;"ASTM-A-694-F-81, BRIDA WN SCH STD ANSI 300 x 4""";;;
@@ -39,7 +39,7 @@ Solid1_468;"CODO 2""";Accesorios soldados;;;Acero;;;;#3000, DIMENSIONES SEGÚN A
 Solid1_469;"TUBO 2""";Tubería;;;Acero,Carbono;;;;2 MNPT, API 5L Gr. B, Sch. Std;;;
 Srf1_3;VÁLVULA DE COMPUERTA 2;;;;Génerico;;;;;;;
 Solid1_470;"TUBO 2""";Tubería;;;Acero,Carbono;;;;2 MNPT, API 5L Gr. B, Sch. Std;;;
-Solid1_471;"UNIÓN UNIVERSAL 2""";Accesorios roscados;;;Acero inoxidable;;;;FTH 3000# FS NPT, ASTM A-105, DIMENSIONES SEGÚN ASME;;;
+Solid1_471;"UNIÓN UNIVERSAL 2""";Accesorios roscados;;;Acero inoxidable;;;;FTH 3000# FS NPT, ASTM A-105, DIMENSIONES SEGÚN ASME;;;Activos\Imagenes\Conector\UNIV-01.png
 Solid1_472;"TUBO 2""";Tubería;;;Acero,Carbono;;;;1 MNPT, API 5L Gr. B, Sch. Std;;;
 Solid1_473;"CODO 2""-90°";Accesorios soldados;;;Acero,Carbono;;;;RL. SCH. STD. ASTM A860 WPHY 52;;;Activos\Imagenes\Codos\CODO-02.png
 Solid1_474;"TUBERÍA 2""";Tubería;;;Acero,Carbono;;;;;;;
@@ -85,13 +85,13 @@ Soldadura;SOLDADURA DE EMPALME ;;;;;;;;;;;
 Soldadura_1;SOLDADURA DE EMPALME ;;;;;;;;;;;
 Solid1_503;"HALF COUPLING 1""";Accesorios roscados;;;Génerico;;;;FNNP #3000 ASTM A105 Gr.II ASME B16.13;;;Activos\Imagenes\Half coupling\Half01.png
 Solid2_326;"NIPLE 1""-2""";Accesorios roscados;;;Génerico;;;;"MNPT API 5L Gr.B, NIPLE 1"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
-Solid20;"VÁLVULA DE GLOBO 1""";Equipos;;;Génerico;;;;DIMENSIONES SEGÚN ASME B16.10, CONSTRUCCIÓN SEGÚN ASME B16.34;;;
-Solid1_505;"VÁLVULA DE GLOBO 1""";Equipos;;;Génerico;;;;DIMENSIONES SEGÚN ASME B16.10, CONSTRUCCIÓN SEGÚN ASME B16.34;;;
-Solid19;"VÁLVULA DE GLOBO 1""";Equipos;;;Génerico;;;;DIMENSIONES SEGÚN ASME B16.10, CONSTRUCCIÓN SEGÚN ASME B16.34;;;
+Solid20;"VÁLVULA DE GLOBO 1""";Equipos;;;Génerico;;;;DIMENSIONES SEGÚN ASME B16.10, CONSTRUCCIÓN SEGÚN ASME B16.34;;;Activos\Imagenes\Valvulas\VG-02.png
+Solid1_505;"VÁLVULA DE GLOBO 1""";Equipos;;;Génerico;;;;DIMENSIONES SEGÚN ASME B16.10, CONSTRUCCIÓN SEGÚN ASME B16.34;;;Activos\Imagenes\Valvulas\VG-02.png
+Solid19;"VÁLVULA DE GLOBO 1""";Equipos;;;Génerico;;;;DIMENSIONES SEGÚN ASME B16.10, CONSTRUCCIÓN SEGÚN ASME B16.34;;;Activos\Imagenes\Valvulas\VG-02.png
 Solid2_328;"NIPLE ROSCADO 1""-3""";Accesorios roscados;;;Génerico;;;;"MNPT API 5L Gr.B, NIPLE 1"" x 3"" Long x 3"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
-Solid1_507;"UNIÓN UNIVERSAL 1""";Accesorios roscados;;;Acero inoxidable;;;;FTH #3000 FS NPT, ASMT A-105, DIMENSIONES SEGÚN ASME B16.3. B16.14;;;
+Solid1_507;"UNIÓN UNIVERSAL 1""";Accesorios roscados;;;Acero inoxidable;;;;FTH #3000 FS NPT, ASMT A-105, DIMENSIONES SEGÚN ASME B16.3. B16.14;;;Activos\Imagenes\Conector\UNIV-01.png
 Solid1_508;"TUBO 1"" ";Tubería;;;Acero, carbono;;;;2 MNPT, API 5L Gr. B, Sch. Std;;;
-Solid1_509;"CODO 1""";Accesorios roscados;;;Acero;;;;"#3000, DIMENSIONES SEGÚN ASME B16.11""";;;Activos\Imagenes\Codos\CON-02.png
+Solid1_509;"CODO 1""";Accesorios roscados;;;Acero;;;;"#3000, DIMENSIONES SEGÚN ASME B16.11""";;;Activos\Imagenes\Codos\CODO-02.png
 Solid1_510;"TUBO ROSCADO 1""";Tubería;;;Acero, carbono;;;;2 MNPT, API 5L Gr. B, Sch. Std;;;
 Sólido1_10;"SOPORTE TUBO 4""";Soportes;;;Génerico;;;;;;;
 Solid1_140;"TUBO 4""";Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
@@ -102,20 +102,20 @@ Solid1_118;SOPORTE;;;;;;;;;;;
 Solid1_677;BASE TABLERO;;;;;;;;;;;
 Solid1_657;FILTRO TABLERO ACTUADOR;;;;;;;;;;;
 Solid1_627;REGULADOR 1301F_B;;;;;;;;;;;
-Solid1_545;"TEE 1/8""";;;;;;;;;;;
+Solid1_545;"TEE 1/8""";;;;;;;;;;;Activos\Imagenes\Conector\CON-03.png
 Solid2_366;REGULADOR FISHER 67-CF;;;;;;;;;;;
 Solid1_530;MANÓMETRO CAUGE BAKE CONECTION;MAN/ACC;;;316;;;;;;;Activos\Imagenes\Manómetros\PI01.png
 Solid1_557;MANÓMETRO CAUGE BAKE CONECTION;MAN/ACC;;;316;;;;;;;Activos\Imagenes\Manómetros\PI01.png
 Solid8_3;VERSA SELENOIDE;;;;;;;;;;;
 Solid5_1;VERSA SELENOIDE;;;;;;;;;;;
 Solid8_6;VERSA SELENOIDE;;;;;;;;;;;
-Solid1_539;"TEE 1/8""";;;;;;;;;;;
+Solid1_539;"TEE 1/8""";;;;;;;;;;;Activos\Imagenes\Conector\CON-03.png
 Sólido5_1;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/4 - Type L;;;
 Sólido6_2;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/4 - Type L;;;
 Sólido4;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/4 - Type L;;;
 Sólido5;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/4 - Type L;;;
 Sólido7;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/4 - Type L;;;
-Solid1_536;"TEE 1/8""";;;;;;;;;;;
+Solid1_536;"TEE 1/8""";;;;;;;;;;;Activos\Imagenes\Conector\CON-03.png
 Solid1_635;LLAVE;;;;;;;;;;;
 Solid1_121;"TUBO 4""";Tubería;;;Acero, carbono;;;; SCH. STD. API 5L Gr. B;;;
 Solid7_3;"TEE RECTA 4""";Accesorios soldados;;;Acero, carbono;;;;SCH STD ASTM 234;;;
@@ -159,12 +159,12 @@ Solid1_138;"TUBO 4""";Tubería;;;Acero, carbono;;;; SCH. STD. API 5L Gr. B;;;
 Solid1_113;"REDUCCIÓN CONCÉNTRICA 4""-2""";Accesorios soldados;;;Acero, carbono;;;;SCH STD ASTM A234;;;
 Solid1_122;"TAPÓN DE 1/2"" CABEZA HEXAGONAL";Tornillería;;;Acero,forjado;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Esparrágo\TAPON01.png
 �����3_6;"TAPÓN DE 1/2"" CABEZA HEXAGONAL";Tornillería;;;Acero,forjado;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Esparrágo\TAPON01.png
-����������6_14;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;"# 2000, Marca: METSO, Mod: Eliminator, #3000, FNPT- FNPT, ASTM A105""";;;
+����������6_14;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;"# 2000, Marca: METSO, Mod: Eliminator, #3000, FNPT- FNPT, ASTM A105""";;;Activos\Imagenes\Valvulas\VB03.png
 Solid2_4;"NIPLE ROSCADO 3/4""-2""";Accesorios roscados;;;Génerico;;;;MNPT API 5L Gr.B;;;Activos\Imagenes\Esparrágo\Niple01.png
 Solid1_559;"HALF COUPLING 3/4""";Accesorios roscados;;;Génerico;;;;FNNP #3000 ASTM A105 Gr.II ASME B16.11;;;Activos\Imagenes\Half coupling\Half01.png
 �����3_8;"TAPÓN DE 1/2"" CABEZA HEXAGONAL";Tornillería;;;Acero,forjado;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Esparrágo\TAPON01.png
 Solid1_119;"TAPÓN DE 1/2"" CABEZA HEXAGONAL";Tornillería;;;Acero,forjado;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Esparrágo\TAPON01.png
-����������6_14;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;"# 2000, Marca: METSO, Mod: Eliminator, #3000, FNPT- FNPT, ASTM A105""";;;
+����������6_14;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;"# 2000, Marca: METSO, Mod: Eliminator, #3000, FNPT- FNPT, ASTM A105""";;;Activos\Imagenes\Valvulas\VB03.png
 Solid2_6;"NIPLE ROSCADO 3/4""-2""";Accesorios roscados;;;Génerico;;;;MNPT API 5L Gr.B;;;Activos\Imagenes\Esparrágo\Niple01.png
 Solid3_346;"BRIDA WN 2""-600";Accesorios soldados;;;Acero, carbono;;;;"ASTM-A-694-F-97,BRIDA WN SCH STD ANSI 600 x 2""";;;
 Solid1_223;ESPARRÁGO BRIDA2-600;Tornillería;;;Génerico;;;;" ASTM A193 GR.B7-CC/7-2H,ESPÁRRAGO 5/8"" x 7 1/4"" LONG";;;Activos\Imagenes\Esparrágo\ESP01.png
@@ -211,11 +211,11 @@ Solid1_263;ESPARRÁGO BRIDA2-600;Tornillería;;;Génerico;;;;" ASTM A193 GR.B7-C
 Solid1_264;ESPARRÁGO BRIDA2-600;Tornillería;;;Génerico;;;;" ASTM A193 GR.B7-CC/7-2H,ESPÁRRAGO 5/8"" x 7 1/4"" LONG";;;Activos\Imagenes\Esparrágo\ESP01.png
 Solid1_265;ESPARRÁGO BRIDA2-600;Tornillería;;;Génerico;;;;" ASTM A193 GR.B7-CC/7-2H,ESPÁRRAGO 5/8"" x 7 1/4"" LONG";;;Activos\Imagenes\Esparrágo\ESP01.png
 Solid1_266;ESPARRÁGO BRIDA2-600;Tornillería;;;Génerico;;;;" ASTM A193 GR.B7-CC/7-2H,ESPÁRRAGO 5/8"" x 7 1/4"" LONG";;;Activos\Imagenes\Esparrágo\ESP01.png
-Solid1_598;"REGULADOR 2"" ";Equipos;;;Acero, carbono;;;;"REGULADOR 2"" ANSI 600,  AXIAL FLOW VALVE";;;
-Solid1_599;"REGULADOR 2"" ";Equipos;;;Acero, carbono;;;;"REGULADOR 2"" ANSI 600,  AXIAL FLOW VALVE";;;
+Solid1_598;"REGULADOR 2"" ";Equipos;;;Acero, carbono;;;;"REGULADOR 2"" ANSI 600,  AXIAL FLOW VALVE";;;Activos\Imagenes\Reguladores\REG01.png
+Solid1_599;"REGULADOR 2"" ";Equipos;;;Acero, carbono;;;;"REGULADOR 2"" ANSI 600,  AXIAL FLOW VALVE";;;Activos\Imagenes\Reguladores\REG01.png
 Solid1_24;CONECTOR RECTO 1-2;Tornillería;;;Acero inoxidable, austenítico;;;;" CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
 Solid1_434;"CODO 1/4""";Accesorios roscados;;;Acero;;;;Codo forjado y roscado de 90º - Clase 3000,  ASME B16.11 Codo roscado de 90 grad - Clase 3000 1/4;;;Activos\Imagenes\Codos\CON-02.png
-Solid1_436;"REGULADOR 1/2""";Equipos;;;Génerico;;;; FISHER ZSC 100;;;
+Solid1_436;"REGULADOR 1/2""";Equipos;;;Génerico;;;; FISHER ZSC 100;;;Activos\Imagenes\Reguladores\REG01.png
 Solid1_25;"CONECTOR RECTO 1/2""";Tornillería;;;Acero inoxidable, austenítico;;;;" CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
 Sólido6_2;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;;ASTM B 88 Tubo 1/2 - Type L;;;
 Sólido1_8;"SOPORTE TUBO 4""";Soportes;;;Génerico;;;;;;;
@@ -234,7 +234,7 @@ Solid1_107;"REDUCCIÓN BUSHING 3/4"" X 1/2""";Accesorios roscados;;;Acero, forja
 351B297-1-solid1_3;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 484D215-1-solid1_3;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 302C209-1-solid1_3;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
-�����3_5;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
+�����3_5;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
 Sólido5_3;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/2 - Type L;;;
 Sólido6 ;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/2 - Type L;;;
 Sólido2_3;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/2 - Type L;;;
@@ -256,18 +256,18 @@ Solid1_14;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austen�
 Solid1_26;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
 Solid1_23;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
 Solid1_12;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
-Solid1_130;"TEE 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;;;;
-Solid1_131;"TEE 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;;;;
+Solid1_130;"TEE 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;;;;Activos\Imagenes\Conector\CON-03.png
+Solid1_131;"TEE 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;;;;Activos\Imagenes\Conector\CON-03.png
 Solid1_13;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
 Solid1_442;"CODO 1/4""";Accesorios roscados;;;Acero;;;;Codo forjado y roscado de 90º - Clase 3000,  ASME B16.11 Codo roscado de 90 grad - Clase 3000 1/4;;;Activos\Imagenes\Codos\CON-02.png
-Solid1_444;"REGULADOR 1/2""";Equipos;;;Génerico;;;; FISHER ZSC 100;;;
+Solid1_444;"REGULADOR 1/2""";Equipos;;;Génerico;;;; FISHER ZSC 100;;;Activos\Imagenes\Reguladores\REG01.png
 Solid2_5;"NIPLE 3/4""";Accesorios roscados;;;Génerico;;;;"MNPT API 5L Gr.B, NIPLE 3/4"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
-�����3_7;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
+�����3_7;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
 Solid1_105;"REDUCCIÓN BUSHING 3/4"" X 1/2""";Accesorios roscados;;;Acero, forjado;;;; Wrought Steel Threaded Pipe Fittings-Hex Head Bushing Threaded-NPT;;;
 302C209-1-solid1_2;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 484D215-1-solid1_2;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
-Solid1_432;"REGULADOR 1/2""";Equipos;;;Génerico;;;; FISHER ZSC 100;;;
-Solid1_440;"REGULADOR 1/2""";Equipos;;;Génerico;;;; FISHER ZSC 101;;;
+Solid1_432;"REGULADOR 1/2""";Equipos;;;Génerico;;;; FISHER ZSC 100;;;Activos\Imagenes\Reguladores\REG01.png
+Solid1_440;"REGULADOR 1/2""";Equipos;;;Génerico;;;; FISHER ZSC 101;;;Activos\Imagenes\Reguladores\REG01.png
 Solid1_430;"CODO 1/4""";Accesorios roscados;;;Acero;;;;Codo forjado y roscado de 90º - Clase 3000,  ASME B16.11 Codo roscado de 90 grad - Clase 3000 1/4;;;Activos\Imagenes\Codos\CON-02.png
 Solid1_438;"CODO 1/4""";Accesorios roscados;;;Acero;;;;Codo forjado y roscado de 90º - Clase 3000,  ASME B16.11 Codo roscado de 90 grad - Clase 3000 1/5;;;Activos\Imagenes\Codos\CON-02.png
 Solid1_27;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
@@ -279,21 +279,21 @@ Solid2_12;"NIPLE ROSCAD0 1/4""";Accesorrios roscados;;;Génerico;;;;"NIPLE 3/4""
 Solid2_8;"NIPLE ROSCAD0 1/4""";Accesorrios roscados;;;Génerico;;;;"NIPLE 3/4"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
 Solid2_9;"NIPLE ROSCAD0 1/4""";Accesorrios roscados;;;Génerico;;;;"NIPLE 3/4"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
 Solid2_10;"NIPLE ROSCAD0 1/4""";Accesorrios roscados;;;Génerico;;;;"NIPLE 3/4"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
-�����3_11;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
-�����3;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
-�����3_10;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
-�����3_1;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
-�����3_2;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
-�����3_1;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
-�����3_3;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;
+�����3_11;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
+�����3;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
+�����3_10;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
+�����3_1;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
+�����3_2;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
+�����3_1;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
+�����3_3;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105;;;Activos\Imagenes\Valvulas\VB03.png
 484D215-1-solid1_1;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 302C209-1-solid1_1;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 302C209-1-solid1_4;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 484D215-1-solid1_4;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 Solid2_2;"NIPLE ROSCAD0 1/2""";Accesorrios roscados;;;Génerico;;;;"NIPLE 1/2"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
-Solid1_127;"TEE 1/2""";Accesorrios roscados;;;Acero;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;
+Solid1_127;"TEE 1/2""";Accesorrios roscados;;;Acero;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Conector\CON-03.png
 Solid2_1;"NIPLE ROSCAD0 1/2""";Accesorrios roscados;;;Génerico;;;;"NIPLE 1/2"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
-Solid1_128;"TEE 1/2""";Accesorrios roscados;;;Acero;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;
+Solid1_128;"TEE 1/2""";Accesorrios roscados;;;Acero;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Conector\CON-03.png
 302C209-1-solid1_4;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 484D215-1-solid1_4;MANÓMETRO 0-1200 psig;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;
 Solid1_28;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
@@ -310,7 +310,7 @@ Solid7_2;"TEE RECTA 4""";Accesorios soldados;;;Acero, carbono;;;;SCH STD ASTM 23
 Solid1_151;"TUBO 4""";Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid1_8;"CODO 1/2"" 90°";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CODO DE 90° 1/2"" MNPT x 1/2"" OD";;;Activos\Imagenes\Codos\CON-02.png
 Solid1_108;"REDUCCIÓN BUSHING 3/4"" X 1/2""";Accesorios roscados;;;Acero, forjado;;;;"Wrought Steel Threaded Pipe Fittings-Hex Head Bushing Threaded-NPT ,Nº de pieza: GB/T 14383 3/4x1/2 ""HHB NPT""";;;
-�����3_4;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105, METSO, Mod: Eliminator;;;
+�����3_4;"VÁLVULA DE BOLA 3/4""";Equipos;;;Génerico;;;;#3000, FNPT- FNPT, ASTM A105, METSO, Mod: Eliminator;;;Activos\Imagenes\Valvulas\VB03.png
 Solid2_11;"NIPLE ROSCADO 3/4""-2""";Accesorios roscados;;;Génerico;;;;" NIPLE 3/4"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
 Sólido1_6;"SOPORTE TUBO 4""";Soportes;;;Génerico;;;;;;;
 Solid3_348;"BRIDA WN 4""";Accesorios soldados;;;Acero, carbono;;;; ASTM-A-694-F-61;;;
@@ -321,13 +321,13 @@ Sólido1_24;MEDIDOR ROTATIVO G250;Equipos;;;Génerico;;;; MEDIDOR ROTATIVO G250 
 Solid1_136;"TUBO 4""";Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Sólido1_9;"SOPORTE TUBO 4""";Soportes;;;Génerico;;;;;;;
 Solid2_131;"VÁLVULA DE BOLA  2 CUERPOS 4""";Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
-Sólido1_12;SPECTACLE BLIND 4 ANSI 150;Equipos;;;Génerico;;;;;;;
+Sólido1_12;SPECTACLE BLIND 4 ANSI 150;Equipos;;;Génerico;;;;;;;Activos\Imagenes\Valvulas\SPEC01.png
 Solid2_344;"ESPARRÁGO BRIDA 4""";Tornillería;;;Génerico;;;;" ASTM A193 GR.B7-CC/7-2H, ESPARRAGO 5/8"" x 3.75 in Long";;;Activos\Imagenes\Esparrágo\ESP01.png
 Solid1_1;"CODO 4""-90°";Accesorios soldados;;;Acero,Carbono;;;; RL. SCH. STD. ASTM A860 WPHY 52;;;Activos\Imagenes\Codos\CODO-02.png
 Solid1_21;"CONECTOR RECTO 1/2""";Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/2"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
 Sólido6_3;BARRIDO DE TUBERÍA;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/2 - Type L;;;
 Solid1_9;"CODO 1/2"" 90°";Accesorios soldados;;;Acero inoxidable, austenítico;;;;"CODO DE 90° 1/2"" MNPT x 1/2"" OD";;;Activos\Imagenes\Codos\CON-02.png
-Solid1_522;MANIFOLD 3 VIAS;Equipos;;;Génerico;;;;;;;
+Solid1_522;MANIFOLD 3 VIAS;Equipos;;;Génerico;;;;;;;Activos\Imagenes\Manija\MAN01.png
 Solid1_525;"TAPÓN 1/2"" ";Tornillería;;;Acero;;;;ASME B16.11 Tapón de cabeza hexagonal 1/2;;;Activos\Imagenes\Esparrágo\TAPON01.png
 Solid1_676;MANIJA GAUGE VALVE;Accesorios roscados;;;Acero inoxidable;;;;;;;Activos\Imagenes\Manija\MAN01.png
 Solid2;"NIPLE ROSCADO 1/2""-2""";Accesorios roscados;;;Génerico;;;;"MNPT API 5L Gr.B,NIPLE 1/2"" x 2"" Long x 2"" Long - Sch.STD";;;Activos\Imagenes\Esparrágo\Niple01.png
@@ -352,5 +352,5 @@ Solid1;"CODO 4""-90°";Accesorios soldados;;;Acero,Carbono;;;; RL. SCH. STD. AST
 Solid1_150;"TUBO 4""";Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid2_133;"VÁLVULA DE BOLA  2 CUERPOS 4""";Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid3;"BRIDA CIEGA 4""";Accesorios soldados;;;Génerico;;;;"ASTM-A-105-GR-II ,BRIDA CIEGA ANSI 300 x 4""";;;
-Solid1_129;"TEE 1/2""";Accesorios soldados;;;Acero;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;
+Solid1_129;"TEE 1/2""";Accesorios soldados;;;Acero;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Conector\CON-03.png
 Solid1_134;"TUBO 4""";Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
