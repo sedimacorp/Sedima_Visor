@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sedima Visor</title>
+  <style>
+/* ================= ESTILO GENERAL DE LA PÁGINA ================= */
+
+    body {
+         margin: 0; 
+         background-color: #ffffff; 
+         display: flex; 
+         align-items:  flex-start;
+         justify-content: center;
+          height: 100vh; 
+          gap: 20px; 
+          padding: 20px;
+           box-sizing: border-box; 
+           flex-wrap: wrap; }
+
+/* ================= PANEL INFOBOX QUE SE ABRE CON EL CLICK ================= */     
+
+    #infoBox { 
+        background: rgba(1, 35, 122, 0.781);
+         color: #f7faf9; 
+         padding: 20px; 
+         border-radius: 10px; 
+         font-family: sans-serif; 
+         font-size: 15px; 
+         width: 100px;
+          max-width: 50vh; 
+          display: none;
+           overflow-y: auto; 
+           max-height: 90vh; 
+           box-shadow: 0 4px 4px rgb(0, 0, 0);
+         text-align: center; /* Centramos contenido por defecto */
+         flex: 1 1 200px; /* PERMITE AJUSTE DINÁMICO */}
+
+/* ================= PANEL DEL VISOR 3D ================= */         
+    #visor-container { 
+        background-color: #ffffff9d;
+         width: 95%; 
+         max-width: 800px; 
+         aspect-ratio: 1 / 1; 
+         border-radius: 10px; 
+         box-shadow: 0 4px 4px rgb(0, 0, 0); 
+         overflow: hidden;
+        position: relative; 
+         flex: 1 1 400px;}
+          
+/* ================= CANVAS DE THREE ================= */
+    canvas { 
+        width: 100%;
+         height: 100%;
+          display: block; }
+
+ /* ================= BOTONES DE PDF ================= */         
+    .pdf-button { 
+        background: #041daa86; 
+        color: #ffffff; 
+        padding: 5px 10px; 
+        margin: 4px 0; 
+        border: none;
+         border-radius: 6px; 
+         cursor: pointer; 
+         font-size: 13px; 
+         width: 100%; 
+         text-align: center; }
+
+    .pdf-button:hover { 
+        background: #460303; }
+ /* ================= IMAGEN DEL INFOBOX ================= */       
+    .element-img {
+    background-color: #ffffff; /* Fondo blanco detrás de la imagen */
+    max-width:60%;
+    height: auto;
+    border-radius: 10px;
+    margin: 5px auto; /* Centra la imagen horizontalmente */
+    display: block;   /* Para asegurar centrado */
+    padding: 0px;     /* Separación de bordes para un marco blanco limpio */ }
+
+    /* ================= VENTANA DE DOCUMENTOS DE INGENIERÍA ================= */
+#docsBox { 
+    background: rgba(212, 13, 13, 0.781);  
+    color: #ffffff;                      
+    padding: 20px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 300px;
+    max-width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 4px rgb(0, 0, 0);
+    display: block; /* Mostrar siempre */
+}
+
+/* ================= ENLACES DE DOCUMENTOS ================= */
+.doc-link {
+    display: block;
+    margin: 5px 0;
+    color: #e5dada; 
+    text-decoration: none;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.doc-link:hover {
+    text-decoration: underline;
+}
+/*-- ============== LOGO SEDIMA ============== */
+#logoSedima {
+    position: absolute;         /* Posición fija en pantalla */
+    top: 10px;                  /* Distancia desde arriba */
+    left: 10px;                 /* Distancia desde la izquierda */
+    width: 120px;               /* Tamaño del logo */
+    opacity: 0.9;               /* Ligera transparencia */
+    z-index: 2;                /* Encima de todo */
+    pointer-events: none; /* Permite interacción con el visor debajo */
+}
+
+/*-- ============== LOGO CLIENTE ============== */
+#logocliente {
+    position: absolute;         /* Posición fija en pantalla */
+    top: 10px;                  /* Distancia desde arriba */
+    right:10px;                 /* Distancia desde la izquierda */
+    width: 80px;               /* Tamaño del logo */
+    opacity: 0.9;               /* Ligera transparencia */
+    z-index: 2;                /* Encima de todo */
+    pointer-events: none; /* Permite interacción con el visor debajo */
+}
+
+/* RESPONSIVE: cuando pantalla es menor a 768px, apilar en columnas */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #infoBox,
+    #docsBox {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    #visor-container {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+  </style>
+</head>
+
+<body>
+<!-- Panel de información que se muestra al hacer clic en un objeto -->
+  <div id="infoBox"></div>
+<!-- Contenedor del visor 3D -->
+ <div id="visor-container">
+    <!-- ============== LOGOS ============== -->
+    <img id="logoSedima" src="Activos/Logos/LogoSedima.png" alt="Logo Sedima" />
+    <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
+</div>
+<!-- ============== MODAL VISOR DE PDF ============== -->
+<div id="pdfModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:999;">
+    <div style="position: relative; width: 90%; max-width: 800px; height: 90%;">
+        <iframe id="pdfFrame" src="" style="width: 100%; height: 100%; border: none; border-radius: 12px;"></iframe>
+        <button id="closePdfModal" style="position: absolute; top: 10px; right: 10px; background: #f44336; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 18px;">✖</button>
+    </div>
+</div>
+
+
+<!-- Librerías necesarias -->
+  <script src="libs/three.min.js"></script>
+  <script src="libs/GLTFLoader.js"></script>
+  <script src="libs/OrbitControls.js"></script>
+ 
+
+<script>
+/* ============== VARIABLES PRINCIPALES DEL VISOR ============== */
+const container = document.getElementById('visor-container');
+const infoBox = document.getElementById('infoBox');
+const scene = new THREE.Scene();
+scene.background = new THREE.Color("#cccccc");
+const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+camera.position.set(3, 3, 3);
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 1));
+
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+let selectableObjects = [];
+let selectedObject = null;
+let originalMaterial = null;
+const highlightMaterial = new THREE.MeshStandardMaterial({ color: "#C9AE5D", metalness: 0.4, roughness: 0.2 });
+
+/* ============== CARGA DEL CSV GENERAL CON TODOS LOS ELEMENTOS ============== */
+
+let datosElementos = {};
+fetch('Datos/mapa_elementos.csv')
+    .then(response => response.text())
+    .then(data => {
+        const lines = data.trim().split('\n');
+        const headers = lines[0].split(';');
+        lines.slice(1).forEach(line => {
+            const values = line.split(';');
+            let obj = {};
+            headers.forEach((header, index) => {
+                obj[header.trim()] = values[index] ? values[index].trim() : "";
+            });
+            datosElementos[obj.nombre_original] = obj;
+        });
+        cargarModelo();
+    })
+    .catch(err => {
+        console.error("Error cargando todos_los_elementos.csv", err);
+        cargarModelo();
+    });
+
+    /* ============== CARGA DEL MODELO GLB PRINCIPAL ============== */
+
+function cargarModelo() {
+    const loader = new THREE.GLTFLoader();
+    loader.load('Activos/Modelos/modelo.glb', function (gltf) {
+        const model = gltf.scene;
+        model.traverse(child => {
+            if (child.isMesh) {
+                selectableObjects.push(child);
+            }
+        });
+        const box = new THREE.Box3().setFromObject(model);
+        const center = box.getCenter(new THREE.Vector3());
+        const size = box.getSize(new THREE.Vector3());
+        const maxDim = Math.max(size.x, size.y, size.z);
+        const scale = 2 / maxDim;
+        model.scale.set(scale, scale, scale);
+        model.position.sub(center.multiplyScalar(scale));
+        scene.add(model);
+    }, undefined, error => {
+        console.error("Error cargando modelo:", error);
+    });
+}
+
+/* ============== AJUSTE RESPONSIVO AL REDIMENSIONAR ============== */
+window.addEventListener('resize', () => {
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+});
+
+/* ============== MANEJO DEL CLICK PARA SELECCIONAR Y MOSTRAR INFO ============== */
+container.addEventListener('click', (event) => {
+    const rect = container.getBoundingClientRect();
+    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+    raycaster.setFromCamera(mouse, camera);
+    const intersects = raycaster.intersectObjects(selectableObjects, true);
+    if (intersects.length > 0) {
+        const clickedObject = intersects[0].object;
+        if (selectedObject && originalMaterial) {
+            selectedObject.material = originalMaterial;
+        }
+        selectedObject = clickedObject;
+        originalMaterial = clickedObject.material;
+        clickedObject.material = highlightMaterial;
+
+        const nombre = clickedObject.name;
+        const data = datosElementos[nombre];
+        if (data) {
+            let titulo = data.nombre_amigable && data.nombre_amigable.trim() !=="" ? data.nombre_amigable : nombre;
+            // Elimina comillas iniciales y finales si existen
+           titulo = titulo.replace(/^"(.*)"$/, '$1');
+           // Reemplaza comillas dobles internas por una comilla simple (corrige 8"" -> 8")
+           titulo = titulo.replace(/""/g, '"');
+            let html = `<div style="text-align:center; font-weight:bold; font-size:18px; margin-bottom:8px;">${titulo}</div>`;
+
+            if (data.Imagen) {
+             html += `<img src="${data.Imagen}" alt="${titulo}" class="element-img"><br>`;
+            }
+
+            Object.keys(data).forEach(key => {
+                let lowerKey = key.toLowerCase().trim();
+                if (!["nombre_original", "nombre_amigable", "imagen", "ficha técnica", "manual"].includes(lowerKey)) {
+                    html += `<strong>${key}:</strong> ${data[key] || 'N/A'}<br>`;
+                }
+            });
+
+            if (data["Ficha técnica"]) {
+                html += `<button class="pdf-button" onclick="openPdfModal('${data["Ficha técnica"]}')">🧾 Ficha Técnica</button>`;
+            }
+            if (data["Manual"]) {
+                html += `<button class="pdf-button" onclick="openPdfModal('${data["Manual"]}')">⚙️ Manual</button>`;
+            }
+            infoBox.innerHTML = html;
+            infoBox.style.display = "block";
+        } else {
+            infoBox.innerHTML = `<strong>${nombre}</strong><br>Sin datos disponibles`;
+            infoBox.style.display = "block";
+        }
+    } else {
+        infoBox.style.display = "none";
+    }
+});
+
+/* ============== LOOP DE ANIMACIÓN DEL VISOR ============== */
+function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+}
+animate();
+
+/* ============== CARGAR Y MOSTRAR DOCUMENTOS DE INGENIERÍA AGRUPADOS ============== */
+// 1. Crear ventana de documentos de ingeniería 
+const docsBox = document.createElement('div');
+docsBox.id = "docsBox";
+docsBox.innerHTML = "<h3 style='text-align:center;'>Documentos de Ingeniería</h3>";
+document.body.appendChild(docsBox);
+
+// 2. Cargar JSON estructurado
+fetch('Activos/Documentos_ingeniería/documentos.json')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(categoria => {
+      // Título de categoría
+      const catTitle = document.createElement('h4');
+      catTitle.textContent = categoria.categoria;
+      catTitle.style.marginTop = "12px";
+      catTitle.style.borderBottom = "1px solid #fff";
+      catTitle.style.paddingBottom = "4px";
+      docsBox.appendChild(catTitle);
+
+      // Lista de documentos de esta categoría
+      categoria.documentos.forEach(doc => {
+        const link = document.createElement('a');
+        link.href = "#";
+        link.textContent = `📑 ${doc.nombre}`;
+        link.classList.add("doc-link");
+
+        if (doc.url) {
+          // Si tiene URL, lo abre
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            openPdfModal(doc.url);
+          });
+        } else {
+          // Si no tiene URL, se ve gris y desactivado
+          link.style.opacity = "0.5";
+          link.style.pointerEvents = "none";
+        }
+
+        docsBox.appendChild(link);
+      });
+    });
+  })
+  .catch(err => {
+    console.error("Error cargando documentos.json", err);
+    docsBox.innerHTML += "<p>Error cargando documentos.</p>";
+  });
+
+/* ============== CONTROL DEL MODAL PDF ============== */
+const pdfModal = document.getElementById('pdfModal');
+const pdfFrame = document.getElementById('pdfFrame');
+const closePdfModal = document.getElementById('closePdfModal');
+
+function openPdfModal(url) {
+    pdfFrame.src = url;
+    pdfModal.style.display = "flex";
+}
+
+closePdfModal.addEventListener('click', () => {
+    pdfModal.style.display = "none";
+    pdfFrame.src = "";
+});
+
+
+</script>
+<!-- Botón de descarga directa del ZIP -->
+<button id="downloadProjectZip" style="
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #797b79;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 10px;
+    z-index: 1000;">
+    📥 Descargar
+</button>
+
+<script>
+// Botón descarga directa del ZIP
+document.getElementById('downloadProjectZip').addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = 'DocumentosProyecto.zip';
+    link.download = 'DocumentosProyecto.zip';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+</script>
+
+</body>
+</html>
+
+
+
+
