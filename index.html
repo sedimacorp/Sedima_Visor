@@ -284,7 +284,7 @@ container.addEventListener('click', (event) => {
 
             Object.keys(data).forEach(key => {
                 let lowerKey = key.toLowerCase().trim();
-                if (!["nombre_original", "nombre_amigable", "imagen", "ficha técnica", "manual"].includes(lowerKey)) {
+                if (!["nombre_original", "nombre_amigable", "imagen", "Ficha técnica", "manual"].includes(lowerKey)) {
                     html += `<strong>${key}:</strong> ${data[key] || 'N/A'}<br>`;
                 }
             });
