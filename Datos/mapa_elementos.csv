@@ -1,7 +1,7 @@
 ﻿nombre_original;nombre_amigable;TAG MANTTO;Categoria;Cantidad;Unidad;Material;SCH / Espesor;Rating;Mantenimiento;Observaciones;Ficha técnica;Manual;Imagen
 Solid1_143;"TUBO 4""";;Tubería;;;Acero,Carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid3_34;"FLANCHE SO 4""";;Accesorios soldados;;;Génerico;;;;ASTM-A-105-GR-II;;;
-Solid2_348;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;"ASTM A193 GR.B7-CC/7-2H ,  ESPARRAGO 3/4"" x 5.25 in Long";;;Activos\Imagenes\Esparrágo\ESP01.png
+Solid2_348;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;"ASTM A193 GR.B7-CC/7-2H ,  ESPARRAGO 3/4"" x 5.25 in Long";;;Activos/Imágenes/Esparrágo/ESP01.png
 Solid2_17;"VÁLVULA DE BOLA 2 CUERPOS 4""";;Equipos;;;Génerico;;;; RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid3_35;"FLANCHE SO 4""";;Accesorios soldados;;;Génerico;;;;ASTM-A-105-GR-II;;;
 Solid2_340;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;"ASTM A193 GR.B7-CC/7-2H ,  ESPARRAGO 3/4"" x 5.25 in Long";;;Activos\Imagenes\Esparrágo\ESP01.png
@@ -316,8 +316,8 @@ Sólido1_6;"SOPORTE TUBO 4""";;Soportes;;;Génerico;;;;;;;
 Solid3_348;"BRIDA WN 4""";;Accesorios soldados;;;Acero, carbono;;;; ASTM-A-694-F-61;;;
 Solid2_342;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;" ASTM A193 GR.B7-CC/7-2H, ESPARRAGO 5/8"" x 3.75 in Long";;;Activos\Imagenes\Esparrágo\ESP01.png
 Solid1_145;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
-Sólido1_22;MEDIDOR ROTATIVO G250;;Equipos;;;Génerico;;;; MEDIDOR ROTATIVO G250 - Twin - 4in;;;
-Sólido1_24;MEDIDOR ROTATIVO G250;;Equipos;;;Génerico;;;; MEDIDOR ROTATIVO G250 - Twin - 4in;;;
+Sólido1_22;MEDIDOR ROTATIVO G250;FET-456;Equipos;;;Génerico;;;; MEDIDOR ROTATIVO G250 - Twin - 4in;;;
+Sólido1_24;MEDIDOR ROTATIVO G250;FET-456;Equipos;;;Génerico;;;; MEDIDOR ROTATIVO G250 - Twin - 4in;;;
 Solid1_136;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Sólido1_9;"SOPORTE TUBO 4""";;Soportes;;;Génerico;;;;;;;
 Solid2_131;"VÁLVULA DE BOLA  2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
