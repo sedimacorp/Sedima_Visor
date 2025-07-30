@@ -2,20 +2,20 @@
 Solid1_143;"TUBO 4""";;Tubería;;;Acero,Carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid3_34;"FLANCHE SO 4""";;Accesorios soldados;;;Génerico;;;;ASTM-A-105-GR-II;;;
 Solid2_348;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;"ASTM A193 GR.B7-CC/7-2H ,  ESPARRAGO 3/4"" x 5.25 in Long";;;Activos/Imágenes/Esparrágo/ESP01.png
-Solid2_17;"VÁLVULA DE BOLA 2 CUERPOS 4""";;Equipos;;;Génerico;;;; RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_17;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;; RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid3_35;"FLANCHE SO 4""";;Accesorios soldados;;;Génerico;;;;ASTM-A-105-GR-II;;;
 Solid2_340;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;"ASTM A193 GR.B7-CC/7-2H ,  ESPARRAGO 3/4"" x 5.25 in Long";;;Activos\Imagenes\Esparrágo\ESP01.png
 Solid7_6;"TEE RECTA 4""";;Accesorios soldados;;;Acero,Carbono;;;;SCH STD ASTM 234;;;
 Solid3_350;"BRIDA WN 4""";;Accesorios soldados;;;Acero,Carbono;;;;" ASTM-A-694-F-81 , BRIDA WN SCH STD ANSI 300 x 4""";;;
 Solid2_321;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;ASTM A193 GR.B7-CC/7-2H;;;Activos\Imagenes\Esparrágo\ESP01.png
-Solid2_24;"VÁLVULA DE BOLA 2 CUERPOS 4""";;Equipos;;;Génerico;;;; RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_24;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;; RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid3_338;"BRIDA WN 4""";;Accesorios soldados;;;Acero,Carbono;;;;"ASTM-A-694-F-81, BRIDA WN SCH STD ANSI 300 x 4""";;;
 Solid1_491;"TUBO 4""";;Tubería;;;Acero,Carbono;;;; SCH. STD. API 5L Gr. B;;;
 Solid1_5;"CODO 4""-90°";;Accesorios soldados;;;Acero,Carbono;;;; RL. SCH. STD. ASTM A860 WPHY 52;;;Activos\Imagenes\Codos\CODO-02.png
 Solid1_152;"TUBO 4""";;Tubería;;;Acero,Carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid1_149;"TUBO 4""";;Tubería;;;Acero,Carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid3_331;"BRIDA WN 4""";;Accesorios soldados;;;Acero,Carbono;;;;"ASTM-A-694-F-81, BRIDA WN SCH STD ANSI 300 x 4""";;;
-Solid2_23;"VÁLVULA DE BOLA 2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_23;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 484D215-1-solid1;MANÓMETRO 0-1200 psig;;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 EXPY45DialEtch-1-solid1_5;MANÓMETRO 0-1200 psig;;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
 302C209-1-solid1;MANÓMETRO 0-1200 psig;;MAN/ACC;;;316;;;;"4.5""  DISPLAY, TOMA 1/2 NPT POR DEBAJO";;;Activos\Imagenes\Manómetros\PI01.png
@@ -31,7 +31,7 @@ Solid2_7;"NIPLE ROSCADO 3/4""-2""";;Accesorios roscados;;;Génerico;;;;" MNPT AP
 Solid1_123;"TAPÓN 1/2"" ";;Tornillería;;;Acero, forjado;;;;Cabeza hexagonal, #3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Esparrágo\TAPON01.png
 Solid7_5;"TEE RECTA 4""";;Accesorios soldados;;;Acero,Carbono;;;;SCH STD ASTM 234;;;
 Solid3_331;"BRIDA WN 4""";;Accesorios soldados;;;Acero,Carbono;;;;"ASTM-A-694-F-81, BRIDA WN SCH STD ANSI 300 x 4""";;;
-Solid2_22;"VÁLVULA DE BOLA 2 CUERPOS 4"" ";;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_22;"VÁLVULA DE BOLA 2 CUERPOS 4"" ";VAL-101;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid1_464;"TUBO 4""";;Tubería;;;Acero,Carbono;;;; SCH. STD. API 5L Gr. B;;;
 Sólido1_13;"BASE FILTRO 10 """;;Equipos;;;Génerico;;;;;;;Activos\Imagenes\Filtros\FLT01.png
 Solid1_467;"TUBO ROSCADO 2""";;Tubería;;;Acero,Carbono;;;;;;;
@@ -96,7 +96,7 @@ Solid1_510;"TUBO ROSCADO 1""";;Tubería;;;Acero, carbono;;;;2 MNPT, API 5L Gr. B
 Sólido1_10;"SOPORTE TUBO 4""";;Soportes;;;Génerico;;;;;;;
 Solid1_140;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid2_340;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;"ASTM A193 GR.B7-CC/7-2H,ESPARRAGO 3/4"" x 4.75 in Long";;;Activos\Imagenes\Esparrágo\ESP01.png
-Solid2_21;"VÁLVULA DE BOLA 2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_21;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Sólido1_40;ACTUADOR PA70;;Equipos;;;Génerico;;;;;;;Activos/Imagenes/Actuadores/ACT03.png
 Solid1_118;SOPORTE;;;;;;;;;;;;
 Solid1_677;BASE TABLERO;;;;;;;;;;;;
@@ -148,11 +148,11 @@ Solid1_120;"TUBO 4""";;Tubería;;;Acero, carbono;;;; SCH. STD. API 5L Gr. B;;;
 Solid7_4;"TEE RECTA 4""";;;;;Acero, carbono;;;;SCH STD ASTM 234;;;
 Solid1_133;"TUBO 4""";;Tubería;;;Acero, carbono;;;; SCH. STD. API 5L Gr. B;;;
 Solid3_331;"BRIDA WN 4""";;Accesorios soldados;;;Acero, carbono;;;;"ASTM-A-694-F-81,  BRIDA WN SCH STD ANSI 300 x 4""";;;
-Solid2_20;"VÁLVULA DE BOLA 2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_20;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid1_147;"TUBO 4""";;Tubería;;;Acero, carbono;;;; SCH. STD. API 5L Gr. B;;;
 Solid1_3 ;"CODO 4""-90°";;Accesorios soldados;;;Acero,Carbono;;;; RL. SCH. STD. ASTM A860 WPHY 52;;;Activos\Imagenes\Codos\CODO-02.png
 Solid1_137;"TUBO 4""";;Tubería;;;Acero, carbono;;;; SCH. STD. API 5L Gr. B;;;
-Solid2_19;"VÁLVULA DE BOLA 2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_19;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF - ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid1_139;"TUBO 4""";;Tubería;;;Acero, carbono;;;; SCH. STD. API 5L Gr. B;;;
 Solid1_117;"REDUCCIÓN CONCÉNTRICA 4""-2""";;Accesorios soldados;;;Acero, carbono;;;;SCH STD ASTM A234;;;
 Solid1_138;"TUBO 4""";;Tubería;;;Acero, carbono;;;; SCH. STD. API 5L Gr. B;;;
@@ -303,9 +303,9 @@ Solid1_625; ss-4-wvcr-6-400_02;;;;;Génerico;;;;;;;
 Sólido3_1;BARRIDO DE TUBERÍA;;Tubería;;;Cobre;;;;;;;
 Sólido1_17;REGISTRADOR ANALOGICO DE PRESIÓN;;Equipos;;;Génerico;;;;;;;Activos\Imagenes\REGISTRADOR\CTRL-01.png
 Solid1_30;"CONECTOR RECTO 1/4""";;Tornillería;;;Acero inoxidable, austenítico;;;;"CONECTOR RECTO 1/4"" OD x 1/4"" NPT";;;Activos\Imagenes\Conector\CON-01.png
-Solid2_18;"VÁLVULA DE BOLA  2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
-Solid2_16;"VÁLVULA DE BOLA  2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
-Solid2_129;"VÁLVULA DE BOLA  2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_18;"VÁLVULA DE BOLA  2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_16;"VÁLVULA DE BOLA  2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_129;"VÁLVULA DE BOLA  2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid7_2;"TEE RECTA 4""";;Accesorios soldados;;;Acero, carbono;;;;SCH STD ASTM 234;;;
 Solid1_151;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid1_8;"CODO 1/2"" 90°";;Accesorios roscados;;;Acero inoxidable, austenítico;;;;"CODO DE 90° 1/2"" MNPT x 1/2"" OD";;;Activos\Imagenes\Codos\CON-02.png
@@ -320,7 +320,7 @@ Sólido1_22;MEDIDOR ROTATIVO G250;FET-456;Equipos;;;Génerico;;;; MEDIDOR ROTATI
 Sólido1_24;MEDIDOR ROTATIVO G250;FET-456;Equipos;;;Génerico;;;; MEDIDOR ROTATIVO G250 - Twin - 4in;;;
 Solid1_136;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Sólido1_9;"SOPORTE TUBO 4""";;Soportes;;;Génerico;;;;;;;
-Solid2_131;"VÁLVULA DE BOLA  2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_131;"VÁLVULA DE BOLA  2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Sólido1_12;SPECTACLE BLIND 4 ANSI 150;;Equipos;;;Génerico;;;;;;;Activos\Imagenes\Valvulas\SPEC01.png
 Solid2_344;"ESPARRÁGO BRIDA 4""";;Tornillería;;;Génerico;;;;" ASTM A193 GR.B7-CC/7-2H, ESPARRAGO 5/8"" x 3.75 in Long";;;Activos\Imagenes\Esparrágo\ESP01.png
 Solid1_1;"CODO 4""-90°";;Accesorios soldados;;;Acero,Carbono;;;; RL. SCH. STD. ASTM A860 WPHY 52;;;Activos\Imagenes\Codos\CODO-02.png
@@ -341,16 +341,16 @@ Sólido1_4;SOPORTE COMPUTADOR DE FLUJO;;Soportes;;;Génerico;;;;;;;
 Solid1_144;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid1_659;"TERMOPOZO DE 3/4""";;Equipos;;;Génerico;;;;;;;
 Sólido10;BARRIDO DE TUBERÍA;;Tubería;;;Cobre;;;; ASTM B 88 Tubo 1/2 - Type L;;;
-Solid2_132;"VÁLVULA DE BOLA  2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_132;"VÁLVULA DE BOLA  2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid1_146;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
 Solid7_1;"TEE RECTA 4""";;Accesorios soldados;;;Acero, carbono;;;;SCH STD ASTM 234;;;
 Solid1_135;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
-Solid2_130;"VÁLVULA DE BOLA  2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_130;"VÁLVULA DE BOLA  2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid7;"TEE RECTA 4""";;Accesorios soldados;;;Acero, carbono;;;;SCH STD ASTM 234;;;
 Solid1_2;"CODO 4""-90°";;Accesorios soldados;;;Acero,Carbono;;;; RL. SCH. STD. ASTM A860 WPHY 52;;;Activos\Imagenes\Codos\CODO-02.png
 Solid1;"CODO 4""-90°";;Accesorios soldados;;;Acero,Carbono;;;; RL. SCH. STD. ASTM A860 WPHY 53;;;Activos\Imagenes\Codos\CODO-02.png
 Solid1_150;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;
-Solid2_133;"VÁLVULA DE BOLA  2 CUERPOS 4""";;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
+Solid2_133;"VÁLVULA DE BOLA  2 CUERPOS 4""";VAL-101;Equipos;;;Génerico;;;;RF-ANSI 300;;;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid3;"BRIDA CIEGA 4""";;Accesorios soldados;;;Génerico;;;;"ASTM-A-105-GR-II ,BRIDA CIEGA ANSI 300 x 4""";;;
 Solid1_129;"TEE 1/2""";;Accesorios soldados;;;Acero;;;;#3000 NPT ASTM A105, SEGÚN ASME B16.11;;;Activos\Imagenes\Conector\CON-03.png
 Solid1_134;"TUBO 4""";;Tubería;;;Acero, carbono;;;;SCH. STD. API 5L Gr. B;;;

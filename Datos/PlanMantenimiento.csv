@@ -1,3 +1,7 @@
-﻿TAG MANTTO;FECHA;ACTIVIDAD;RESULTADO
-FET-456;22/06/2025;Calibración;Cumple
-FET-456;15/03/2025;Mantenimiento preventivo;No cumple
+﻿TAG MANTTO;ACTIVIDAD;FECHA;RESULTADO
+FET-456;Calibración;25/07/2025;Satisfactorio
+FET-456;Comprobacion;30/07/2025;Cumple
+TUB-101;Limpieza;24/06/2025;Cumple
+VAL-101;Limpieza;25/06/2025;Cumple
+VAL-101;Mantenimiento ;26/06/2025;Satisfactorio
+VAL-101;Comprobacion;26/06/2025;Cumple

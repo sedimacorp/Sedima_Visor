@@ -1,21 +1,35 @@
 import csv
 import json
-import os
+from collections import defaultdict
 
-# Ruta a la carpeta "Datos"
-carpeta = os.path.join("Datos")
+csv_path = 'Datos/PlanMantenimiento.csv'
+json_path = 'Datos/mantenimiento.json'
 
-# Ruta completa de entrada y salida
-archivo_csv = os.path.join(carpeta, 'PlanMantenimiento.csv')
-archivo_json = os.path.join(carpeta, 'PlanMantenimiento.json')
+# Ajusta el separador según tu archivo, normalmente ; para Excel/latam
+csv_delimiter = ';'
 
-# Leer el CSV y convertirlo en una lista de diccionarios
-with open(archivo_csv, newline='', encoding='utf-8') as csvfile:
-    reader = csv.DictReader(csvfile)
-    data = list(reader)
+historial_por_tag = defaultdict(list)
 
-# Escribir en formato JSON
-with open(archivo_json, 'w', encoding='utf-8') as jsonfile:
-    json.dump(data, jsonfile, indent=4, ensure_ascii=False)
+with open(csv_path, mode='r', encoding='utf-8-sig') as csvfile:
+    reader = csv.DictReader(csvfile, delimiter=csv_delimiter)
+    for row in reader:
+        # Usa la columna que ahora es idéntica en ambos archivos
+        tag = row['TAG MANTTO']   # Cambiado aquí
+        historia = {
+            'ACTIVIDAD': row.get('ACTIVIDAD', ''),
+            'FECHA': row.get('FECHA', ''),
+            'RESULTADO': row.get('RESULTADO', '')
+        }
+        historial_por_tag[tag].append(historia)
 
-print(f'✅ Archivo JSON creado: {archivo_json}')
+# Estructura agrupada por TAG MANTTO
+json_data = [
+    {'TAG MANTTO': tag, 'historial': historial}
+    for tag, historial in historial_por_tag.items()
+]
+
+with open(json_path, mode='w', encoding='utf-8') as jsonfile:
+    json.dump(json_data, jsonfile, ensure_ascii=False, indent=2)
+
+print(f'Archivo {json_path} generado correctamente.')
+

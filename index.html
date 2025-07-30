@@ -130,6 +130,34 @@
     z-index: 2;                /* Encima de todo */
     pointer-events: none; /* Permite interacción con el visor debajo */
 }
+/* === HISTORIAL DE MANTENIMIENTO EN INFOBOX === */
+.historial-mantto-box {
+  text-align: center;
+  margin-top: 18px;
+}
+.historial-mantto-table {
+  width: 100%;
+  background: #17447b;
+  border-radius: 8px;
+  border: 1px solid #f9f9fc;
+  margin: 0 auto;
+}
+.historial-mantto-table caption {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+.historial-mantto-table th {
+  background: #0d2754;
+  color: #fff;
+  padding: 6px 4px;
+}
+.historial-mantto-table td {
+  color: #fff;
+  padding: 6px 4px;
+}
+
 
 /* RESPONSIVE: cuando pantalla es menor a 768px, apilar en columnas */
 @media (max-width: 768px) {
@@ -288,6 +316,10 @@ container.addEventListener('click', (event) => {
                     html += `<strong>${key}:</strong> ${data[key] || 'N/A'}<br>`;
                 }
             });
+             const tagMantto = data["TAG MANTTO"];
+             if (tagMantto) {
+            html += renderHistorialMantenimiento(tagMantto);
+        }
 
             if (data["Ficha técnica"]) {
                 html += `<button class="pdf-button" onclick="openPdfModal('${data["Ficha técnica"]}')">🧾 TécniFicha</button>`;
@@ -405,6 +437,48 @@ document.getElementById('downloadProjectZip').addEventListener('click', () => {
     link.click();
     document.body.removeChild(link);
 });
+// ============ HISTORIAL DE MANTENIMIENTO ============
+let historialMantenimiento = []; // Tendrá todo el array del .json
+
+fetch('Datos/mantenimiento.json')
+  .then(res => res.json())
+  .then(data => { historialMantenimiento = data; })
+  .catch(err => console.error("Error cargando mantenimiento.json", err));
+
+// Busca el historial para un TAG MANTTO dado
+function getHistorialPorTagMantto(tagMantto) {
+  const resultado = historialMantenimiento.find(item => item["TAG MANTTO"] === tagMantto);
+  return resultado && Array.isArray(resultado.historial) ? resultado.historial : [];
+}
+
+// Devuelve el HTML del historial para un TAG MANTTO
+function renderHistorialMantenimiento(tagMantto) {
+  const historial = getHistorialPorTagMantto(tagMantto);
+  if (!historial.length) return "";
+  let html = `
+    <div class="historial-mantto-box">
+      <table class="historial-mantto-table">
+        <caption>HISTORIAL DE EJECUCIÓN: PLAN DE MANTENIMIENTO</caption>
+        <thead>
+          <tr>
+            <th>ACTIVIDAD</th>
+            <th>FECHA</th>
+            <th>RESULTADO</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+  historial.forEach(row => {
+    html += `<tr>
+      <td>${row.ACTIVIDAD}</td>
+      <td>${row.FECHA}</td>
+      <td>${row.RESULTADO}</td>
+    </tr>`;
+  });
+  html += `</tbody></table></div>`;
+  return html;
+}
+
 </script>
 
 </body>
