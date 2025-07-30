@@ -312,7 +312,7 @@ container.addEventListener('click', (event) => {
 
             Object.keys(data).forEach(key => {
                 let lowerKey = key.toLowerCase().trim();
-                if (!["nombre_original", "nombre_amigable", "imagen", "Ficha técnica", "manual"].includes(lowerKey)) {
+                if (!["nombre_original", "nombre_amigable", "imagen", "Ténificha", "manual"].includes(lowerKey)) {
                     html += `<strong>${key}:</strong> ${data[key] || 'N/A'}<br>`;
                 }
             });
@@ -321,8 +321,8 @@ container.addEventListener('click', (event) => {
             html += renderHistorialMantenimiento(tagMantto);
         }
 
-            if (data["Ficha técnica"]) {
-                html += `<button class="pdf-button" onclick="openPdfModal('${data["Ficha técnica"]}')">🧾 TécniFicha</button>`;
+            if (data["Ténificha"]) {
+                html += `<button class="pdf-button" onclick="openPdfModal('${data["Ténificha"]}')">🧾 TécniFicha</button>`;
             }
             if (data["Manual"]) {
                 html += `<button class="pdf-button" onclick="openPdfModal('${data["Manual"]}')">⚙️ Manual</button>`;
