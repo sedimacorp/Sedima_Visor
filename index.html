@@ -28,20 +28,22 @@
          border-radius: 10px; 
          font-family: sans-serif; 
          font-size: 15px; 
-         width: 100px;
-          max-width: 50vh; 
+         width: 340px;
+          max-width: 95vh; 
           display: none;
            overflow-y: auto; 
            max-height: 90vh; 
            box-shadow: 0 4px 4px rgb(0, 0, 0);
          text-align: center; /* Centramos contenido por defecto */
-         flex: 1 1 200px; /* PERMITE AJUSTE DINÁMICO */}
+         flex: 1 1 200px; /* PERMITE AJUSTE DINÁMICO */
+        min-height: 90px; /* garantiza buen fondo con poco texto */
+  margin-bottom: 0;}
 
 /* ================= PANEL DEL VISOR 3D ================= */         
     #visor-container { 
         background-color: #ffffff9d;
-         width: 95%; 
-         max-width: 800px; 
+         min-width: 500px;
+         max-width: 880px; 
          aspect-ratio: 1 / 1; 
          border-radius: 10px; 
          box-shadow: 0 4px 4px rgb(0, 0, 0); 
@@ -170,17 +172,19 @@
 }
 
 /* --- FORMULARIO DE MANTENIMIENTO --- */
-.form-mantto-box {
+.form-mantto-box,.historial-mantto-box 
+ {
   text-align: center;
   margin-top: 18px;
-  padding: 15px 10px;
+  padding:18px 18px 12px 18px ;
   background: #fff;
   border: 3px solid #17447b;
   border-radius: 15px;
   box-shadow: 0 2px 6px rgba(30,40,80,0.08);
   display: inline-block;
-  min-width: 260px;
-  max-width: 100%;
+  width: 340px;
+  max-width: 95vw; 
+   margin-bottom: 0;
 }
 
 .form-mantto-box h4 {
@@ -221,6 +225,14 @@
 
 .form-mantto-box button:hover {
   background: #17447b;
+}
+#panel-lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* o flex-start para izquierdas */
+  gap: 26px; /* separación generosa entre recuadros */
+  margin-right: 48px; /* mayor espacio respecto al visor 3D */
+   min-width: 355px;
 }
 
 
