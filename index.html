@@ -21,24 +21,26 @@
 
 /* ================= PANEL INFOBOX QUE SE ABRE CON EL CLICK ================= */     
 
-    #infoBox { 
-        background: rgba(1, 35, 122, 0.781);
-         color: #f7faf9; 
-         padding: 20px; 
-         border-radius: 10px; 
-         font-family: sans-serif; 
-         font-size: 15px; 
-         width: 300px;
-          max-width: 305vh; 
-          max-height: 300vh;
-          display: none;
-           overflow-y: auto; 
-           max-height: 90vh; 
-           box-shadow: 0 4px 4px rgb(0, 0, 0);
-         text-align: center; /* Centramos contenido por defecto */
-         flex: 1 1 200px; /* PERMITE AJUSTE DINÁMICO */
-        min-height: 90px; /* garantiza buen fondo con poco texto */
-  margin-bottom: 0;}
+ #infoBox {
+  background: rgba(1, 35, 122, 0.78);
+  color: #f7faf9;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 15px;
+  width: 350px;             /* Mantén un ancho cómodo */
+  min-height: 180px;        /* Altura mínima para espacio aunque haya poco contenido */
+  height: auto;             /* Crece según su contenido */
+  max-height: 65vh;         /* (o lo que quieras: 70vh, 80vh, ajusta según el alto de tu panel) */
+  overflow-y: auto;         /* Muestra scroll SOLO si es necesario */
+  box-shadow: 0 4px 4px rgb(0, 0, 0);
+  text-align: center;
+  margin-bottom: 0;
+  display: block;
+  /* IMPORTANTE: solo UNA regla flex aquí, y SOLO si el contenedor padre lo necesita */
+  flex: 3 1 0%;
+}
+
 
 /* ================= PANEL DEL VISOR 3D ================= */         
     #visor-container { 
@@ -175,27 +177,29 @@
 /* --- FORMULARIO DE MANTENIMIENTO --- */
 .form-mantto-box,.historial-mantto-box 
  {
-  text-align: center;
-  margin-top: 18px;
-  padding:18px 18px 12px 18px ;
+   width: 340px;
+  max-width: 95vw;
   background: #fff;
   border: 3px solid #17447b;
   border-radius: 15px;
   box-shadow: 0 2px 6px rgba(30,40,80,0.08);
-  display: inline-block;
-  width: 340px;
-  max-width: 95vw; 
-   margin-bottom: 0;
+  text-align: center;
+  padding: 20px 18px 14px 18px;
+  margin: 0 auto;
+  min-height: 120px;
+  display: block;
+  flex: 1 1 0%;
+  margin-top: 0;
 }
 
-.form-mantto-box h4 {
+.form-mantto-box h4 { /*Titulo del formulario*/
   margin: 0 0 12px 0;
   color: #17447b;
   font-size: 17px;
   font-weight: bold;
 }
 
-.form-mantto-box input[type="text"],
+.form-mantto-box input[type="text"], /*campos del formulario*/
 .form-mantto-box input[type="date"] {
   width: 90%;
   padding: 6px 8px;
@@ -209,7 +213,7 @@
   outline: none;
   box-sizing: border-box;
 }
-.form-mantto-box button {
+.form-mantto-box button { /*botón del formulaio*/
   background: #041daa86;
   color: #fff;
   border: none;
@@ -230,12 +234,13 @@
 #panel-lateral {
   display: flex;
   flex-direction: column;
-  align-items: center; /* o flex-start para izquierdas */
-  gap: 26px; /* separación generosa entre recuadros */
-  margin-right: 48px; /* mayor espacio respecto al visor 3D */
-   min-width: 355px;
-}
-
+  align-items: stretch;    /* todos los recuadros estirados al mismo ancho */
+  height: 85vh;           /* igual altura que docsBox */
+  max-height: 90vh;
+  min-width: 355px;
+  gap: 32px;              /* mayor separación entre infoBox y formulario */
+  margin-right: 48px;
+  justify-content: flex-start;}
 
 /* RESPONSIVE: cuando pantalla es menor a 768px, apilar en columnas */
 @media (max-width: 768px) {
