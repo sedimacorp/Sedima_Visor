@@ -134,7 +134,7 @@
 .historial-mantto-box {
   text-align: center;
   margin-top: 18px;
-  padding: 12px 4px;
+  padding: 15px 10px;
   background: #ffffff00;                /* Fondo del recuadro */
   border: 3px solid #17447b;       /* Borde azul oscuro */
   border-radius: 15px;             /* Esquinas redondeadas */
@@ -151,10 +151,13 @@
   margin: 0 auto;
 }
 .historial-mantto-table caption {
-  color: rgb(254, 248, 248);
+  color: #fff;
   font-weight: bold;
   margin-bottom: 4px;
   font-size: 15px;
+  caption-side: top;
+      padding: 7px 0 3px 0;
+      background: transparent;
 }
 .historial-mantto-table th {
   background: #0d2754;
@@ -198,6 +201,8 @@
   font-size: 15px;
   background: #f7f8fb;
   color: #2c2c3c;
+  outline: none;
+  box-sizing: border-box;
 }
 .form-mantto-box button {
   background: #041daa86;
@@ -211,7 +216,9 @@
   cursor: pointer;
   font-family: inherit;
   font-weight: bold;
-}
+  transition: background 0.2s;
+    }
+
 .form-mantto-box button:hover {
   background: #17447b;
 }
@@ -239,6 +246,7 @@
 </head>
 
 <body>
+
 <!-- Panel de información que se muestra al hacer clic en un objeto -->
   <div id="infoBox"></div>
   <!-- Formulario para agregar mantenimiento (aparece dinámicamente) -->
@@ -251,10 +259,37 @@
     <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
 </div>
 <!-- ============== MODAL VISOR DE PDF ============== -->
-<div id="pdfModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:999;">
-    <div style="position: relative; width: 90%; max-width: 800px; height: 90%;">
-        <iframe id="pdfFrame" src="" style="width: 100%; height: 100%; border: none; border-radius: 12px;"></iframe>
-        <button id="closePdfModal" style="position: absolute; top: 10px; right: 10px; background: #f44336; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 18px;">✖</button>
+<div id="pdfModal" style="display:none; 
+position:fixed; 
+top:0; 
+left:0; 
+width:100%;
+ height:100%; 
+ background: rgba(0,0,0,0.7); 
+ justify-content:center;
+  align-items:center;
+   z-index:999;">
+    <div style="position: relative; 
+    width: 90%;
+     max-width: 800px; 
+     height: 90%;">
+        <iframe id="pdfFrame" 
+        src="" style="width: 100%; 
+        height: 100%; 
+        border: none; 
+        border-radius: 12px;">
+        </iframe>
+        <button id="closePdfModal" style="position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        background: #f44336; 
+        color: white; 
+        border: none; 
+        border-radius: 50%; 
+        width: 32px;
+         height: 32px; 
+         cursor: pointer; 
+         font-size: 18px;">✖</button>
     </div>
 </div>
 
@@ -341,7 +376,60 @@ window.addEventListener('resize', () => {
     renderer.setSize(container.clientWidth, container.clientHeight);
 });
 
-/* ============== MANEJO DEL CLICK PARA SELECCIONAR Y MOSTRAR INFO ============== */
+// === HISTORIAL Y FORMULARIO (¡Bloques solo una vez!)
+    let historialMantenimiento = [];
+    fetch('Datos/mantenimiento.json')
+      .then(res => res.json())
+      .then(data => { historialMantenimiento = data; })
+      .catch(err => console.error("Error cargando mantenimiento.json", err));
+
+    function getHistorialPorTagMantto(tagMantto) {
+      const resultado = historialMantenimiento.find(item => item["TAG MANTTO"] === tagMantto);
+      return resultado && Array.isArray(resultado.historial) ? resultado.historial : [];
+    }
+function renderHistorialMantenimiento(tagMantto) {
+      const historial = getHistorialPorTagMantto(tagMantto);
+      if (!historial.length) return "";
+      let html = `
+        <div class="historial-mantto-box">
+          <table class="historial-mantto-table">
+            <caption>HISTORIAL DE EJECUCIÓN: PLAN DE MANTENIMIENTO</caption>
+            <thead>
+              <tr>
+                <th>ACTIVIDAD</th>
+                <th>FECHA</th>
+                <th>RESULTADO</th>
+              </tr>
+              </thead>
+            <tbody>
+      `;
+      historial.forEach(row => {
+        html += `<tr>
+          <td>${row.ACTIVIDAD}</td>
+          <td>${row.FECHA}</td>
+          <td>${row.RESULTADO}</td>
+        </tr>`;
+      });
+      html += `</tbody></table></div>`;
+      return html;
+    }
+    function renderFormMantenimiento(tagManttoSelected) {
+      if (!tagManttoSelected) return "";
+      return `
+        <div class="form-mantto-box">
+          <h4>Nuevo mantenimiento</h4>
+          <form id="formMantto">
+            <input type="hidden" name="tag_mantto" value="${tagManttoSelected}">
+            <input type="text" name="actividad" placeholder="Actividad" required><br>
+            <input type="date" name="fecha" required><br>
+            <input type="text" name="resultado" placeholder="Resultado" required><br>
+            <button type="submit">Agregar mantenimiento</button>
+          </form>
+           </div>
+      `;
+    }
+
+/* ============== MANEJO DEL CLICK PARA SELECCIONAR y MOSTRAR INFO ============== */
 container.addEventListener('click', (event) => {
     const rect = container.getBoundingClientRect();
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
@@ -383,22 +471,72 @@ container.addEventListener('click', (event) => {
         }
 
             if (data["TécniFicha"]) {
-                html += `<button class="pdf-button" onclick="openPdfModal('${data["TécniFicha"]}')">🧾 TécniFicha</button>`;
+                html += `<button class="pdf-button" 
+                onclick="openPdfModal('${data["TécniFicha"]}')">🧾 TécniFicha</button>`;
             }
             if (data["Manual"]) {
                 html += `<button class="pdf-button" onclick="openPdfModal('${data["Manual"]}')">⚙️ Manual</button>`;
             }
             infoBox.innerHTML = html;
             infoBox.style.display = "block";
-        } else {
-            infoBox.innerHTML = `<strong>${nombre}</strong><br>Sin datos disponibles`;
-            infoBox.style.display = "block";
-        }
-    } else {
-        infoBox.style.display = "none";
-    }
-});
 
+      
+          if (tagMantto) {
+            document.getElementById('formManttoBox').innerHTML = renderFormMantenimiento(tagMantto);
+            document.getElementById('formManttoBox').style.display = "block";
+            const form = document.getElementById('formMantto');
+            form.onsubmit = function(e) {
+              e.preventDefault();
+              const actividad = form.actividad.value;
+              const fecha = form.fecha.value;
+              const resultado = form.resultado.value;
+              ////* NUEVO: Enviar el registro al backend Flask vía fetch POST*/
+              fetch('http://127.0.0.1:5000/agregar_mantto', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  'TAG MANTTO': tagMantto,
+                  'ACTIVIDAD': actividad,
+                  'FECHA': fecha,
+                  'RESULTADO': resultado
+                })
+              })
+              .then(resp => resp.json())
+              .then(dataResp => {
+                if (dataResp.status === "ok") {
+                  alert("¡Mantenimiento guardado correctamente!");
+                  form.reset();
+               // Refresca historial tras guardar:
+                  fetch('Datos/mantenimiento.json')
+                    .then(res => res.json())
+                    .then(dataJson => {
+                      historialMantenimiento = dataJson;
+                      // Vuelve a mostrar el historial actualizado
+                      // (puedes optimizar solo esta parte si lo prefieres)
+                      const nuevoHistorial = renderHistorialMantenimiento(tagMantto);
+                      // Reemplaza solo la parte del historial
+                      // Aquí simplificado: vuelve a mostrar todo el infoBox
+                      container.dispatchEvent(new MouseEvent('click', event));
+                    });   
+               } else {
+                  alert("Error al guardar: " + dataResp.msg);
+                }
+              });
+            };
+          } else {
+            document.getElementById('formManttoBox').style.display = "none";
+          }
+        } else {
+          infoBox.innerHTML = `<strong>${nombre}</strong><br>Sin datos disponibles`;
+          infoBox.style.display = "block";
+          document.getElementById('formManttoBox').style.display = "none";
+        }
+         } else {
+        infoBox.style.display = "none";
+        document.getElementById('formManttoBox').style.display = "none";
+      }
+    });
+      
 /* ============== LOOP DE ANIMACIÓN DEL VISOR ============== */
 function animate() {
     requestAnimationFrame(animate);
@@ -498,69 +636,8 @@ document.getElementById('downloadProjectZip').addEventListener('click', () => {
     link.click();
     document.body.removeChild(link);
 });
-// ============ HISTORIAL DE MANTENIMIENTO ============
-let historialMantenimiento = []; // Tendrá todo el array del .json
 
-fetch('Datos/mantenimiento.json')
-  .then(res => res.json())
-  .then(data => { historialMantenimiento = data; })
-  .catch(err => console.error("Error cargando mantenimiento.json", err));
-
-// Busca el historial para un TAG MANTTO dado
-function getHistorialPorTagMantto(tagMantto) {
-  const resultado = historialMantenimiento.find(item => item["TAG MANTTO"] === tagMantto);
-  return resultado && Array.isArray(resultado.historial) ? resultado.historial : [];
-}
-
-// Devuelve el HTML del historial para un TAG MANTTO
-function renderHistorialMantenimiento(tagMantto) {
-  const historial = getHistorialPorTagMantto(tagMantto);
-  if (!historial.length) return "";
-  let html = `
-    <div class="historial-mantto-box">
-      <table class="historial-mantto-table">
-        <caption>HISTORIAL DE EJECUCIÓN: PLAN DE MANTENIMIENTO</caption>
-        <thead>
-          <tr>
-            <th>ACTIVIDAD</th>
-            <th>FECHA</th>
-            <th>RESULTADO</th>
-          </tr>
-        </thead>
-        <tbody>
-  `;
-  historial.forEach(row => {
-    html += `<tr>
-      <td>${row.ACTIVIDAD}</td>
-      <td>${row.FECHA}</td>
-      <td>${row.RESULTADO}</td>
-    </tr>`;
-  });
-  html += `</tbody></table></div>`;
-  return html;
-}
- // Devuelve el HTML del formulario con el estilo enmarcado y los campos alineados
-    function renderFormMantenimiento(tagManttoSelected) {
-      if (!tagManttoSelected) return "";
-      return `
-        <div class="form-mantto-box">
-          <h4>Nuevo mantenimiento</h4>
-          <form id="formMantto">
-            <input type="hidden" name="tag_mantto" value="${tagManttoSelected}">
-            <input type="text" name="actividad" placeholder="Actividad" required><br>
-            <input type="date" name="fecha" required><br>
-            <input type="text" name="resultado" placeholder="Resultado" required><br>
-            <button type="submit">Agregar mantenimiento</button>
-          </form>
-        </div>
-      `;
-    }
     
-</script>
-
+ </script>
 </body>
 </html>
-
-
-
-
