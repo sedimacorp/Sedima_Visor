@@ -2,7 +2,7 @@ import csv
 import json
 from collections import defaultdict
 
-csv_path = 'Datos/PlanMantenimiento.csv'
+csv_path = 'Datos/mantenimiento.csv'
 json_path = 'Datos/mantenimiento.json'
 
 # Ajusta el separador según tu archivo, normalmente ; para Excel/latam

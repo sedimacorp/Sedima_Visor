@@ -11,6 +11,11 @@
         "ACTIVIDAD": "Comprobacion",
         "FECHA": "30/07/2025",
         "RESULTADO": "Cumple"
+      },
+      {
+        "ACTIVIDAD": "Comprobacion",
+        "FECHA": "30/12/2025",
+        "RESULTADO": "Cumple"
       }
     ]
   },
@@ -41,6 +46,71 @@
         "ACTIVIDAD": "Comprobacion",
         "FECHA": "26/06/2025",
         "RESULTADO": "Cumple"
+      }
+    ]
+  },
+  {
+    "TAG MANTTO": "",
+    "historial": [
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
+      },
+      {
+        "ACTIVIDAD": "",
+        "FECHA": "",
+        "RESULTADO": ""
       }
     ]
   }

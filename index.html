@@ -166,6 +166,56 @@
   padding: 6px 4px;
 }
 
+/* --- FORMULARIO DE MANTENIMIENTO --- */
+.form-mantto-box {
+  text-align: center;
+  margin-top: 18px;
+  padding: 15px 10px;
+  background: #fff;
+  border: 3px solid #17447b;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(30,40,80,0.08);
+  display: inline-block;
+  min-width: 260px;
+  max-width: 100%;
+}
+
+.form-mantto-box h4 {
+  margin: 0 0 12px 0;
+  color: #17447b;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.form-mantto-box input[type="text"],
+.form-mantto-box input[type="date"] {
+  width: 90%;
+  padding: 6px 8px;
+  border: 1.5px solid #17447b;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  background: #f7f8fb;
+  color: #2c2c3c;
+}
+.form-mantto-box button {
+  background: #041daa86;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 14px;
+  width: 92%;
+  margin-top: 2px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+}
+.form-mantto-box button:hover {
+  background: #17447b;
+}
+
 
 /* RESPONSIVE: cuando pantalla es menor a 768px, apilar en columnas */
 @media (max-width: 768px) {
@@ -191,6 +241,9 @@
 <body>
 <!-- Panel de información que se muestra al hacer clic en un objeto -->
   <div id="infoBox"></div>
+  <!-- Formulario para agregar mantenimiento (aparece dinámicamente) -->
+<div id="formManttoBox" style="display:none;"></div>
+
 <!-- Contenedor del visor 3D -->
  <div id="visor-container">
     <!-- ============== LOGOS ============== -->
@@ -486,7 +539,23 @@ function renderHistorialMantenimiento(tagMantto) {
   html += `</tbody></table></div>`;
   return html;
 }
-
+ // Devuelve el HTML del formulario con el estilo enmarcado y los campos alineados
+    function renderFormMantenimiento(tagManttoSelected) {
+      if (!tagManttoSelected) return "";
+      return `
+        <div class="form-mantto-box">
+          <h4>Nuevo mantenimiento</h4>
+          <form id="formMantto">
+            <input type="hidden" name="tag_mantto" value="${tagManttoSelected}">
+            <input type="text" name="actividad" placeholder="Actividad" required><br>
+            <input type="date" name="fecha" required><br>
+            <input type="text" name="resultado" placeholder="Resultado" required><br>
+            <button type="submit">Agregar mantenimiento</button>
+          </form>
+        </div>
+      `;
+    }
+    
 </script>
 
 </body>
