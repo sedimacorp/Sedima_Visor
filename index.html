@@ -6,319 +6,324 @@
   <title>Sedima Visor</title>
   <style>
 /* ================= ESTILO GENERAL DE LA PÁGINA ================= */
-
     body {
-         margin: 0; 
-         background-color: #ffffff; 
-         display: flex; 
-         align-items:  flex-start;
-         justify-content: center;
-          height: 100vh; 
-          gap: 20px; 
-          padding: 20px;
-           box-sizing: border-box; 
-           flex-wrap: wrap; }
+      margin: 0; 
+      background-color: #ffffff; 
+      display: flex; 
+      align-items: flex-start;
+      justify-content: center;
+      height: 100vh; 
+      gap: 20px; 
+      padding: 20px;
+      box-sizing: border-box; 
+      flex-wrap: wrap;
+    }
 
 /* ================= PANEL INFOBOX QUE SE ABRE CON EL CLICK ================= */     
+    #infoBox {
+      background:#032480c7;
+      color: #f7faf9;
+      padding: 30px;
+      border-radius: 10px;
+      font-family: sans-serif;
+      font-size: 13px; /*tamño de fuente*/
+      width: 390px;         /* Mantén un ancho cómodo */
+      height: auto;         /* Crece según su contenido */
+      overflow-y: auto;     /* Muestra scroll SOLO si es necesario */
+      box-shadow: 0 4px 4px rgb(0, 0, 0);
+      text-align: center;
+      margin-bottom: 0;
+      display: block;
+      flex: 2 1 0%;
+    }
 
- #infoBox {
-  background: rgba(1, 35, 122, 0.78);
-  color: #f7faf9;
-  padding: 20px;
-  border-radius: 10px;
-  font-family: sans-serif;
-  font-size: 15px;
-  width: 350px;             /* Mantén un ancho cómodo */
-  min-height: 180px;        /* Altura mínima para espacio aunque haya poco contenido */
-  height: auto;             /* Crece según su contenido */
-  max-height: 65vh;         /* (o lo que quieras: 70vh, 80vh, ajusta según el alto de tu panel) */
-  overflow-y: auto;         /* Muestra scroll SOLO si es necesario */
-  box-shadow: 0 4px 4px rgb(0, 0, 0);
-  text-align: center;
-  margin-bottom: 0;
-  display: block;
-  /* IMPORTANTE: solo UNA regla flex aquí, y SOLO si el contenedor padre lo necesita */
-  flex: 3 1 0%;
-}
-
-
-/* ================= PANEL DEL VISOR 3D ================= */         
+/* ================= PANEL DEL VISOR 3D ================= */
     #visor-container { 
-        background-color: #ffffff9d;
-         min-width: 500px;
-         max-width: 880px; 
-         aspect-ratio: 1 / 1; 
-         border-radius: 10px; 
-         box-shadow: 0 4px 4px rgb(0, 0, 0); 
-         overflow: hidden;
-        position: relative; 
-         flex: 1 1 400px;}
-          
-/* ================= CANVAS DE THREE ================= */
+      background-color: #ffffff9d;
+      min-width: 500px;
+      max-width: 880px; 
+      aspect-ratio: 1 / 1; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 4px rgb(0, 0, 0); 
+      overflow: hidden;
+      position:relative; 
+      flex: 1 1 400px;
+    }
     canvas { 
-        width: 100%;
-         height: 100%;
-          display: block; }
+      width: 100%;
+      height: 100%;
+      display: block; 
+    }
 
- /* ================= BOTONES DE PDF ================= */         
+
+  /* ================= BOTONES DE PDF ================= */       
     .pdf-button { 
-        background: #041daa86; 
-        color: #ffffff; 
-        padding: 5px 10px; 
-        margin: 4px 0; 
-        border: none;
-         border-radius: 6px; 
-         cursor: pointer; 
-         font-size: 13px; 
-         width: 100%; 
-         text-align: center; }
+      background: #041daa86; 
+      color: #ffffff; 
+      padding: 5px 10px; 
+      margin: 4px 0; 
+      border: none;
+      border-radius: 6px; 
+      cursor: pointer; 
+      font-size: 13px; 
+      width: 100%; 
+      text-align: center; 
+    }
+    .pdf-button:hover { background: #460303; }
 
-    .pdf-button:hover { 
-        background: #460303; }
- /* ================= IMAGEN DEL INFOBOX ================= */       
+  /* ================= IMAGEN DEL INFOBOX ================= */       
     .element-img {
-    background-color: #ffffff; /* Fondo blanco detrás de la imagen */
-    max-width:50%;
-    height: auto;
-    border-radius: 10px;
-    margin: 5px auto; /* Centra la imagen horizontalmente */
-    display: block;   /* Para asegurar centrado */
-    padding: 0px;     /* Separación de bordes para un marco blanco limpio */ }
+      background-color: #ffffff;
+      max-width:50%;
+      height: auto;
+      border-radius: 10px;
+      margin: 5px auto;
+      display: block;
+      padding: 0px;
+    }
 
-    /* ================= VENTANA DE DOCUMENTOS DE INGENIERÍA ================= */
-#docsBox { 
-    background: rgba(212, 13, 13, 0.781);  
-    color: #ffffff;                      
-    padding: 20px;
-    border-radius: 10px;
-    font-family: sans-serif;
-    font-size: 14px;
-    width: 300px;
-    max-width: 300px;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 4px 4px rgb(0, 0, 0);
-    display: block; /* Mostrar siempre */
-}
+/* ================= VENTANA DE DOCUMENTOS DE INGENIERÍA ================= */
+    #docsBox { 
+      background: rgba(212, 13, 13, 0.781);  
+      color: #ffffff;                      
+      padding: 20px;
+      border-radius: 10px;
+      font-family: sans-serif;
+      font-size: 14px;
+      width: 300px;
+      max-width: 300px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 4px 4px rgb(0, 0, 0);
+      display: block;
+    }
+    .doc-link {
+      display: block;
+      margin: 5px 0;
+      color: #e5dada; 
+      text-decoration: none;
+      font-size: 14px;
+      font-family: sans-serif;
+    }
+    .doc-link:hover { text-decoration: underline; }
 
-/* ================= ENLACES DE DOCUMENTOS ================= */
-.doc-link {
-    display: block;
-    margin: 5px 0;
-    color: #e5dada; 
-    text-decoration: none;
-    font-size: 14px;
-    font-family: sans-serif;
-}
-
-.doc-link:hover {
-    text-decoration: underline;
-}
 /*-- ============== LOGO SEDIMA ============== */
-#logosedima {
-    position: absolute;         /* Posición fija en pantalla */
-    top: 10px;                  /* Distancia desde arriba */
-    left: 10px;                 /* Distancia desde la izquierda */
-    width: 120px;               /* Tamaño del logo */
-    opacity: 0.9;               /* Ligera transparencia */
-    z-index: 2;                /* Encima de todo */
-    pointer-events: none; /* Permite interacción con el visor debajo */
-}
+    #logosedima {
+      position: absolute;        
+      top: 10px;                 
+      left: 10px;                
+      width: 120px;              
+      opacity: 0.9;              
+      z-index: 2;               
+      pointer-events: none;
+    }
 
 /*-- ============== LOGO CLIENTE ============== */
-#logocliente {
-    position: absolute;         /* Posición fija en pantalla */
-    top: 10px;                  /* Distancia desde arriba */
-    right:10px;                 /* Distancia desde la izquierda */
-    width: 80px;               /* Tamaño del logo */
-    opacity: 0.9;               /* Ligera transparencia */
-    z-index: 2;                /* Encima de todo */
-    pointer-events: none; /* Permite interacción con el visor debajo */
-}
+    #logocliente {
+      position: absolute;        
+      top: 10px;                 
+      right:10px;                
+      width: 80px;               
+      opacity: 0.9;              
+      z-index: 2;               
+      pointer-events: none;
+    }
 /* === HISTORIAL DE MANTENIMIENTO EN INFOBOX === */
-.historial-mantto-box {
-  text-align: center;
-  margin-top: 18px;
-  padding: 15px 10px;
-  background: #ffffff00;                /* Fondo del recuadro */
-  border: 3px solid #17447b;       /* Borde azul oscuro */
-  border-radius: 15px;             /* Esquinas redondeadas */
-  box-shadow: 0 2px 6px rgba(30,40,80,0.08); /* Sombra sutil */
-  display: inline-block;           /* Solo lo justo para envolver la tabla */
-  min-width: 260px;                /* Opcional: mínimo ancho para estética */
-  max-width: 100%;                 /* Para que nunca se desborde */
-}
-.historial-mantto-table {
-  width: 100%;
-  background: #17447b;
-  border-radius: 8px;
-  border: 1px solid #f9f9fc;
-  margin: 0 auto;
-}
-.historial-mantto-table caption {
-  color: #fff;
-  font-weight: bold;
-  margin-bottom: 4px;
-  font-size: 15px;
-  caption-side: top;
-      padding: 7px 0 3px 0;
+    .historial-mantto-box {
+      text-align: center;
+      margin-top: 5px; 
+      padding: 10px 10px; 
+      background: #2f00ff36;   /* Fondo del recuadro; pon #fff si deseas blanco puro */
+      border: 3px solid #17447b;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(30,40,80,0.08);
+      display: inline-block;
+      min-width: 60px;
+      max-width: 100%;
+    }
+    .historial-mantto-table {
+      width: 100%;
+      background: #093d7c;
+      border-radius: 8px;
+      border: 1px 3px solid #17447b00;
+      margin: 0 auto;
+    }
+    .historial-mantto-table caption {
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 4px;
+      font-size: 12px;
+      caption-side: top;
+      padding: 5px 0 3px 0;
       background: transparent;
-}
-.historial-mantto-table th {
-  background: #0d2754;
-  color: #fff;
-  padding: 6px 4px;
-}
-.historial-mantto-table td {
-  color: #fff;
-  padding: 6px 4px;
-}
+    }
+    .historial-mantto-table th {
+      background: #0d2754;
+      color: #ffffff;
+      padding: 5px 3px;
+    }
+    .historial-mantto-table td {
+      color: #fffffff8;
+      padding: 5px 3px;
+    }
 
 /* --- FORMULARIO DE MANTENIMIENTO --- */
-.form-mantto-box,.historial-mantto-box 
- {
-   width: 340px;
-  max-width: 95vw;
-  background: #fff;
-  border: 3px solid #17447b;
-  border-radius: 15px;
-  box-shadow: 0 2px 6px rgba(30,40,80,0.08);
-  text-align: center;
-  padding: 20px 18px 14px 18px;
-  margin: 0 auto;
-  min-height: 120px;
-  display: block;
-  flex: 1 1 0%;
-  margin-top: 0;
-}
-
-.form-mantto-box h4 { /*Titulo del formulario*/
-  margin: 0 0 12px 0;
-  color: #17447b;
-  font-size: 17px;
-  font-weight: bold;
-}
-
-.form-mantto-box input[type="text"], /*campos del formulario*/
-.form-mantto-box input[type="date"] {
-  width: 90%;
-  padding: 6px 8px;
-  border: 1.5px solid #17447b;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  font-family: inherit;
-  font-size: 15px;
-  background: #f7f8fb;
-  color: #2c2c3c;
-  outline: none;
-  box-sizing: border-box;
-}
-.form-mantto-box button { /*botón del formulaio*/
-  background: #041daa86;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 7px 10px;
-  font-size: 14px;
-  width: 92%;
-  margin-top: 2px;
-  cursor: pointer;
-  font-family: inherit;
-  font-weight: bold;
-  transition: background 0.2s;
+    .form-mantto-box {
+      width: 340px;
+      max-width: 95vw;
+      background: #032480c7;
+      border: 3px solid #17447b;
+      border-radius: 15px;
+      box-shadow: 0 2px 6px rgba(30,40,80,0.08);
+      text-align: center;
+      padding: 20px 18px 14px 18px;
+      margin: 0 auto 30px auto;
+      min-height: 120px;
+      display: block;
     }
 
-.form-mantto-box button:hover {
-  background: #17447b;
-}
-#panel-lateral {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;    /* todos los recuadros estirados al mismo ancho */
-  height: 85vh;           /* igual altura que docsBox */
-  max-height: 90vh;
-  min-width: 355px;
-  gap: 32px;              /* mayor separación entre infoBox y formulario */
-  margin-right: 48px;
-  justify-content: flex-start;}
+    .form-mantto-box h4 { 
+      margin: 0 0 12px 0;
+      color: #ebebeb;
+      font-size: 17px;
+      font-weight: bold;
+    }
+    .form-mantto-box input[type="text"],
+    .form-mantto-box input[type="date"] {
+      width: 90%;
+      padding: 6px 8px;
+      border: 1.5px solid #17447b;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      font-family: inherit;
+      font-size: 15px;
+      background: #f7f8fb;
+      color: #2c2c3c;
+      outline: none;
+      box-sizing: border-box;
+    }
+    .form-mantto-box button {
+      background: #0a1c8386;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 7px 10px;
+      font-size: 14px;
+      width: 92%;
+      margin-top: 2px;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .form-mantto-box button:hover {
+      background: #17447b;
+    }
+    #formManttoFeedback {
+      margin-top: 5px;
+      font-size: 13px;
+      min-height: 20px;
+      color: #4cca24;
+    }
 
-/* RESPONSIVE: cuando pantalla es menor a 768px, apilar en columnas */
-@media (max-width: 768px) {
-    body {
+    #panel-lateral {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      height: auto;
+      min-width: 355px;
+      gap: 32px;
+      margin-right: 28px;
+      justify-content: flex-start;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      body {
         flex-direction: column;
         align-items: center;
-    }
-
-    #infoBox,
-    #docsBox {
+      }
+      #infoBox,
+      #docsBox {
         max-width: 90%;
         width: 90%;
-    }
-
-    #visor-container {
+      }
+      #visor-container {
         width: 90%;
         max-width: 90%;
+      }
+      .form-mantto-box {
+        width: 98vw;
+        max-width: 98vw;
+      }
     }
-}
   </style>
 </head>
 
 <body>
-
-<!-- Panel de información que se muestra al hacer clic en un objeto -->
+ <!-- Panel lateral izquierdo -->
 <div id="panel-lateral">
   <div id="infoBox"></div>
-  <div id="formManttoBox" style="display:none;"></div>
+  <div class="form-mantto-box" id="formManttoBoxFixed">
+    <!-- ...formulario... -->
+    <h4>Nuevo mantenimiento</h4>
+    <form id="formMantto" autocomplete="off">
+      <input type="text" name="tag_mantto" placeholder="TAG MANTTO" required><br>
+      <input type="text" name="actividad" placeholder="Actividad" required><br>
+      <input type="date" name="fecha" required><br>
+      <input type="text" name="resultado" placeholder="Resultado" required><br>
+      <button type="submit">Agregar mantenimiento</button>
+    </form>
+    <div id="formManttoFeedback"></div>
+  </div>
+</div>
+<!-- Contenedor del visor 3D -->
+<div id="visor-container">
+  <!-- ============== LOGOS ============== -->
+  <img id="logosedima" src="Activos/Logos/LogoSedima.png" alt="Logo Sedima" />
+  <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
 </div>
 
-<!-- Contenedor del visor 3D -->
- <div id="visor-container">
-    <!-- ============== LOGOS ============== -->
-    <img id="logosedima" src="Activos/Logos/LogoSedima.png" alt="Logo Sedima" />
-    <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
-</div>
+
 <!-- ============== MODAL VISOR DE PDF ============== -->
 <div id="pdfModal" style="display:none; 
 position:fixed; 
 top:0; 
 left:0; 
 width:100%;
- height:100%; 
- background: rgba(0,0,0,0.7); 
- justify-content:center;
-  align-items:center;
-   z-index:999;">
-    <div style="position: relative; 
+height:100%; 
+background: rgba(0,0,0,0.7); 
+justify-content:center;
+align-items:center;
+z-index:999;">
+  <div style="position: relative; 
     width: 90%;
-     max-width: 800px; 
-     height: 90%;">
-        <iframe id="pdfFrame" 
-        src="" style="width: 100%; 
-        height: 100%; 
-        border: none; 
-        border-radius: 12px;">
-        </iframe>
-        <button id="closePdfModal" style="position: absolute; 
-        top: 10px; 
-        right: 10px; 
-        background: #f44336; 
-        color: white; 
-        border: none; 
-        border-radius: 50%; 
-        width: 32px;
-         height: 32px; 
-         cursor: pointer; 
-         font-size: 18px;">✖</button>
-    </div>
+    max-width: 800px; 
+    height: 90%;">
+    <iframe id="pdfFrame" 
+      src="" style="width: 100%; 
+      height: 100%; 
+      border: none; 
+      border-radius: 12px;">
+    </iframe>
+    <button id="closePdfModal" style="position: absolute; 
+      top: 10px; 
+      right: 10px; 
+      background: #f44336; 
+      color: white; 
+      border: none; 
+      border-radius: 50%; 
+      width: 32px;
+      height: 32px; 
+      cursor: pointer; 
+      font-size: 18px;">✖</button>
+  </div>
 </div>
 
-
 <!-- Librerías necesarias -->
-  <script src="libs/three.min.js"></script>
-  <script src="libs/GLTFLoader.js"></script>
-  <script src="libs/OrbitControls.js"></script>
- 
-
+<script src="libs/three.min.js"></script>
+<script src="libs/GLTFLoader.js"></script>
+<script src="libs/OrbitControls.js"></script>
 <script>
 /* ============== VARIABLES PRINCIPALES DEL VISOR ============== */
 const container = document.getElementById('visor-container');
@@ -342,225 +347,217 @@ let originalMaterial = null;
 const highlightMaterial = new THREE.MeshStandardMaterial({ color: "#C9AE5D", metalness: 0.4, roughness: 0.2 });
 
 /* ============== CARGA DEL CSV GENERAL CON TODOS LOS ELEMENTOS ============== */
-
 let datosElementos = {};
 fetch('Datos/mapa_elementos.csv')
-    .then(response => response.text())
-    .then(data => {
-        const lines = data.trim().split('\n');
-        const headers = lines[0].split(';');
-        lines.slice(1).forEach(line => {
-            const values = line.split(';');
-            let obj = {};
-            headers.forEach((header, index) => {
-                obj[header.trim()] = values[index] ? values[index].trim() : "";
-            });
-            datosElementos[obj.nombre_original] = obj;
-        });
-        cargarModelo();
-    })
-    .catch(err => {
-        console.error("Error cargando todos_los_elementos.csv", err);
-        cargarModelo();
+  .then(response => response.text())
+  .then(data => {
+    const lines = data.trim().split('\n');
+    const headers = lines[0].split(';');
+    lines.slice(1).forEach(line => {
+      const values = line.split(';');
+      let obj = {};
+      headers.forEach((header, index) => {
+        obj[header.trim()] = values[index] ? values[index].trim() : "";
+      });
+      datosElementos[obj.nombre_original] = obj;
     });
-
-    /* ============== CARGA DEL MODELO GLB PRINCIPAL ============== */
+    cargarModelo();
+  })
+  .catch(err => {
+    console.error("Error cargando todos_los_elementos.csv", err);
+    cargarModelo();
+  });
 
 function cargarModelo() {
-    const loader = new THREE.GLTFLoader();
-    loader.load('Activos/Modelos/modelo.glb', function (gltf) {
-        const model = gltf.scene;
-        model.traverse(child => {
-            if (child.isMesh) {
-                selectableObjects.push(child);
-            }
-        });
-        const box = new THREE.Box3().setFromObject(model);
-        const center = box.getCenter(new THREE.Vector3());
-        const size = box.getSize(new THREE.Vector3());
-        const maxDim = Math.max(size.x, size.y, size.z);
-        const scale = 2 / maxDim;
-        model.scale.set(scale, scale, scale);
-        model.position.sub(center.multiplyScalar(scale));
-        scene.add(model);
-    }, undefined, error => {
-        console.error("Error cargando modelo:", error);
+  const loader = new THREE.GLTFLoader();
+  loader.load('Activos/Modelos/modelo.glb', function (gltf) {
+    const model = gltf.scene;
+    model.traverse(child => {
+      if (child.isMesh) {
+        selectableObjects.push(child);
+      }
     });
+    const box = new THREE.Box3().setFromObject(model);
+    const center = box.getCenter(new THREE.Vector3());
+    const size = box.getSize(new THREE.Vector3());
+    const maxDim = Math.max(size.x, size.y, size.z);
+    const scale = 2 / maxDim;
+    model.scale.set(scale, scale, scale);
+    model.position.sub(center.multiplyScalar(scale));
+    scene.add(model);
+  }, undefined, error => {
+    console.error("Error cargando modelo:", error);
+  });
 }
 
-/* ============== AJUSTE RESPONSIVO AL REDIMENSIONAR ============== */
 window.addEventListener('resize', () => {
-    camera.aspect = container.clientWidth / container.clientHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(container.clientWidth, container.clientHeight);
+  camera.aspect = container.clientWidth / container.clientHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(container.clientWidth, container.clientHeight);
 });
 
-// === HISTORIAL Y FORMULARIO (¡Bloques solo una vez!)
-    let historialMantenimiento = [];
-    fetch('Datos/mantenimiento.json')
-      .then(res => res.json())
-      .then(data => { historialMantenimiento = data; })
-      .catch(err => console.error("Error cargando mantenimiento.json", err));
+// === HISTORIAL Y FUNCIONES AUXILIARES ===
+let historialMantenimiento = [];
+fetch('Datos/mantenimiento.json')
+  .then(res => res.json())
+  .then(data => { historialMantenimiento = data; })
+  .catch(err => console.error("Error cargando mantenimiento.json", err));
 
-    function getHistorialPorTagMantto(tagMantto) {
-      const resultado = historialMantenimiento.find(item => item["TAG MANTTO"] === tagMantto);
-      return resultado && Array.isArray(resultado.historial) ? resultado.historial : [];
-    }
+function getHistorialPorTagMantto(tagMantto) {
+  const resultado = historialMantenimiento.find(item => item["TAG MANTTO"] === tagMantto);
+  return resultado && Array.isArray(resultado.historial) ? resultado.historial : [];
+}
 function renderHistorialMantenimiento(tagMantto) {
-      const historial = getHistorialPorTagMantto(tagMantto);
-      if (!historial.length) return "";
-      let html = `
-        <div class="historial-mantto-box">
-          <table class="historial-mantto-table">
-            <caption>HISTORIAL DE EJECUCIÓN: PLAN DE MANTENIMIENTO</caption>
-            <thead>
-              <tr>
-                <th>ACTIVIDAD</th>
-                <th>FECHA</th>
-                <th>RESULTADO</th>
-              </tr>
-              </thead>
-            <tbody>
-      `;
-      historial.forEach(row => {
-        html += `<tr>
-          <td>${row.ACTIVIDAD}</td>
-          <td>${row.FECHA}</td>
-          <td>${row.RESULTADO}</td>
-        </tr>`;
-      });
-      html += `</tbody></table></div>`;
-      return html;
-    }
-    function renderFormMantenimiento(tagManttoSelected) {
-      if (!tagManttoSelected) return "";
-      return `
-        <div class="form-mantto-box">
-          <h4>Nuevo mantenimiento</h4>
-          <form id="formMantto">
-            <input type="hidden" name="tag_mantto" value="${tagManttoSelected}">
-            <input type="text" name="actividad" placeholder="Actividad" required><br>
-            <input type="date" name="fecha" required><br>
-            <input type="text" name="resultado" placeholder="Resultado" required><br>
-            <button type="submit">Agregar mantenimiento</button>
-          </form>
-           </div>
-      `;
-    }
+  const historial = getHistorialPorTagMantto(tagMantto);
+  if (!historial.length) return "";
+  let html = `
+    <div class="historial-mantto-box">
+      <table class="historial-mantto-table">
+        <caption>HISTORIAL DE EJECUCIÓN: PLAN DE MANTENIMIENTO</caption>
+        <thead>
+          <tr>
+            <th>ACTIVIDAD</th>
+            <th>FECHA</th>
+            <th>RESULTADO</th>
+          </tr>
+        </thead>
+        <tbody>
+  `;
+  historial.forEach(row => {
+    html += `<tr>
+      <td>${row.ACTIVIDAD}</td>
+      <td>${row.FECHA}</td>
+      <td>${row.RESULTADO}</td>
+    </tr>`;
+  });
+  html += `</tbody></table></div>`;
+  return html;
+}
 
 /* ============== MANEJO DEL CLICK PARA SELECCIONAR y MOSTRAR INFO ============== */
 container.addEventListener('click', (event) => {
-    const rect = container.getBoundingClientRect();
-    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-    raycaster.setFromCamera(mouse, camera);
-    const intersects = raycaster.intersectObjects(selectableObjects, true);
-    if (intersects.length > 0) {
-        const clickedObject = intersects[0].object;
-        if (selectedObject && originalMaterial) {
-            selectedObject.material = originalMaterial;
-        }
-        selectedObject = clickedObject;
-        originalMaterial = clickedObject.material;
-        clickedObject.material = highlightMaterial;
+  const rect = container.getBoundingClientRect();
+  mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+  raycaster.setFromCamera(mouse, camera);
+  const intersects = raycaster.intersectObjects(selectableObjects, true);
+  if (intersects.length > 0) {
+    const clickedObject = intersects[0].object;
+    if (selectedObject && originalMaterial) {
+      selectedObject.material = originalMaterial;
+    }
+    selectedObject = clickedObject;
+    originalMaterial = clickedObject.material;
+    clickedObject.material = highlightMaterial;
 
-        const nombre = clickedObject.name;
-        const data = datosElementos[nombre];
-        if (data) {
-            let titulo = data.nombre_amigable && data.nombre_amigable.trim() !=="" ? data.nombre_amigable : nombre;
-            // Elimina comillas iniciales y finales si existen
-           titulo = titulo.replace(/^"(.*)"$/, '$1');
-           // Reemplaza comillas dobles internas por una comilla simple (corrige 8"" -> 8")
-           titulo = titulo.replace(/""/g, '"');
-            let html = `<div style="text-align:center; font-weight:bold; font-size:18px; margin-bottom:8px;">${titulo}</div>`;
+    const nombre = clickedObject.name;
+    const data = datosElementos[nombre];
+    if (data) {
+      let titulo = data.nombre_amigable && data.nombre_amigable.trim() !=="" ? data.nombre_amigable : nombre;
+      titulo = titulo.replace(/^"(.*)"$/, '$1');
+      titulo = titulo.replace(/""/g, '"');
+      let html = `<div style="text-align:center; font-weight:bold; font-size:18px; margin-bottom:8px;">${titulo}</div>`;
 
-            if (data.Imagen) {
-             html += `<img src="${data.Imagen}" alt="${titulo}" class="element-img"><br>`;
-            }
-
-            Object.keys(data).forEach(key => {
-                let lowerKey = key.toLowerCase().trim();
-                if (!["nombre_original", "nombre_amigable", "imagen", "técnificha", "manual"].includes(lowerKey)) {
-                    html += `<strong>${key}:</strong> ${data[key] || 'N/A'}<br>`;
-                }
-            });
-             const tagMantto = data["TAG MANTTO"];
-             if (tagMantto) {
-            html += renderHistorialMantenimiento(tagMantto);
-        }
-
-            if (data["TécniFicha"]) {
-                html += `<button class="pdf-button" 
-                onclick="openPdfModal('${data["TécniFicha"]}')">🧾 TécniFicha</button>`;
-            }
-            if (data["Manual"]) {
-                html += `<button class="pdf-button" onclick="openPdfModal('${data["Manual"]}')">⚙️ Manual</button>`;
-            }
-            infoBox.innerHTML = html;
-            infoBox.style.display = "block";
-
-      
-          if (tagMantto) {
-            document.getElementById('formManttoBox').innerHTML = renderFormMantenimiento(tagMantto);
-            document.getElementById('formManttoBox').style.display = "block";
-            const form = document.getElementById('formMantto');
-            form.onsubmit = function(e) {
-              e.preventDefault();
-              const actividad = form.actividad.value;
-              const fecha = form.fecha.value;
-              const resultado = form.resultado.value;
-              ////* NUEVO: Enviar el registro al backend Flask vía fetch POST*/
-              fetch('http://127.0.0.1:5000/agregar_mantto', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  'TAG MANTTO': tagMantto,
-                  'ACTIVIDAD': actividad,
-                  'FECHA': fecha,
-                  'RESULTADO': resultado
-                })
-              })
-              .then(resp => resp.json())
-              .then(dataResp => {
-                if (dataResp.status === "ok") {
-                  alert("¡Mantenimiento guardado correctamente!");
-                  form.reset();
-               // Refresca historial tras guardar:
-                  fetch('Datos/mantenimiento.json')
-                    .then(res => res.json())
-                    .then(dataJson => {
-                      historialMantenimiento = dataJson;
-                      // Vuelve a mostrar el historial actualizado
-                      // (puedes optimizar solo esta parte si lo prefieres)
-                      const nuevoHistorial = renderHistorialMantenimiento(tagMantto);
-                      // Reemplaza solo la parte del historial
-                      // Aquí simplificado: vuelve a mostrar todo el infoBox
-                      container.dispatchEvent(new MouseEvent('click', event));
-                    });   
-               } else {
-                  alert("Error al guardar: " + dataResp.msg);
-                }
-              });
-            };
-          } else {
-            document.getElementById('formManttoBox').style.display = "none";
-          }
-        } else {
-          infoBox.innerHTML = `<strong>${nombre}</strong><br>Sin datos disponibles`;
-          infoBox.style.display = "block";
-          document.getElementById('formManttoBox').style.display = "none";
-        }
-         } else {
-        infoBox.style.display = "none";
-        document.getElementById('formManttoBox').style.display = "none";
+      if (data.Imagen) {
+        html += `<img src="${data.Imagen}" alt="${titulo}" class="element-img"><br>`;
       }
-    });
-      
-/* ============== LOOP DE ANIMACIÓN DEL VISOR ============== */
+
+      Object.keys(data).forEach(key => {
+        let lowerKey = key.toLowerCase().trim();
+        if (!["nombre_original", "nombre_amigable", "imagen", "técnificha", "manual"].includes(lowerKey)) {
+          html += `<strong>${key}:</strong> ${data[key] || 'N/A'}<br>`;
+        }
+      });
+
+      const tagMantto = data["TAG MANTTO"];
+      if (tagMantto) {
+        html += renderHistorialMantenimiento(tagMantto);
+      }
+
+      if (data["TécniFicha"]) {
+        html += `<button class="pdf-button" onclick="openPdfModal('${data["TécniFicha"]}')">🧾 TécniFicha</button>`;
+      }
+      if (data["Manual"]) {
+        html += `<button class="pdf-button" onclick="openPdfModal('${data["Manual"]}')">⚙️ Manual</button>`;
+      }
+      infoBox.innerHTML = html;
+      infoBox.style.display = "block";
+    } else {
+      infoBox.innerHTML = `<strong>${nombre}</strong><br>Sin datos disponibles`;
+      infoBox.style.display = "block";
+    }
+  } else {
+    infoBox.style.display = "none";
+  }
+});
+
+/* ============== NUEVO BLOQUE LOGICA FORMULARIO FIJO (INICIO) ============== */
+const tagInput = document.querySelector('#formMantto input[name="tag_mantto"]');
+const feedbackDiv = document.getElementById('formManttoFeedback');
+tagInput.addEventListener('blur', function() {
+  let encontrado = null;
+  for (const k in datosElementos) {
+    if ((datosElementos[k]["TAG MANTTO"] || "").toUpperCase().trim() === tagInput.value.toUpperCase().trim()) {
+      encontrado = datosElementos[k];
+      break;
+    }
+  }
+  if (encontrado) {
+    feedbackDiv.innerHTML = `<span style="color:#9ef37b;">${encontrado.nombre_amigable || encontrado.nombre_original}</span>`;
+  } else { 
+    feedbackDiv.innerHTML = `<span style="color:#ffd47d;">TAG no encontrado en el modelo. Se agregará igualmente.</span>`;
+  }
+});
+
+document.getElementById('formMantto').onsubmit = function(e) {
+  e.preventDefault();
+  const tag_mantto = this.tag_mantto.value;
+  const actividad = this.actividad.value;
+  const fecha = this.fecha.value;
+  const resultado = this.resultado.value;
+  fetch('http://127.0.0.1:5000/agregar_mantto', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      'TAG MANTTO': tag_mantto,
+      'ACTIVIDAD': actividad,
+      'FECHA': fecha,
+      'RESULTADO': resultado
+    })
+  })
+  .then(resp => resp.json())
+  .then(dataResp => {
+    if (dataResp.status === "ok") {
+      alert("¡Mantenimiento guardado correctamente!");
+      this.reset();
+      feedbackDiv.innerHTML = "";
+      // --- NUEVO: Recarga mantenimiento.json y actualiza historial si corresponde ---
+      fetch('Datos/mantenimiento.json')
+        .then(res => res.json())
+        .then(dataJson => {
+          historialMantenimiento = dataJson;
+          if (infoBox.style.display === "block" && infoBox.innerHTML && tag_mantto) {
+            if (infoBox.innerHTML.includes(tag_mantto)) {
+              const nuevaTabla = renderHistorialMantenimiento(tag_mantto);
+              infoBox.innerHTML = infoBox.innerHTML.replace(
+                /<div class="historial-mantto-box">[\s\S]*?<\/div>/,
+                nuevaTabla
+              );
+            }
+          }
+        });
+      // --- FIN NUEVO ---
+    } else {
+      alert("Error al guardar: " + dataResp.msg);
+    }
+  });
+};
+/* ============== NUEVO BLOQUE LOGICA FORMULARIO FIJO (FIN) ============== */
+
 function animate() {
-    requestAnimationFrame(animate);
-    controls.update();
-    renderer.render(scene, camera);
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
 }
 animate();
 
@@ -576,7 +573,6 @@ fetch('Activos/Documentos_ingeniería/documentos.json')
   .then(response => response.json())
   .then(data => {
     data.forEach(categoria => {
-      // Título de categoría
       const catTitle = document.createElement('h4');
       catTitle.textContent = categoria.categoria;
       catTitle.style.marginTop = "12px";
@@ -584,7 +580,6 @@ fetch('Activos/Documentos_ingeniería/documentos.json')
       catTitle.style.paddingBottom = "4px";
       docsBox.appendChild(catTitle);
 
-      // Lista de documentos de esta categoría
       categoria.documentos.forEach(doc => {
         const link = document.createElement('a');
         link.href = "#";
@@ -592,17 +587,14 @@ fetch('Activos/Documentos_ingeniería/documentos.json')
         link.classList.add("doc-link");
 
         if (doc.url) {
-          // Si tiene URL, lo abre
           link.addEventListener('click', (e) => {
             e.preventDefault();
             openPdfModal(doc.url);
           });
         } else {
-          // Si no tiene URL, se ve gris y desactivado
           link.style.opacity = "0.5";
           link.style.pointerEvents = "none";
         }
-
         docsBox.appendChild(link);
       });
     });
@@ -618,45 +610,39 @@ const pdfFrame = document.getElementById('pdfFrame');
 const closePdfModal = document.getElementById('closePdfModal');
 
 function openPdfModal(url) {
-    pdfFrame.src = url;
-    pdfModal.style.display = "flex";
+  pdfFrame.src = url;
+  pdfModal.style.display = "flex";
 }
-
 closePdfModal.addEventListener('click', () => {
-    pdfModal.style.display = "none";
-    pdfFrame.src = "";
+  pdfModal.style.display = "none";
+  pdfFrame.src = "";
 });
-
-
 </script>
+
 <!-- Botón de descarga directa del ZIP -->
 <button id="downloadProjectZip" style="
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: #797b79;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 8px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 10px;
-    z-index: 1000;">
-    📥 Descargar
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #797b79;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 10px;
+  z-index: 1000;">
+  📥 Descargar
 </button>
-
 <script>
-// Botón descarga directa del ZIP
 document.getElementById('downloadProjectZip').addEventListener('click', () => {
-    const link = document.createElement('a');
-    link.href = 'DocumentosProyecto.zip';
-    link.download = 'DocumentosProyecto.zip';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const link = document.createElement('a');
+  link.href = 'DocumentosProyecto.zip';
+  link.download = 'DocumentosProyecto.zip';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 });
-
-    
- </script>
+</script>
 </body>
 </html>
