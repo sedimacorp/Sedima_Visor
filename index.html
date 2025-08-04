@@ -53,6 +53,7 @@
       width: 100%;
       height: 100%;
       display: block; 
+
     }
 
 
@@ -338,7 +339,9 @@ container.appendChild(renderer.domElement);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 1));
-
+const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+directionalLight.position.set(5, 10, 7.5); // posición arbitraria
+scene.add(directionalLight);
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 let selectableObjects = [];
@@ -454,7 +457,13 @@ container.addEventListener('click', (event) => {
     infoBox.style.display = "none";
   }
 });
-
+/* ============== NUEVO BLOQUE LOGICA FORMULARIO FIJO (FIN) ============== */
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+animate();
 
 
 /* ============== CARGAR Y MOSTRAR DOCUMENTOS DE INGENIERÍA AGRUPADOS ============== */
@@ -514,6 +523,7 @@ closePdfModal.addEventListener('click', () => {
   pdfFrame.src = "";
 });
 </script>
+
 
 <!-- Botón de descarga directa del ZIP -->
 <button id="downloadProjectZip" style="
