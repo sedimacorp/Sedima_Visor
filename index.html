@@ -265,18 +265,19 @@
 <div id="panel-lateral">
   <div id="infoBox"></div>
   <div class="form-mantto-box" id="formManttoBoxFixed">
-    <!-- ...formulario... -->
-    <h4>Nuevo mantenimiento</h4>
-    <form id="formMantto" autocomplete="off">
-      <input type="text" name="tag_mantto" placeholder="TAG MANTTO" required><br>
-      <input type="text" name="actividad" placeholder="Actividad" required><br>
-      <input type="date" name="fecha" required><br>
-      <input type="text" name="resultado" placeholder="Resultado" required><br>
-      <button type="submit">Agregar mantenimiento</button>
-    </form>
-    <div id="formManttoFeedback"></div>
+      <h4>Nuevo mantenimiento</h4>
+      <!-- Formulario embebido desde Microsoft Forms -->
+      <iframe src="TU_LINK_DE_MICROSOFT_FORMS_AQUI"
+              width="330"
+              height="480"
+              frameborder="0"
+              marginwidth="0"
+              marginheight="0"
+              style="background:#FFFFFF;border-radius:8px;border:1.3px solid #17447b;">
+        Cargando formulario de mantenimiento...
+      </iframe>
+    </div>
   </div>
-</div>
 <!-- Contenedor del visor 3D -->
 <div id="visor-container">
   <!-- ============== LOGOS ============== -->
@@ -396,43 +397,7 @@ window.addEventListener('resize', () => {
   renderer.setSize(container.clientWidth, container.clientHeight);
 });
 
-// === HISTORIAL Y FUNCIONES AUXILIARES ===
-let historialMantenimiento = [];
-fetch('Datos/mantenimiento.json')
-  .then(res => res.json())
-  .then(data => { historialMantenimiento = data; })
-  .catch(err => console.error("Error cargando mantenimiento.json", err));
 
-function getHistorialPorTagMantto(tagMantto) {
-  const resultado = historialMantenimiento.find(item => item["TAG MANTTO"] === tagMantto);
-  return resultado && Array.isArray(resultado.historial) ? resultado.historial : [];
-}
-function renderHistorialMantenimiento(tagMantto) {
-  const historial = getHistorialPorTagMantto(tagMantto);
-  if (!historial.length) return "";
-  let html = `
-    <div class="historial-mantto-box">
-      <table class="historial-mantto-table">
-        <caption>HISTORIAL DE EJECUCIÓN: PLAN DE MANTENIMIENTO</caption>
-        <thead>
-          <tr>
-            <th>ACTIVIDAD</th>
-            <th>FECHA</th>
-            <th>RESULTADO</th>
-          </tr>
-        </thead>
-        <tbody>
-  `;
-  historial.forEach(row => {
-    html += `<tr>
-      <td>${row.ACTIVIDAD}</td>
-      <td>${row.FECHA}</td>
-      <td>${row.RESULTADO}</td>
-    </tr>`;
-  });
-  html += `</tbody></table></div>`;
-  return html;
-}
 
 /* ============== MANEJO DEL CLICK PARA SELECCIONAR y MOSTRAR INFO ============== */
 container.addEventListener('click', (event) => {
@@ -491,75 +456,7 @@ container.addEventListener('click', (event) => {
   }
 });
 
-/* ============== NUEVO BLOQUE LOGICA FORMULARIO FIJO (INICIO) ============== */
-const tagInput = document.querySelector('#formMantto input[name="tag_mantto"]');
-const feedbackDiv = document.getElementById('formManttoFeedback');
-tagInput.addEventListener('blur', function() {
-  let encontrado = null;
-  for (const k in datosElementos) {
-    if ((datosElementos[k]["TAG MANTTO"] || "").toUpperCase().trim() === tagInput.value.toUpperCase().trim()) {
-      encontrado = datosElementos[k];
-      break;
-    }
-  }
-  if (encontrado) {
-    feedbackDiv.innerHTML = `<span style="color:#9ef37b;">${encontrado.nombre_amigable || encontrado.nombre_original}</span>`;
-  } else { 
-    feedbackDiv.innerHTML = `<span style="color:#ffd47d;">TAG no encontrado en el modelo. Se agregará igualmente.</span>`;
-  }
-});
 
-document.getElementById('formMantto').onsubmit = function(e) {
-  e.preventDefault();
-  const tag_mantto = this.tag_mantto.value;
-  const actividad = this.actividad.value;
-  const fecha = this.fecha.value;
-  const resultado = this.resultado.value;
-  fetch('http://127.0.0.1:5000/agregar_mantto', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      'TAG MANTTO': tag_mantto,
-      'ACTIVIDAD': actividad,
-      'FECHA': fecha,
-      'RESULTADO': resultado
-    })
-  })
-  .then(resp => resp.json())
-  .then(dataResp => {
-    if (dataResp.status === "ok") {
-      alert("¡Mantenimiento guardado correctamente!");
-      this.reset();
-      feedbackDiv.innerHTML = "";
-      // --- NUEVO: Recarga mantenimiento.json y actualiza historial si corresponde ---
-      fetch('Datos/mantenimiento.json')
-        .then(res => res.json())
-        .then(dataJson => {
-          historialMantenimiento = dataJson;
-          if (infoBox.style.display === "block" && infoBox.innerHTML && tag_mantto) {
-            if (infoBox.innerHTML.includes(tag_mantto)) {
-              const nuevaTabla = renderHistorialMantenimiento(tag_mantto);
-              infoBox.innerHTML = infoBox.innerHTML.replace(
-                /<div class="historial-mantto-box">[\s\S]*?<\/div>/,
-                nuevaTabla
-              );
-            }
-          }
-        });
-      // --- FIN NUEVO ---
-    } else {
-      alert("Error al guardar: " + dataResp.msg);
-    }
-  });
-};
-/* ============== NUEVO BLOQUE LOGICA FORMULARIO FIJO (FIN) ============== */
-
-function animate() {
-  requestAnimationFrame(animate);
-  controls.update();
-  renderer.render(scene, camera);
-}
-animate();
 
 /* ============== CARGAR Y MOSTRAR DOCUMENTOS DE INGENIERÍA AGRUPADOS ============== */
 // 1. Crear ventana de documentos de ingeniería 
