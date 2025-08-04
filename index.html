@@ -436,10 +436,6 @@ container.addEventListener('click', (event) => {
         }
       });
 
-      const tagMantto = data["TAG MANTTO"];
-      if (tagMantto) {
-        html += renderHistorialMantenimiento(tagMantto);
-      }
 
       if (data["TécniFicha"]) {
         html += `<button class="pdf-button" onclick="openPdfModal('${data["TécniFicha"]}')">🧾 TécniFicha</button>`;
