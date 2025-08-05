@@ -165,11 +165,14 @@
 </head>
 
 <body>
- <!-- Panel lateral izquierdo -->
-<div id="infoBox"></div>
-<button id="openManttoForm" class="pdf-button" style="background:#00356B;">➕ Nuevo mantenimiento</button>
 
+<!-- Panel lateral izquierdo -->
+<div id="panel-lateral">
+  <div id="infoBox"></div>
+  <button id="openManttoForm" class="pdf-button" style="background:#00356B;">➕ Nuevo mantenimiento</button>
 </div>
+
+
 <!-- Contenedor del visor 3D -->
 <div id="visor-container">
   <!-- ============== LOGOS ============== -->
@@ -406,15 +409,29 @@ function openPdfModal(url) {
   pdfFrame.src = url;
   pdfModal.style.display = "flex";
 }
-function abrirPowerAppModal() {
-  const powerAppURL = "https://apps.powerapps.com/play/e/default-af07fa8c-7049-4b79-aea0-9024ed1b1bb5/a/235de6c5-0145-419b-a144-97ff289ef027?tenantId=af07fa8c-7049-4b79-aea0-9024ed1b1bb5&hint=3cdbdb0d-a255-4557-aabc-60f6a85ce395";
-  pdfFrame.src = powerAppURL;
-  pdfModal.style.display = "flex";
-}
+
 
 closePdfModal.addEventListener('click', () => {
   pdfModal.style.display = "none";
   pdfFrame.src = "";
+});
+</script>
+<script>
+// Función para abrir el Power App en un modal (usando el iframe existente)
+function openPowerAppForm() {
+  const powerAppURL = "https://apps.powerapps.com/play/e/default-af07fa8c-7049-4b79-aea0-9024ed1b1bb5/a/235de6c5-0145-419b-a144-97ff289ef027?tenantId=af07fa8c-7049-4b79-aea0-9024ed1b1bb5&hint=3cdbdb0d-a255-4557-aabc-60f6a85ce395";
+  const pdfModal = document.getElementById('pdfModal');
+  const pdfFrame = document.getElementById('pdfFrame');
+  pdfFrame.src = powerAppURL;
+  pdfModal.style.display = "flex";
+}
+
+// Asociar el botón con la función al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+  const manttoBtn = document.getElementById('openManttoForm');
+  if (manttoBtn) {
+    manttoBtn.addEventListener('click', openPowerAppForm);
+  }
 });
 </script>
 
