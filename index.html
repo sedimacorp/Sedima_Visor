@@ -129,103 +129,19 @@
       z-index: 2;               
       pointer-events: none;
     }
-/* === HISTORIAL DE MANTENIMIENTO EN INFOBOX === */
-    .historial-mantto-box {
-      text-align: center;
-      margin-top: 5px; 
-      padding: 10px 10px; 
-      background: #2f00ff36;   /* Fondo del recuadro; pon #fff si deseas blanco puro */
-      border: 3px solid #17447b;
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(30,40,80,0.08);
-      display: inline-block;
-      min-width: 60px;
-      max-width: 100%;
-    }
-    .historial-mantto-table {
-      width: 100%;
-      background: #093d7c;
-      border-radius: 8px;
-      border: 1px 3px solid #17447b00;
-      margin: 0 auto;
-    }
-    .historial-mantto-table caption {
-      color: #fff;
-      font-weight: bold;
-      margin-bottom: 4px;
-      font-size: 12px;
-      caption-side: top;
-      padding: 5px 0 3px 0;
-      background: transparent;
-    }
-    .historial-mantto-table th {
-      background: #0d2754;
-      color: #ffffff;
-      padding: 5px 3px;
-    }
-    .historial-mantto-table td {
-      color: #fffffff8;
-      padding: 5px 3px;
-    }
 
-/* --- FORMULARIO DE MANTENIMIENTO --- */
-    .form-mantto-box {
-      width: 340px;
-      max-width: 95vw;
-      background: #032480c7;
-      border: 3px solid #17447b;
-      border-radius: 15px;
-      box-shadow: 0 2px 6px rgba(30,40,80,0.08);
-      text-align: center;
-      padding: 20px 18px 14px 18px;
-      margin: 0 auto 30px auto;
-      min-height: 120px;
-      display: block;
-    }
-
-    .form-mantto-box h4 { 
-      margin: 0 0 12px 0;
-      color: #ebebeb;
-      font-size: 17px;
-      font-weight: bold;
-    }
-    .form-mantto-box input[type="text"],
-    .form-mantto-box input[type="date"] {
-      width: 90%;
-      padding: 6px 8px;
-      border: 1.5px solid #17447b;
-      border-radius: 6px;
-      margin-bottom: 10px;
-      font-family: inherit;
-      font-size: 15px;
-      background: #f7f8fb;
-      color: #2c2c3c;
-      outline: none;
-      box-sizing: border-box;
-    }
-    .form-mantto-box button {
-      background: #0a1c8386;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 7px 10px;
-      font-size: 14px;
-      width: 92%;
-      margin-top: 2px;
-      cursor: pointer;
-      font-family: inherit;
-      font-weight: bold;
-      transition: background 0.2s;
-    }
-    .form-mantto-box button:hover {
-      background: #17447b;
-    }
-    #formManttoFeedback {
-      margin-top: 5px;
-      font-size: 13px;
-      min-height: 20px;
-      color: #4cca24;
-    }
+  #formManttoBoxFixed {
+  width: 100%;
+  /* Asegura que el formulario se vea siempre en la parte inferior del panel izquierdo */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  padding-top: 18px;
+  background: #f7faf9cc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #667;
+}
 
     #panel-lateral {
       display: flex;
@@ -263,22 +179,20 @@
 
 <body>
  <!-- Panel lateral izquierdo -->
-<div id="panel-lateral">
-  <div id="infoBox"></div>
-  <div class="form-mantto-box" id="formManttoBoxFixed">
-      <h4>Nuevo mantenimiento</h4>
-      <!-- Formulario embebido desde Microsoft Forms -->
-      <iframe src= "https://forms.office.com/Pages/ResponsePage.aspx?id=jPoHr0lweUuuoJAk7RsbtU8ZgqzQR2RHnX3H-fqzymZURTFEWklaUkhUUDlPS1BTNUJWQ1YzMEFOSS4u&embed=true" 
-              frameborder="0"
-              marginwidth="0"
-               width="100%" 
-                height="600px"
-              marginheight="0"
-              style="background:#FFFFFF;border-radius:8px;border:1.3px solid #17447b;">
-        Cargando formulario de mantenimiento...
-      </iframe>
-    </div>
-  </div>
+<!-- Panel lateral izquierdo -->
+<div id="panel-lateral"></div> 
+<div id="infoBox"></div>
+<div id="formManttoBoxFixed">
+ <iframe 
+    id="iframePowerApps"
+    src="https://apps.powerapps.com/play/e/default-af07fa8c-7049-4b79-aea0-9024ed1b1bb5/a/235de6c5-0145-419b-a144-97ff289ef027?tenantId=af07fa8c-7049-4b79-aea0-9024ed1b1bb5&hint=3cdbdb0d-a255-4557-aabc-60f6a85ce395&sourcetime=1754425762886"
+    width="100%"
+    height="370"
+    frameborder="0"
+    allow="fullscreen; clipboard-write; camera; microphone; geolocation"
+    style="border-radius:12px; box-shadow:0 2px 8px #444; background:#fff;">
+  </iframe>
+</div>
 <!-- Contenedor del visor 3D -->
 <div id="visor-container">
   <!-- ============== LOGOS ============== -->
@@ -454,7 +368,7 @@ container.addEventListener('click', (event) => {
     infoBox.style.display = "none";
   }
 });
-/* ============== NUEVO BLOQUE LOGICA FORMULARIO FIJO (FIN) ============== */
+/* ============== animación ============== */
 function animate() {
   requestAnimationFrame(animate);
   controls.update();
