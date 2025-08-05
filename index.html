@@ -130,19 +130,6 @@
       pointer-events: none;
     }
 
-  #formManttoBoxFixed {
-  width: 100%;
-  /* Asegura que el formulario se vea siempre en la parte inferior del panel izquierdo */
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-  padding-top: 18px;
-  background: #f7faf9cc;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px #667;
-}
-
     #panel-lateral {
       display: flex;
       flex-direction: column;
@@ -179,19 +166,9 @@
 
 <body>
  <!-- Panel lateral izquierdo -->
-<!-- Panel lateral izquierdo -->
-<div id="panel-lateral"></div> 
 <div id="infoBox"></div>
-<div id="formManttoBoxFixed">
- <iframe 
-    id="iframePowerApps"
-    src="https://apps.powerapps.com/play/e/default-af07fa8c-7049-4b79-aea0-9024ed1b1bb5/a/235de6c5-0145-419b-a144-97ff289ef027?tenantId=af07fa8c-7049-4b79-aea0-9024ed1b1bb5&hint=3cdbdb0d-a255-4557-aabc-60f6a85ce395&sourcetime=1754425762886"
-    width="100%"
-    height="370"
-    frameborder="0"
-    allow="fullscreen; clipboard-write; camera; microphone; geolocation"
-    style="border-radius:12px; box-shadow:0 2px 8px #444; background:#fff;">
-  </iframe>
+<button id="openManttoForm" class="pdf-button" style="background:#00356B;">➕ Nuevo mantenimiento</button>
+
 </div>
 <!-- Contenedor del visor 3D -->
 <div id="visor-container">
@@ -429,6 +406,12 @@ function openPdfModal(url) {
   pdfFrame.src = url;
   pdfModal.style.display = "flex";
 }
+function abrirPowerAppModal() {
+  const powerAppURL = "https://apps.powerapps.com/play/e/default-af07fa8c-7049-4b79-aea0-9024ed1b1bb5/a/235de6c5-0145-419b-a144-97ff289ef027?tenantId=af07fa8c-7049-4b79-aea0-9024ed1b1bb5&hint=3cdbdb0d-a255-4557-aabc-60f6a85ce395";
+  pdfFrame.src = powerAppURL;
+  pdfModal.style.display = "flex";
+}
+
 closePdfModal.addEventListener('click', () => {
   pdfModal.style.display = "none";
   pdfFrame.src = "";
