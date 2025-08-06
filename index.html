@@ -32,7 +32,7 @@
   max-width: 420px;
   height: 100vh;
   background: #f7faf9;
-  box-shadow: 2px 0 8px #ddd4;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.267);
   z-index: 10;
   padding: 0;
   box-sizing: border-box;
@@ -41,13 +41,18 @@
 .sidebar.left {
   border-radius: 0 15px 15px 0;
   padding: 18px 10px 14px 18px;
+  display: flex; 
+  flex-direction: column;
 }
+ 
+.flex-spacer { flex: 1 1 auto; } 
+
 .sidebar.right { 
   border-radius: 15px 0 0 15px;
   padding: 20px 16px 14px 10px;
   background: rgba(212, 13, 13, 0.781);
   color: #fff;
-  box-shadow: -2px 0 8px #a44a;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.667);
   max-height: 100vh;
   overflow-y: auto;
 }
@@ -94,16 +99,16 @@
 
   #formManttoBoxFixed {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 0px;
   padding-bottom: 8px;
   background: #fffafdcc;
-  box-shadow: 0 2px 6px #abc4;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.267);
   border-radius: 8px;
 }
 #formManttoBoxFixed iframe {
   width: 100%; min-height: 240px;
   border: none; border-radius: 7px;
-  box-shadow: 0 1px 6px #7773;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* ================= PANEL DEL VISOR 3D CENTRO================= */
@@ -114,7 +119,7 @@ flex: 2.5 1 0%;
   margin: 0 12px;
   background: #fff;
   border-radius: 18px;
-  box-shadow: 0 4px 18px #aaa6;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,6 +203,7 @@ canvas {
 <!-- Panel lateral izquierdo -->
 <div class="sidebar left">
       <div id="infoBox"></div>
+      <div class="flex-spacer"></div>
        <div id="formManttoBoxFixed">
   <iframe
     src="https://forms.office.com/Pages/ResponsePage.aspx?id=jPoHr0lweUuuoJAk7RsbtU8ZgqzQR2RHnX3H-fqzymZURFhCQjhSNkEwVTJPNDFBN043TlZLQ1hOQS4u&embed=true" 
