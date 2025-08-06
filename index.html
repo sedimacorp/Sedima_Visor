@@ -155,7 +155,29 @@ canvas {
   height: 100%;
   display: block;
 }
-
+/* ================= BOTÓN DE DESCARGA DEL VISOR ================= */
+   .visor-download-btn {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  background: #2242b2;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 22;
+  box-shadow: 0 2px 18px #2344;
+  opacity: 0.94;
+  transition: opacity 0.18s;
+}
+.visor-download-btn:hover {
+  opacity: 1;
+  background: #001d7a;
+}
+ 
 
   /* ================= BOTONES DE PDF ================= */       
     .pdf-button { 
@@ -171,6 +193,8 @@ canvas {
       text-align: center; 
     }
     .pdf-button:hover { background: #460303; }
+
+
 
   /* ================= IMAGEN DEL INFOBOX ================= */       
     .element-img {
@@ -223,7 +247,11 @@ canvas {
   <!-- ============== LOGOS ============== -->
   <img id="logosedima" src="Activos/Logos/LogoSedima.png" alt="Logo Sedima" />
   <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
+  <button id="downloadProjectZip" class="visor-download-btn">
+    📥 DESCARGAR DOCUMENTACIÓN
+  </button>
 </div>
+
 
  <!-- Lado derecho -->
     <div class="sidebar right" >
@@ -465,7 +493,9 @@ closePdfModal.addEventListener('click', () => {
   pdfModal.style.display = "none";
   pdfFrame.src = "";
 });
-</script>
+/* ============== BOTÓN DE DESCARGA DOCUMENTACIÓN ============== */
+document.getElementById('downloadProjectZip').addEventListener('click', function() {
+  window.location.href = 'Activos/DESCARGAR_DOCUMENTACION.zip' });
 
 </script>
 </body>

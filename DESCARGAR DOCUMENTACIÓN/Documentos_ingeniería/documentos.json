@@ -1,0 +1,344 @@
+[
+    {
+        "categoria": "1 GENERALES",
+        "documentos": [
+            {
+                "nombre": "Listado General de Documentos",
+                "url": "Activos/Documentos_ingeniería/LISTADO GENERAL DE DOCUMENTOS.pdf"
+            },
+            {
+                "nombre": "Formato Datos de Entrada",
+                "url": "Activos/Documentos_ingeniería/FORMATO DATOS DE ENTRADA.pdf"
+            },
+            {
+                "nombre": "Estandares de Diseño para el Desarrollo de la Ingeniería",
+                "url": "Activos/Documentos_ingeniería/ESTANDARES DE DISEÑO PARA EL DESARROLLO DE LA INGENIERIA.pdf"
+            },
+            {
+                "nombre": "Cronograma General del Proyecto",
+                "url": "Activos/Documentos_ingeniería/CRONOGRAMA GENERAL DEL PROYECTO.pdf"
+            }
+        ]
+    },
+    {
+        "categoria": "2 ÁREA MECÁNICA",
+        "documentos": [
+            {
+                "nombre": "Listados del Área Mecánica"
+            },
+            {
+                "nombre": "Listado de Equipos"
+            },
+            {
+                "nombre": "Listado de Válvulas"
+            },
+            {
+                "nombre": "Especificaciones del Área Mecánica"
+            },
+            {
+                "nombre": "Especificación de Válvulas Manuales"
+            },
+            {
+                "nombre": "Especificación de Válvulas Motorizadas"
+            },
+            {
+                "nombre": "Especificación de Montaje Mecánico"
+            },
+            {
+                "nombre": "Especificación de Montaje de Tuberías, Válvulas y Accesorios"
+            },
+            {
+                "nombre": "Especificación de Pinturas y Recubrimiento"
+            },
+            {
+                "nombre": "Especificación de Empaque, Marcado y Transporte de Equipos y Materiales"
+            },
+            {
+                "nombre": "Especificación de Alineación y Soldadura de Tubería"
+            },
+            {
+                "nombre": "Hojas de Datos de Equipos y Válvulas"
+            },
+            {
+                "nombre": "Hoja de Datos del Filtro"
+            },
+            {
+                "nombre": "Hojas de Datos de reguladores tren de control"
+            },
+            {
+                "nombre": "Hojas de Datos de Válvulas de Seguridad"
+            }
+        ]
+    },
+    {
+        "categoria": "3 ÁREA PROCESOS",
+        "documentos": [
+            {
+                "nombre": "Bases de Diseño"
+            },
+            {
+                "nombre": "Diagrama de Bloque"
+            },
+            {
+                "nombre": "Diagrama P&ID de Proceso Principal"
+            },
+            {
+                "nombre": "Símbolos"
+            },
+            {
+                "nombre": "Listado de líneas"
+            }
+        ]
+    },
+    {
+        "categoria": "4 ÁREA INSTRUMENTACIÓN",
+        "documentos": [
+            {
+                "nombre": "Listados del Área de Instrumentación"
+            },
+            {
+                "nombre": "Listado General de Variables a Medir"
+            },
+            {
+                "nombre": "Listado general de Instrumentos"
+            },
+            {
+                "nombre": "Tablas de Conexionado"
+            },
+            {
+                "nombre": "Especificación de Instrumentación"
+            },
+            {
+                "nombre": "Especificación General de Instrumentos"
+            },
+            {
+                "nombre": "Especificación de Montaje de Instrumentos"
+            },
+            {
+                "nombre": "Especificaciones técnicas de cables"
+            },
+            {
+                "nombre": "Estrategia de Interconexión entre Campo y PLC"
+            },
+            {
+                "nombre": "Estrategia de Sistema de Control"
+            },
+            {
+                "nombre": "Requerimientos de equipos para el sistema de control"
+            },
+            {
+                "nombre": "Montaje y Conexionado de Instrumentos"
+            },
+            {
+                "nombre": "Típicos de Montaje de Instrumentos"
+            },
+            {
+                "nombre": "Diagramas de Lazo"
+            },
+            {
+                "nombre": "Diagramas de Conexionado y Disposición de Equipos"
+            },
+            {
+                "nombre": "Hojas Datos de Instrumentos"
+            },
+            {
+                "nombre": "Hoja de Datos de Actuador (ESDV)"
+            },
+            {
+                "nombre": "Hoja de Datos de tablero de control neumático para ESDV"
+            },
+            {
+                "nombre": "Hoja de Datos de Indicadores de Presión (PI)"
+            },
+            {
+                "nombre": "Hoja de Datos de Transmisores de Presión (PT/PIT)"
+            },
+            {
+                "nombre": "Hoja de Datos de Válvulas de Control de Presión (PCV)"
+            }
+        ]
+    },
+    {
+        "categoria": "5 ÁREA TUBERÍA",
+        "documentos": [
+            {
+                "nombre": "Piping class"
+            },
+            {
+                "nombre": "Selección y especificación de tubría"
+            },
+            {
+                "nombre": "Listado General de Tuberías y Accesorios"
+            },
+            {
+                "nombre": "Planos de Tubería "
+            },
+            {
+                "nombre": "PLANTA Y LISTA DE MATERIALES"
+            },
+            {
+                "nombre": "PLANTA Y SECCIÓN A-A- MECANICA ACOTADA"
+            },
+            {
+                "nombre": "SECCIONES B-B Y C-C  MECANICOS ACOTADO"
+            },
+            {
+                "nombre": "PLANTA Y VISTA LATERAL-UBICACIÓN DE SOPORTES"
+            },
+            {
+                "nombre": "SOPORTES PARA TUBERIA "
+            },
+            {
+                "nombre": "TRIDIMENSIONAL- IDENTIFICACIÓN DE JUNTAS SOLDADAS"
+            },
+            {
+                "nombre": "TRIDIMENSIONAL, PLANTA Y PERFIL VENTEOS Y DRENAJE"
+            },
+            {
+                "nombre": "LISTADO DE LÍNEAS"
+            }
+        ]
+    },
+    {
+        "categoria": "6 ÁREA ELÉCTRICA",
+        "documentos": [
+            {
+                "nombre": "Análisis  Eléctrico de la Estación"
+            },
+            {
+                "nombre": "Análisis de Cargas Eléctricas y Sistema de Alimentación"
+            },
+            {
+                "nombre": "Diagrama Unifilar General "
+            },
+            {
+                "nombre": "Planta Mecánica con Clasificación de Áreas Eléctricas "
+            },
+            {
+                "nombre": "Cables y Conduits"
+            },
+            {
+                "nombre": "Planimetría de  Banco de Ductos Eléctricos e Instrumentación"
+            },
+            {
+                "nombre": "Especificación de Ductos y Conductores Eléctricos"
+            },
+            {
+                "nombre": "Memorias de Cálculo de Conductores y Cables"
+            },
+            {
+                "nombre": "Listado de Cables y Conduits"
+            },
+            {
+                "nombre": "Detalles de Iluminación"
+            },
+            {
+                "nombre": "Especificación de Luminarias Externas e Internas"
+            },
+            {
+                "nombre": "Memorias de Cálculo de Iluminación Exterior e Interior"
+            },
+            {
+                "nombre": "Especificación de Tableros Eléctricos"
+            },
+            {
+                "nombre": "Take-Off Eléctrico de la Estación"
+            },
+            {
+                "nombre": "Puesta a Tierra y Apantallamiento"
+            },
+            {
+                "nombre": "Memorias de Cálculo del Sistema Puesta a Tierra y Apantallamiento"
+            },
+            {
+                "nombre": "Planimetría del Sistema Puesta a Tierra"
+            },
+            {
+                "nombre": "Especificaciones de Montaje del Sistema Eléctrico"
+            },
+            {
+                "nombre": "Especificaciones de Montaje"
+            }
+        ]
+    },
+    {
+        "categoria": "7 ÁREA CIVIL",
+        "documentos": [
+            {
+                "nombre": "Topografía del Área"
+            },
+            {
+                "nombre": "Informe de Inspección del Trazado del Gasoducto"
+            },
+            {
+                "nombre": "Estudio de Suelos y Levantamiento Topográfico del Área"
+            },
+            {
+                "nombre": " Planos de Detalle de los Cruces Especiales"
+            },
+            {
+                "nombre": "Especificaciones Civiles y Arquitectónicas"
+            },
+            {
+                "nombre": "Especificaciones Concretos Estructurales"
+            },
+            {
+                "nombre": "Especificaciones de Mamposteria"
+            },
+            {
+                "nombre": "Especificaciones de Construcción de Malla"
+            },
+            {
+                "nombre": "Especificaciones de Construccion de Registros"
+            },
+            {
+                "nombre": "Especificaciones de Prefabricación  y  Montaje de Estaciones"
+            },
+            {
+                "nombre": "Especificaciones para Revestimiento de Tuberías Aéreas"
+            },
+            {
+                "nombre": "Especificaciones de Pintura para Paredes"
+            },
+            {
+                "nombre": "Especificaciones de MovimientosTierra"
+            },
+            {
+                "nombre": "Memorias de Cálculo"
+            },
+            {
+                "nombre": "Memoria de Cálculo Obras Civiles"
+            },
+            {
+                "nombre": "Memorias de Obras Hidráulicas y Geotécnicas"
+            },
+            {
+                "nombre": "Planos Civiles"
+            },
+            {
+                "nombre": "TRIDIMENSIONAL"
+            },
+            {
+                "nombre": "PLANTA DE CERRAMIENTO"
+            },
+            {
+                "nombre": "FACHADA Y DETALLES DE CERRAMIENTO"
+            },
+            {
+                "nombre": "PLANTA Y DETALLES ESTRUCTURA DE TECHO Y CIMIENTOS"
+            },
+            {
+                "nombre": "HOT TAP"
+            },
+            {
+                "nombre": "LOCALIZACIÓN GENERAL"
+            },
+            {
+                "nombre": "LOCALIZACIÓN GENERAL"
+            },
+            {
+                "nombre": "MAQUETA INTEGRAL DEL PROYECTO EN DWFX"
+            }
+        ]
+    }
+]
