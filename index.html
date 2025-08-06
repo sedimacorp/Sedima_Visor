@@ -266,21 +266,7 @@ z-index:999;">
       font-size: 18px;">✖</button>
   </div>
 </div>
-<!-- Botón de descarga directa del ZIP -->
-<button id="downloadProjectZip" style="
-  position: fixed;
-  bottom: 10px; 
-  right: 10px; 
-  background: #797b79;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 8px;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 10px;
-  z-index: 1000;">
-  📥 DESCARGAR
-</button>
+
 <!-- Librerías necesarias -->
 <script src="libs/three.min.js"></script>
 <script src="libs/GLTFLoader.js"></script>
@@ -481,30 +467,6 @@ closePdfModal.addEventListener('click', () => {
 });
 </script>
 
-<!-- Botón de descarga directa del ZIP -->
-<button id="downloadProjectZip" style="
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: #797b79;
-  color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 8px;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-size: 10px;
-  z-index: 1000;">
-  📥 Descargar
-</button>
-<script>
-document.getElementById('downloadProjectZip').addEventListener('click', () => {
-  const link = document.createElement('a');
-  link.href = 'DocumentosProyecto.zip';
-  link.download = 'DocumentosProyecto.zip';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-});
 </script>
 </body>
 </html>
