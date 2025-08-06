@@ -6,55 +6,133 @@
   <title>Sedima Visor</title>
   <style>
 /* ================= ESTILO GENERAL DE LA PÁGINA ================= */
-    body {
-      margin: 0; 
-      background-color: #ffffff; 
-      display: flex; 
-      align-items: flex-start;
-      justify-content: center;
-      height: 100vh; 
-      gap: 20px; 
-      padding: 20px;
-      box-sizing: border-box; 
-      flex-wrap: wrap;
+    html, body {
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  width: 100vw; height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #fff;
     }
+/* NUEVO CONTENEDOR PRINCIPAL */
+.layout-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+/* Laterales: ancho fijo, toda la altura */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 370px;
+  min-width: 340px;
+  max-width: 420px;
+  height: 100vh;
+  background: #f7faf9;
+  box-shadow: 2px 0 8px #ddd4;
+  z-index: 10;
+  padding: 0;
+  box-sizing: border-box;
+   overflow: hidden;
+}
+.sidebar.left {
+  border-radius: 0 15px 15px 0;
+  padding: 18px 10px 14px 18px;
+}
+.sidebar.right { 
+  border-radius: 15px 0 0 15px;
+  padding: 20px 16px 14px 10px;
+  background: rgba(212, 13, 13, 0.781);
+  color: #fff;
+  box-shadow: -2px 0 8px #a44a;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+/* Documentos de ingeniería */
+#docsBox {
+  flex: 1;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;}
+.doc-link { color: #e5dada; }
 
-/* ================= PANEL INFOBOX QUE SE ABRE CON EL CLICK ================= */     
-    #infoBox {
-      background:#032480c7;
-      color: #f7faf9;
-      padding: 26px 18px 30px 18px;
-      border-radius: 10px 10px 10px 10px;;
-      font-family: sans-serif;
-      font-size: 13px; /*tamño de fuente*/
-      width: 100%;         /* Mantén un ancho cómodo */
-      height: auto;         /* Crece según su contenido */
-      overflow-y: auto;     /* Muestra scroll SOLO si es necesario */
-      box-shadow: 0 4px 4px rgb(0, 0, 0);
-      text-align: center;
-      margin-bottom: 0;
-        max-height: calc(98vh - 570px); /* deja espacio al Forms abajo (ajusta "570px" según el alto del Forms) */
-      display: block;
-    }
+/* InfoBox y Forms dentro del sidebar izquierdo */
+#infoBox {
+  background:#032480c7;
+  color: #f7faf9;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  width: 100%;
+  min-height: 60px;
+  max-height: 48vh;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  flex: 1 1 auto;
+  font-family: sans-serif;
+  box-shadow: 0 4px 4px rgb(0,0,0);
+  text-align: center;
+  }
 
-/* ================= PANEL DEL VISOR 3D ================= */
+  #formManttoBoxFixed {
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 8px;
+  background: #fffafdcc;
+  box-shadow: 0 2px 6px #abc4;
+  border-radius: 8px;
+}
+#formManttoBoxFixed iframe {
+  width: 100%; min-height: 240px;
+  border: none; border-radius: 7px;
+  box-shadow: 0 1px 6px #7773;
+}
+
+/* ================= PANEL DEL VISOR 3D CENTRO================= */
     #visor-container { 
-      background-color: #ffffff9d;
-      min-width: 500px;
-      max-width: 880px; 
-      aspect-ratio: 1 / 1; 
-      border-radius: 10px; 
-      box-shadow: 0 4px 4px rgb(168, 168, 168); 
-      overflow: hidden;
-      position:relative; 
-      flex: 1 1 400px;
+flex: 2.5 1 0%;
+  min-width: 500px;
+  height: 100vh;
+  margin: 0 12px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px #aaa6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
     }
-    canvas { 
-      width: 100%;
-      height: 100%;
-      display: block; 
+/*-- ============== LOGO SEDIMA ============== */
+    #logosedima {
+      position: absolute;        
+      top: 10px;                 
+      left: 10px;                
+      width: 120px;              
+      opacity: 0.9;              
+      z-index: 2;               
+      pointer-events: none;
+    }
 
+/*-- ============== LOGO CLIENTE ============== */
+    #logocliente {
+      position: absolute;        
+      top: 10px;                 
+      right:10px;                
+      width: 80px;               
+      opacity: 0.9;              
+      z-index: 2;               
+      pointer-events: none;
     }
+canvas { 
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
 
   /* ================= BOTONES DE PDF ================= */       
@@ -82,170 +160,41 @@
       display: block;
       padding: 0px;
     }
-
-/* ================= VENTANA DE DOCUMENTOS DE INGENIERÍA ================= */
-    #docsBox { 
-      background: rgba(212, 13, 13, 0.781);  
-      color: #ffffff;                      
-      padding: 20px;
-      border-radius: 10px;
-      font-family: sans-serif;
-      font-size: 14px;
-      width: 300px;
-      max-width: 300px;
-      max-height: 90vh;
-      overflow-y: auto;
-      box-shadow: 0 4px 4px rgb(0, 0, 0);
-      display: block;
-    }
-    .doc-link {
-      display: block;
-      margin: 5px 0;
-      color: #e5dada; 
-      text-decoration: none;
-      font-size: 14px;
-      font-family: sans-serif;
-    }
-    .doc-link:hover { text-decoration: underline; }
-
-/*-- ============== LOGO SEDIMA ============== */
-    #logosedima {
-      position: absolute;        
-      top: 10px;                 
-      left: 10px;                
-      width: 120px;              
-      opacity: 0.9;              
-      z-index: 2;               
-      pointer-events: none;
-    }
-
-/*-- ============== LOGO CLIENTE ============== */
-    #logocliente {
-      position: absolute;        
-      top: 10px;                 
-      right:10px;                
-      width: 80px;               
-      opacity: 0.9;              
-      z-index: 2;               
-      pointer-events: none;
-    }
-
-/* Formularios pegado al fondo del panel-lateral */
-#formManttoBoxFixed {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background: #f7faf9cc;
-  border-radius: 0 0 10px 10px; 
-  box-shadow: 0 2px 8px #bbb;
-  padding-bottom: 7px;
-  z-index: 30;
-  padding-top: 7px;
-}
-#formManttoBoxFixed iframe {
-  width: 100%;
-  min-height: 370px;
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 1px 8px #7777;
-}
-
-/* Visor 3D */
-#visor-container {
-  flex: 1 1 600px;
-  align-self: flex-start;
-  min-width: 500px;
-  max-width: 880px;
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 4px rgb(168,168,168);
-  overflow: hidden;
-  position: relative;
-}
-
-/* Documentos a la derecha, fijo */
-#docsBox {
-  position: fixed;
-  right: 18px;
-  top: 22px;
-  max-height: 90vh;
-  width: 300px;
-  z-index: 99;
-  /* otros estilos... */
-}
-
-/* Responsive para pantallas pequeñas */
-@media (max-width: 1000px) {
-  body {
+/* Responsive */
+@media (max-width:1200px){
+  .layout-container {
     flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    height: auto; min-height: unset;
   }
-  #panel-lateral, #docsBox, #visor-container {
-    position: static !important;
-    width: 99vw !important;
-    max-width: none !important;
-    left: 0; top: 0; right: 0; margin:0 auto;
+  .sidebar, #visor-container, #docsBox {
+    min-width: 0; max-width: 100vw; width: 98vw;
+    border-radius: 14px;
+    box-shadow: 0 1px 7px #8886;
+    margin: 0 auto 8px auto;
+    height: auto;
   }
+  #infoBox, #formManttoBoxFixed { max-height: none; }
 }
-    #panel-lateral {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      min-width: 355px;
-      max-width: 400px;
-      height: 98vh;
-      position: relative;
-      gap: 0px;
-      margin-right: 28px;
-      justify-content: flex-start;
-
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        align-items: center;
-      }
-      #infoBox,
-      #docsBox {
-        max-width: 90%;
-        width: 90%;
-      }
-      #visor-container {
-        width: 90%;
-        max-width: 90%;
-      }
-      .form-mantto-box {
-        width: 98vw;
-        max-width: 98vw;
-      }
-    }
+    
   </style>
 </head>
 
 <body>
-
+ <div class="layout-container">
 <!-- Panel lateral izquierdo -->
-<div id="panel-lateral">
-  <div id="infoBox"></div>
-<div id="formManttoBoxFixed">
+<div class="sidebar left">
+      <div id="infoBox"></div>
+       <div id="formManttoBoxFixed">
   <iframe
     src="https://forms.office.com/Pages/ResponsePage.aspx?id=jPoHr0lweUuuoJAk7RsbtU8ZgqzQR2RHnX3H-fqzymZURFhCQjhSNkEwVTJPNDFBN043TlZLQ1hOQS4u&embed=true" 
      width="100%"
-    height="525"
+    height="340"
     frameborder="0"
-    marginheight="0"
-    marginwidth="0"
     style="border-radius:10px; box-shadow:0 2px 8px #555;">
     Cargando…
   </iframe>
 </div>
 </div>
-
-
 <!-- Contenedor del visor 3D centro -->
 <div id="visor-container">
   <!-- ============== LOGOS ============== -->
@@ -253,7 +202,13 @@
   <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
 </div>
 
-
+ <!-- Lado derecho -->
+    <div class="sidebar right" >
+    <div id="docsBox">
+      <!-- Tus documentos se insertarán aquí vía JS -->
+    </div>
+  </div>
+  </div>
 <!-- ============== MODAL VISOR DE PDF ============== -->
 <div id="pdfModal" style="display:none; 
 position:fixed; 
@@ -288,7 +243,21 @@ z-index:999;">
       font-size: 18px;">✖</button>
   </div>
 </div>
-
+<!-- Botón de descarga directa del ZIP -->
+<button id="downloadProjectZip" style="
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: #797b79;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 10px;
+  z-index: 1000;">
+  📥 Descargar
+</button>
 <!-- Librerías necesarias -->
 <script src="libs/three.min.js"></script>
 <script src="libs/GLTFLoader.js"></script>
