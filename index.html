@@ -400,11 +400,10 @@ animate();
 
 
 /* ============== CARGAR Y MOSTRAR DOCUMENTOS DE INGENIERÍA AGRUPADOS ============== */
-// 1. Crear ventana de documentos de ingeniería 
-const docsBox = document.createElement('div');
-docsBox.id = "docsBox";
-docsBox.innerHTML = "<h3 style='text-align:center;'>Documentos de Ingeniería</h3>";
-document.body.appendChild(docsBox);
+
+const docsBox = document.getElementById('docsBox');
+docsBox.innerHTML = "<h3 style='text-align:center;'>EDDI</h3>";
+
 
 // 2. Cargar JSON estructurado
 fetch('Activos/Documentos_ingeniería/documentos.json')
