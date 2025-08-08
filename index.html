@@ -429,7 +429,7 @@ container.addEventListener('click', (event) => {
 
       Object.keys(data).forEach(key => {
         let lowerKey = key.toLowerCase().trim();
-        if (!["nombre_original", "nombre_amigable", "imagen", "técnificha", "manual"].includes(lowerKey)) {
+        if (!["nombre_original", "nombre_amigable", "imagen", "técnificha",].includes(lowerKey)) {
           html += `<strong>${key}:</strong> ${data[key] || 'N/A'}<br>`;
         }
       });
@@ -438,9 +438,7 @@ container.addEventListener('click', (event) => {
       if (data["TécniFicha"]) {
         html += `<button class="pdf-button" onclick="openPdfModal('${data["TécniFicha"]}')">🧾 TécniFicha</button>`;
       }
-      if (data["Manual"]) {
-        html += `<button class="pdf-button" onclick="openPdfModal('${data["Manual"]}')">⚙️ Manual</button>`;
-      }
+
       infoBox.innerHTML = html;
       infoBox.style.display = "block";
     } else {
