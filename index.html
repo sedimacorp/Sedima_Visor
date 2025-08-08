@@ -199,7 +199,7 @@ canvas {
   /* ================= IMAGEN DEL INFOBOX ================= */       
     .element-img {
       background-color: #ffffff;
-      max-width:50%;
+      max-width:55%;
       height: auto;
       border-radius: 10px;
       margin: 5px auto;
@@ -251,8 +251,6 @@ canvas {
     🗂️ DESCARGAR DOCUMENTACIÓN
   </button>
 </div>
-
-
  <!-- Lado derecho -->
     <div class="sidebar right" >
     <div id="docsBox">
@@ -325,7 +323,7 @@ const highlightMaterial = new THREE.MeshStandardMaterial({ color: "#C9AE5D", met
 
 /* ============== CARGA DEL CSV GENERAL CON TODOS LOS ELEMENTOS ============== */
 let datosElementos = {};
-fetch('Datos/mapa_elementos.csv')
+fetch('Datos/CSV1.csv')
   .then(response => response.text())
   .then(data => {
     const lines = data.trim().split('\n');
