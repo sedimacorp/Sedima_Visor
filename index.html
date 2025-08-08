@@ -177,26 +177,7 @@ canvas {
   opacity: 1;
   background: #001d7a;
 }
-/* ================= BOTÓN DE POWER BI ================= */
-#btnPowerBI {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background-color: #f44336; /* Rojo Sedima */
-  color: white;
-  padding: 12px 18px;
-  font-weight: bold;
-  font-size: 13px;
-  text-decoration: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  z-index: 1000;
-  transition: 0.3s ease;
-}
-#btnPowerBI:hover {
-  background-color: #d32f2f;
-  transform: scale(1.05);
-}
+
 
   /* ================= BOTONES DE PDF ================= */       
     .pdf-button { 
@@ -513,11 +494,6 @@ closePdfModal.addEventListener('click', () => {
 /* ============== BOTÓN DE DESCARGA DOCUMENTACIÓN ============== */
 document.getElementById('downloadProjectZip').addEventListener('click', function() {
   window.location.href = 'Activos/DESCARGAR_DOCUMENTACIÓN.zip' });
-
- <!-- Botón Power BI -->
-<a href="https://app.powerbi.com/view?r=TU_ID_DE_REPORTE" target="_blank" id="btnPowerBI">
-  VER DASHBOARD POWER BI
-</a>
  
 
 </script>
