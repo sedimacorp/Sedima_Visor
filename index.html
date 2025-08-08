@@ -178,7 +178,27 @@ canvas {
   background: #001d7a;
 }
 
-
+   .visor-dashboard-btn {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  background: #787878;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 10px; 
+  font-weight: bold;
+  z-index: 22;
+  box-shadow: 0 2px 18px rgba(5, 6, 6, 0.267);
+  opacity: 0.94;
+  transition: opacity 0.18s;
+}
+.visor-dashboard-btn:hover {
+  opacity: 1;
+  background: #001d7a;
+}
   /* ================= BOTONES DE PDF ================= */       
     .pdf-button { 
       background: #041daa86; 
@@ -250,7 +270,13 @@ canvas {
   <button id="downloadProjectZip" class="visor-download-btn">
     🗂️ DESCARGAR DOCUMENTACIÓN
   </button>
+
+  <button id="dashboardPowerBI" class="visor-dashboard-btn">
+    📊 DASHBOARD
+  </button> 
+
 </div>
+
  <!-- Lado derecho -->
     <div class="sidebar right" >
     <div id="docsBox">
@@ -495,6 +521,9 @@ closePdfModal.addEventListener('click', () => {
 document.getElementById('downloadProjectZip').addEventListener('click', function() {
   window.location.href = 'Activos/DESCARGAR_DOCUMENTACIÓN.zip' });
  
+  document.getElementById('dashboardPowerBI').addEventListener('click', function() {
+  window.open('https://app.powerbi.com/view?r=TU_ID_DE_REPORTE', '_blank');
+});
 
 </script>
 </body>
