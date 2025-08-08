@@ -32,7 +32,7 @@ Solid1_148;"TUBERÍA 4""";;"Tubería de acero al carbono sin
 costuras o con costura longitudinal";Acero,Carbono;De 2 a 49 in;;Normas de fabricación: API 5L / Modelos: R10 – R25 – R50 – FC /Grados: GRB, X42, X52, X60, X65;Activos/Documentos_Técnicos/Tuberías/TF-110.pdf;Activos/Imagenes/Tuberias/TUB1.png
 Solid1_645;"HALF COUPLING 3/4""";;Accesorios roscados;Génerico;;;;;Activos/Imagenes/Half coupling/Half01.png
 Solid2_7;"NIPLE ROSCADO 3/4""-2""";;Accesorios roscados;Génerico;;;;;Activos/Imagenes/Esparrágo/Niple01.png
-          6_14;"VÁLVULA DE BOLA 3/4""";;Válvula de blqueo;Carbon steel;de 1/2 a 2 in;;Modelo: Bola flotante / Paso: Completo /Rating: #2000 , #3000, #6000;Activos/Documentos_Técnicos/Válvulas/TF-105.pdf;Activos/Imagenes/Valvulas/VB03.png
+����������6_14;"VÁLVULA DE BOLA 3/4""";;Válvula de blqueo;Carbon steel;de 1/2 a 2 in;;Modelo: Bola flotante / Paso: Completo /Rating: #2000 , #3000, #6000;Activos/Documentos_Técnicos/Válvulas/TF-105.pdf;Activos/Imagenes/Valvulas/VB03.png
      3_9;"VÁLVULA DE BOLA 3/4""";;Válvula de blqueo;Carbon steel;de 2 a 12 in;;Modelo: Bola flotante / Paso: Completo /Rating: #2000 , #3000, #6000;Activos/Documentos_Técnicos/Válvulas/TF-105.pdf;Activos/Imagenes/Valvulas/VB03.png
 Solid1_123;"TAPÓN 1/2"" ";;Tornillería;Acero, forjado;;;;;Activos/Imagenes/Esparrágo/TAPON01.png
 Solid7_5;"TEE RECTA 4""";;Accesorios soldados;Acero,Carbono;;;;;
@@ -40,7 +40,7 @@ Solid3_331;"BRIDA WN 4""";;Accesorios soldados;Acero,Carbono;;;;;
 Solid2_22;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Bola;WCB/XCC;de 2 a 12 in;150-300-600;Conexiones: FLG-RF x FLG-RF / Modelo: Side Entry;Activos/Documentos_Técnicos/Válvulas/TF-104.pdf;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid1_464;"TUBERÍA 4""";;"Tubería de acero al carbono sin
 costuras o con costura longitudinal";Acero,Carbono;De 2 a 49 in;;Normas de fabricación: API 5L / Modelos: R10 – R25 – R50 – FC /Grados: GRB, X42, X52, X60, X65;Activos/Documentos_Técnicos/Tuberías/TF-110.pdf;Activos/Imagenes/Tuberias/TUB1.png
-Sólido1_13;"FILTRO 10 """;;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;"Activos/Documentos_Técnicos/Filtro/TF-102.pdf""";Activos/Imagenes/Filtros/FLT01.png
+Sólido1_13;"FILTRO 10 """;;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;Activos/Documentos_Técnicos/Filtro/TF-102.pdf;Activos/Imagenes/Filtros/FLT01.png
 Solid1_467;"TUBO ROSCADO 2""";;Tubería;Acero,Carbono;;;;;
 Solid1_468;"CODO 2""";;Accesorios soldados;Acero;;;;;Activos/Imagenes/Codos/CODO-02.png
 Solid1_469;"TUBERÍA 2""";;"Tubería de acero al carbono sin
@@ -55,7 +55,7 @@ Solid1_473;"CODO 2""-90°";;Accesorios soldados;Acero,Carbono;;;;;Activos/Imagen
 Solid1_474;"TUBERÍA 2""";;"Tubería de acero al carbono sin
 costuras o con costura longitudinal";Acero,Carbono;De 2 a 49 in;;Normas de fabricación: API 5L / Modelos: R10 – R25 – R50 – FC /Grados: GRB, X42, X52, X60, X65;Activos/Documentos_Técnicos/Tuberías/TF-110.pdf;Activos/Imagenes/Tuberias/TUB1.png
 Solid1_445;"CAP 10""";;Accesorios soldados;Génerico;;;;;
-Solid1_446;"FILTRO  10""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;"Activos/Documentos_Técnicos/Filtro/TF-102.pdf""";"Activos/Imagenes/Filtros/FLT01.png"""
+Solid1_446;"FILTRO  10""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;Activos/Documentos_Técnicos/Filtro/TF-102.pdf;Activos/Imagenes/Filtros/FLT01.png
 Solid3_353;"BRIDA WN 10""";;Accesorios soldados;Acero,Carbono;;;;;
 Solid3_301;"BRIDA CIEGA 10""";;Accesorios soldados;Génerico;;;;;
 Solid3_369;"ESPARRÁGO BRIDA 10""";;Tornillería;Génerico;;;;;Activos/Imagenes/Esparrágo/ESP01.png
@@ -68,10 +68,10 @@ Solid3_324;"BRIDA CIEGA 8""";;Accesorios soldados;Génerico;;;;;
 Solid3_355;"BRIDA WN 8""";;Accesorios soldados;Acero,Carbono;;;;;
 Solid2_360;"ESPARRÁGO BRIDA 8""";;Tornillería;Génerico;;;;;Activos/Imagenes/Esparrágo/ESP01.png
 Solid3_377;"ESPARRÁGO BRIDA 8""";;Tornillería;Génerico;;;;;Activos/Imagenes/Esparrágo/ESP01.png
-Solid1_476;"FILTRO 8""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;"Activos/Documentos_Técnicos/Filtro/TF-102.pdf""";"Activos/Imagenes/Filtros/FLT01.png"""
-Solid1_475;"FILTRO 8""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;"Activos/Documentos_Técnicos/Filtro/TF-102.pdf""";"Activos/Imagenes/Filtros/FLT01.png"""
-Sólido1_35;"FILTRO 8""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;"Activos/Documentos_Técnicos/Filtro/TF-102.pdf""";"Activos/Imagenes/Filtros/FLT01.png"""
-Sólido1_34;"FILTRO 8""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;"Activos/Documentos_Técnicos/Filtro/TF-102.pdf""";"Activos/Imagenes/Filtros/FLT01.png"""
+Solid1_476;"FILTRO 8""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;Activos/Documentos_Técnicos/Filtro/TF-102.pdf;Activos/Imagenes/Filtros/FLT01.png
+Solid1_475;"FILTRO 8""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;Activos/Documentos_Técnicos/Filtro/TF-102.pdf;Activos/Imagenes/Filtros/FLT01.png
+Sólido1_35;"FILTRO 8""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;Activos/Documentos_Técnicos/Filtro/TF-102.pdf;Activos/Imagenes/Filtros/FLT01.png
+Sólido1_34;"FILTRO 8""";;Filtro vertical;Acero al carbono;de 2 a 12 in;150-300-600;TEMP: -20°F a 350 °F / Velocidad recomendada < 60 fps;Activos/Documentos_Técnicos/Filtro/TF-102.pdf;Activos/Imagenes/Filtros/FLT01.png
 Solid1_519;"TAPÓN DE CABEZA HEXAGONAL 1""";;Tornillería;Acero;;;;;Activos/Imagenes/Esparrágo/TAPON01.png
 Solid1_520;"TAPÓN DE CABEZA HEXAGONAL 1""";;Tornillería;Acero;;;;;Activos/Imagenes/Esparrágo/TAPON01.png
 Solid1_517;"TAPÓN DE CABEZA HEXAGONAL 1""";;Tornillería;Acero;;;;;Activos/Imagenes/Esparrágo/TAPON01.png
@@ -181,12 +181,12 @@ costuras o con costura longitudinal";Acero, carbono;De 2 a 49 in;;Normas de fabr
 Solid1_113;"REDUCCIÓN CONCÉNTRICA 4""-2""";;Accesorios soldados;Acero, carbono;;;;;
 Solid1_122;"TAPÓN DE 1/2"" CABEZA HEXAGONAL";;Tornillería;Acero,forjado;;;;;Activos/Imagenes/Esparrágo/TAPON01.png
      3_6;"TAPÓN DE 1/2"" CABEZA HEXAGONAL";;Tornillería;Acero,forjado;;;;;Activos/Imagenes/Esparrágo/TAPON01.png
-          6_14;"VÁLVULA DE BOLA 3/4""";;Válvula de blqueo;Carbon steel;de 2 a 12 in;;Modelo: Bola flotante / Paso: Completo /Rating: #2000 , #3000, #6000;Activos/Documentos_Técnicos/Válvulas/TF-105.pdf;Activos/Imagenes/Valvulas/VB03.png
+����������6_14;"VÁLVULA DE BOLA 3/4""";;Válvula de blqueo;Carbon steel;de 2 a 12 in;;Modelo: Bola flotante / Paso: Completo /Rating: #2000 , #3000, #6000;Activos/Documentos_Técnicos/Válvulas/TF-105.pdf;Activos/Imagenes/Valvulas/VB03.png
 Solid2_4;"NIPLE ROSCADO 3/4""-2""";;Accesorios roscados;Génerico;;;;;Activos/Imagenes/Esparrágo/Niple01.png
 Solid1_559;"HALF COUPLING 3/4""";;Accesorios roscados;Génerico;;;;;Activos/Imagenes/Half coupling/Half01.png
      3_8;"TAPÓN DE 1/2"" CABEZA HEXAGONAL";;Tornillería;Acero,forjado;;;;;Activos/Imagenes/Esparrágo/TAPON01.png
 Solid1_119;"TAPÓN DE 1/2"" CABEZA HEXAGONAL";;Tornillería;Acero,forjado;;;;;Activos/Imagenes/Esparrágo/TAPON01.png
-          6_14;"VÁLVULA DE BOLA 3/4""";;Válvula de blqueo;Carbon steel;de 2 a 12 in;;Modelo: Bola flotante / Paso: Completo /Rating: #2000 , #3000, #6000;Activos/Documentos_Técnicos/Válvulas/TF-105.pdf;Activos/Imagenes/Valvulas/VB03.png
+����������6_14;"VÁLVULA DE BOLA 3/4""";;Válvula de blqueo;Carbon steel;de 2 a 12 in;;Modelo: Bola flotante / Paso: Completo /Rating: #2000 , #3000, #6000;Activos/Documentos_Técnicos/Válvulas/TF-105.pdf;Activos/Imagenes/Valvulas/VB03.png
 Solid2_6;"NIPLE ROSCADO 3/4""-2""";;Accesorios roscados;Génerico;;;;;Activos/Imagenes/Esparrágo/Niple01.png
 Solid3_346;"BRIDA WN 2""-600";;Accesorios soldados;Acero, carbono;;;;;
 Solid1_223;ESPARRÁGO BRIDA2-600;;Tornillería;Génerico;;;;;Activos/Imagenes/Esparrágo/ESP01.png
@@ -327,7 +327,7 @@ Sólido2_5;BARRIDO DE TUBERÍA;;Tubería;Cobre;;;;;
 Solid1_22;"CONECTOR RECTO 1/2""";;Accesorios roscados;Acero inoxidable, austenítico;;;;;Activos/Imagenes/Conector/CON-01.png
 Solid1_625; ss-4-wvcr-6-400_02;;;Génerico;;;;;
 Sólido3_1;BARRIDO DE TUBERÍA;;Tubería;Cobre;;;;;
-Sólido1_17;REGISTRADOR ANALOGICO DE PRESIÓN;;Registrador de presión;Génerico;;;Rango de presión: 0-100 psi/0-300 psi/0-1000 psi (según modelo) / Elemento sensor: Tubo Bourdon;"Activos/Documentos_Técnicos/Registrador/TF-109.pdf""";Activos/Imagenes/REGISTRADOR/CTRL-01.png
+Sólido1_17;REGISTRADOR ANALOGICO DE PRESIÓN;;Registrador de presión;Génerico;;;Rango de presión: 0-100 psi/0-300 psi/0-1000 psi (según modelo) / Elemento sensor: Tubo Bourdon;Activos/Documentos_Técnicos/Registrador/TF-109.pdf;Activos/Imagenes/REGISTRADOR/CTRL-01.png
 Solid1_30;"CONECTOR RECTO 1/4""";;Tornillería;Acero inoxidable, austenítico;;;;;Activos/Imagenes/Conector/CON-01.png
 Solid2_18;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Bola;WCB/XCC;de 2 a 12 in;150-300-600;Conexiones: FLG-RF x FLG-RF / Modelo: Side Entry;Activos/Documentos_Técnicos/Válvulas/TF-104.pdf;Activos/Imagenes/Valvulas/Valvulabola.png
 Solid2_16;"VÁLVULA DE BOLA 2 CUERPOS 4""";VAL-101;Bola;WCB/XCC;de 2 a 12 in;150-300-600;Conexiones: FLG-RF x FLG-RF / Modelo: Side Entry;Activos/Documentos_Técnicos/Válvulas/TF-104.pdf;Activos/Imagenes/Valvulas/Valvulabola.png
