@@ -354,7 +354,7 @@ Solid1_2;"CODO 4""-90°";N/A.;Accesorios soldados. Conexión de tubería;Acero a
 Solid1;"CODO 4""-90°";N/A.;Accesorios soldados. Conexión de tubería;Acero al carbono ASTM A234 WPB;4 in;N/A.;Dimensiones por ANSI B16.9;;Activos/Imagenes/Codos/COD01.png
 Solid1_150;"TUBERÍA 4""";;Tubería de acero al carbono sin costuras o con costura longitudinal;API 5L Gr. B;De 2 a 12 in;;Normas de fabricación: PSL1 /PSL2 - Single or double Ramdon length;Activos/Documentos_Técnicos/Tuberías/TF-110.pdf;Activos/Imagenes/Tuberias/TUB1.png
 Solid2_133;"VÁLVULA DE BOLA DE 4"" (SIDE ENTRY)";VAL-114;Bola;WCB/WCC;de 2 a 4 in;150 / 600;Conexiones: FLG-RF x FLG-RF / Modelo: Side Entry;Activos/Documentos_Técnicos/Válvulas/TF-104.pdf;Activos/Imagenes/Valvulas/Valvulabola.png
-Solid3;"BRIDA CIEGA 4""";;Accesorios soldados;Génerico;;;Activos\Imagenes\Brida\FLG02.png;;
+Solid3;"BRIDA CIEGA 4""";;Accesorios soldados;Génerico;;;;;Activos\Imagenes\Brida\FLG02.png
 Solid1_129;"TEE 1/2""";N/A.;Accesorios soldados;Acero inoxidable SS-316;1/2 in;N/A.;Minimo #3000;;Activos\Imagenes\Tuberias\TEE02.png
 Solid1_134;"TUBERÍA 4""";;Tubería de acero al carbono sin costuras o con costura longitudinal;API 5L Gr. B;De 2 a 12 in;;Normas de fabricación: PSL1 /PSL2 - Single or double Ramdon length;Activos/Documentos_Técnicos/Tuberías/TF-110.pdf;Activos/Imagenes/Tuberias/TUB1.png
 Solid1_553;"CONECTOR RECTO 1/4""";;Tornillería;Acero inoxidable, austenítico;;;;;Activos/Imagenes/Conector/CON-01.png
