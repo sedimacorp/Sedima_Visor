@@ -100,7 +100,7 @@ Solid2_21;"VÁLVULA DE BOLA DE 4"" (SIDE ENTRY)";VAL-105;Bola;WCB/WCC;de 2 a 4 i
 Sólido1_40;ACTUADOR PA70;;Actuador neumático;Aluminio;Para Válvulas de 2 – 6in;150-300-600;Rango de Operación: 40 – 120 Psig /Dimensionamiento recomendado: 80 Psig;Activos/Documentos_Técnicos/Actuadores/TF-103.pdf;Activos/Imagenes/Actuadores/ACT03.png
 Solid1_118;SOPORTE;;;;;;;;
 Solid1_677;BASE TABLERO;;;;;;;;
-Solid1_657;FILTRO TABLERO ACTUADOR;N/A.;Filtro de instrumentación;Alumino;F-252;#2150;Fabricante: Fisher, modelo F-252;;Activos/Imágenes/Filtros/FLT05.png
+Solid1_657;FILTRO TABLERO ACTUADOR;N/A.;Filtro de instrumentación;Alumino;F-252;#2150;Fabricante: Fisher, modelo F-252;;Activos/Imagenes/Filtros/FLT05.png
 Solid1_627;REGULADOR 1301F_B;;;;;;;;
 Solid1_545;"TEE 1/8""";;;;;;;;Activos/Imagenes/Conector/CON-03.png
 Solid2_366;REGULADOR FISHER 67-CF;;;;;;;;
