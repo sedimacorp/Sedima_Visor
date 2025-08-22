@@ -280,7 +280,7 @@ canvas {
     🗂️ DESCARGAR DOCUMENTACIÓN
   </button>
 
-  <button id="dashboardPowerBI" class="visor-dashboard-btn">
+  <button id="dashboard" class="visor-dashboard-btn">
     📊 DASHBOARD
   </button> 
 
@@ -325,6 +325,23 @@ z-index:999;">
       height: 32px; 
       cursor: pointer; 
       font-size: 18px;">✖</button>
+  </div>
+</div>
+<!-- ============== MODAL VISOR DE DASHBOARD ============== -->
+<div id="dashboardModal" style="display:none; 
+  position:fixed; 
+  top:0; left:0; 
+  width:100%; height:100%; 
+  background: rgba(30,40,90,0.74); 
+  justify-content:center; align-items:center; 
+  z-index:999;">
+  <div style="position: relative; width: 90%; max-width: 1100px; height: 88%;">
+    <iframe 
+      id="dashboardFrame"
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQN5zN3B8yqSduk4yV9yUYPg78QH7A8XZeyDjA_p_ivJ6jRbhcI1pg9AXbH-d0j6TkYnJ3Glt2Pcb4n/pubhtml?gid=1899222266&single=true"
+      style="width: 100%; height: 100%; border: none; border-radius: 12px;">
+    </iframe>
+    <button id="closeDashboardModal" style="position: absolute; top: 12px; right: 16px; background: #041daa; color: white; border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 18px;">✖</button>
   </div>
 </div>
 
@@ -524,13 +541,25 @@ closePdfModal.addEventListener('click', () => {
   pdfModal.style.display = "none";
   pdfFrame.src = "";
 });
+
 /* ============== BOTÓN DE DESCARGA DOCUMENTACIÓN ============== */
 document.getElementById('downloadProjectZip').addEventListener('click', function() {
   window.location.href = 'Activos/DESCARGAR DOCUMENTACIÓN.zip' });
  
-document.getElementById('dashboardPowerBI').addEventListener('click', function() {
-  window.open('https://app.powerbi.com/links/4U5LxSvaA7?ctid=af07fa8c-7049-4b79-aea0-9024ed1b1bb5&pbi_source=linkShare', '_blank');
-}); 
+// MODAL DASHBOARD GOOGLE SHEETS
+const dashboardModal = document.getElementById('dashboardModal');
+const closeDashboardModal = document.getElementById('closeDashboardModal');
+
+document.getElementById('dashboard').addEventListener('click', function() {
+  dashboardModal.style.display = "flex";
+});
+
+closeDashboardModal.addEventListener('click', function() {
+  dashboardModal.style.display = "none";
+  
+ document.getElementById('dashboardFrame').src = document.getElementById('dashboardFrame').src;
+});
+
 
 
 </script>
