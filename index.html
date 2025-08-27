@@ -321,6 +321,46 @@ z-index:999;">
 <script src="libs/GLTFLoader.js"></script>
 <script src="libs/OrbitControls.js"></script>
 <script>
+
+  const antiCaptureLayer = document.getElementById('antiCaptureLayer');
+
+// Detección de móvil (userAgent y tamaño pantalla)
+function isMobile() {
+  return /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent) || window.innerWidth < 820;
+}
+
+// Evento para teclas típicas de captura/reporte
+document.addEventListener('keydown', function(e) {
+  // Desktop
+  if (
+    e.key === "PrintScreen" || 
+    e.key === "F10" || 
+    (e.ctrlKey && e.key === "s") || 
+    (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "s")
+  ) {
+    e.preventDefault();
+    antiCaptureLayer.style.display = "flex";
+  }
+  // Mobile: intentos (simulados) de captura, volumen arriba+power
+  if (isMobile() && (e.key === "Power" || e.key === "VolumeUp")) {
+    antiCaptureLayer.style.display = "flex";
+  }
+});
+
+// Detectar recorte/captura en mobile por 'visibilitychange' (puede fallar en algunos SO)
+document.addEventListener("visibilitychange", function() {
+  // Si la pantalla pasó a oculto y es móvil, muestra la capa protectora
+  if (isMobile() && document.visibilityState === "hidden") {
+    antiCaptureLayer.style.display = "flex";
+  }
+});
+
+// Bloqueo de clic derecho y selección
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+document.body.style.userSelect = 'none';
+
 /* ============== VARIABLES PRINCIPALES DEL VISOR ============== */
 const container = document.getElementById('visor-container');
 const infoBox = document.getElementById('infoBox');
@@ -533,8 +573,40 @@ closeDashboardModal.addEventListener('click', function() {
   dashboardModal.style.display = "none";
 
 });
-
-
+<div id="antiCaptureLayer" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  backdrop-filter: blur(12px);
+  background: rgba(10,22,50,0.54);
+  z-index: 99999;
+  align-items: center; justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  pointer-events: all;
+">
+  <img src="Activos/Logos/LogoSedima.png" alt="Logo Empresa" style="width:120px; margin-bottom:2vw; border-radius:10px; box-shadow:0 2px 12px #0009;" />
+  <div>SISTEMA ANTICAPTURAS</div>
+  <div style="font-size: 1.2vw; font-weight:normal; margin-top:18px; max-width:450px;">
+    ⚠️ Por seguridad, se ha bloqueado la visualización tras detectar un intento de captura pantalla o recorte.
+    Para continuar, cierre esta advertencia.
+  </div>
+  <button onclick="antiCaptureLayer.style.display='none'" style="
+    margin-top:28px; 
+    background: #013177; 
+    color: #fff;
+    font-size: 1vw;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 11px 32px;
+    border: none;
+    box-shadow: 0 1px 10px #001b;">
+    VOLVER AL VISOR
+  </button>
+</div>
 
 </script>
 </body>
