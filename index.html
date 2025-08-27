@@ -382,11 +382,13 @@ z-index:999;">
     e.key === "Impr Pant" ||
     e.key === "Imp Ptn" ||
     e.key === "PrtSc" ||
+    e.key === "F10" ||
     e.key === "PrtScr" ||
     e.key === "PrtScn" ||
     e.key === "PrntScrn" ||
     e.key.toLowerCase() === "impr pant" ||
-    e.key.toLowerCase() === "imp ptn"
+    e.key.toLowerCase() === "imp ptn"||
+    e.keyCode===44
       ){
  
    e.preventDefault();
