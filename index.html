@@ -401,10 +401,21 @@ z-index:999;">
       navigator.clipboard.writeText(""); // Vacía portapapeles en algunos navegadores
     } 
       }
+
+      // Snipping Tool (Ctrl+Shift+S)
+  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "s") {
+    e.preventDefault();
+    antiCaptureLayer.style.display = "flex";}
+
       if (isMobile() && (e.key === "Power" || e.key === "VolumeUp")) {
         antiCaptureLayer.style.display = "flex";
       }
-    });
+      // MacOS screenshots
+  if ((e.metaKey && e.shiftKey && e.key === "4") || (e.metaKey && e.shiftKey && e.key === "3")) {
+    e.preventDefault();
+    antiCaptureLayer.style.display = "flex";
+  }
+
 
   // Si la página pierde visibilidad (usuario cambia pestaña/ventana en móvil)
 document.addEventListener("visibilitychange", function() {
@@ -412,9 +423,16 @@ document.addEventListener("visibilitychange", function() {
     antiCaptureLayer.style.display = "flex";
   }
 });
+// Bloquear clic derecho en todo el documento
 document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-    });
+  // Si el clic fue dentro del visor, PERMITIRLO
+  if (e.target.closest('#visor-container')) {
+    return; 
+  }
+  // Si fue fuera del visor, bloquearlo
+  e.preventDefault();
+});
+
     document.body.style.userSelect = 'none';
     document.addEventListener('copy', e => e.preventDefault());
 document.addEventListener('cut', e => e.preventDefault());
