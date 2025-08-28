@@ -407,15 +407,17 @@ z-index:999;">
     e.preventDefault();
     antiCaptureLayer.style.display = "flex";}
 
-      if (isMobile() && (e.key === "Power" || e.key === "VolumeUp")) {
-        antiCaptureLayer.style.display = "flex";
-      }
       // MacOS screenshots
   if ((e.metaKey && e.shiftKey && e.key === "4") || (e.metaKey && e.shiftKey && e.key === "3")) {
     e.preventDefault();
     antiCaptureLayer.style.display = "flex";
   }
 
+  // Móviles
+  if (isMobile() && (e.key === "Power" || e.key === "VolumeUp")) {
+    antiCaptureLayer.style.display = "flex";
+  }
+});
 
   // Si la página pierde visibilidad (usuario cambia pestaña/ventana en móvil)
 document.addEventListener("visibilitychange", function() {
@@ -433,8 +435,8 @@ document.addEventListener('contextmenu', function(e) {
   e.preventDefault();
 });
 
-    document.body.style.userSelect = 'none';
-    document.addEventListener('copy', e => e.preventDefault());
+  document.body.style.userSelect = 'none';
+  document.addEventListener('copy', e => e.preventDefault());
 document.addEventListener('cut', e => e.preventDefault());
 document.addEventListener('paste', e => e.preventDefault());
 
