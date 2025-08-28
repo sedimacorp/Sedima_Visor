@@ -374,70 +374,87 @@ z-index:999;">
 <script>
 /* --- ANTICAPTURAS --- */
 
-    function isMobile() {
-      return /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent) || window.innerWidth < 820;
-    }
-    const antiCaptureLayer = document.getElementById('antiCaptureLayer');
-
-    document.addEventListener('keyup', function(e) {
-      if (
- e.key === "PrintScreen" ||
-    e.key === "Impr Pant" ||
-    e.key === "Imp Ptn" ||
-    e.key === "PrtSc" ||
-    e.key === "F10" ||
-    e.key === "PrtScr" ||
-    e.key === "PrtScn" ||
-    e.key === "PrntScrn" ||
-    e.key.toLowerCase() === "impr pant" ||
-    e.key.toLowerCase() === "imp ptn"||
-    e.keyCode===44 // PrintScreen keyCode
-      ){
- 
-   e.preventDefault();
-        antiCaptureLayer.style.display = "flex";
-       if (navigator.clipboard) {
-      navigator.clipboard.writeText(""); // Vacía portapapeles en algunos navegadores
-    } 
-      }
-
-      // Snipping Tool (Ctrl+Shift+S)
-  if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "s") {
-    e.preventDefault();
-    antiCaptureLayer.style.display = "flex";}
-
-      // MacOS screenshots
-  if ((e.metaKey && e.shiftKey && e.key === "4") || (e.metaKey && e.shiftKey && e.key === "3")) {
-    e.preventDefault();
-    antiCaptureLayer.style.display = "flex";
-  }
-
-  // Móviles
-  if (isMobile() && (e.key === "Power" || e.key === "VolumeUp")) {
-    antiCaptureLayer.style.display = "flex";
-  }
-});
-
-  // Si la página pierde visibilidad (usuario cambia pestaña/ventana en móvil)
-document.addEventListener("visibilitychange", function() {
-  if (document.visibilityState === "hidden") {
-    antiCaptureLayer.style.display = "flex";
-  }
-});
-// Bloquear clic derecho en todo el documento
-document.addEventListener('contextmenu', function(e) {
-  // Si el clic fue dentro del visor, PERMITIRLO
-  if (e.target.closest('#visor-container')) {
-    return; 
-  }
-  // Si fue fuera del visor, bloquearlo
+// Bloquear clic derecho (excepto en el visor)
+document.addEventListener('contextmenu', e => {
+  if (e.target.closest('#visor-container')) return; 
   e.preventDefault();
 });
 
-  document.body.style.userSelect = 'none';
-  document.addEventListener('copy', e => e.preventDefault());
-document.addEventListener('cut', e => e.preventDefault());
-document.addEventListener('paste', e => e.preventDefault());
+// ======================
+// Funciones de Fullscreen
+function activarFullscreen(element) {
+  if (element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+}
+function salirFullscreen() {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  }
+}
+
+// ======================
+// Protección Anticaptura Mejorada
+const antiCapture = document.getElementById('antiCaptureLayer');
+let overlayActivo = false;
+
+// Mostrar/Ocultar overlay
+function activarProteccion() {
+  if (!overlayActivo) {
+    antiCapture.style.display = 'flex';
+    overlayActivo = true;
+  }
+}
+function desactivarProteccion() {
+  if (overlayActivo) {
+    antiCapture.style.display = 'none';
+    overlayActivo = false;
+  }
+}
+
+// Detectar PrintScreen, F10, combinaciones Ctrl y Snipping Tool
+document.addEventListener('keydown', e => {
+  if (
+    e.key === 'PrintScreen' || e.key === 'F10' ||
+    (e.ctrlKey && ['c','x','s','p'].includes(e.key.toLowerCase())) ||
+    (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 's') // Snipping Tool
+  ) {
+    e.preventDefault();
+    activarProteccion();
+  }
+});
+
+// Detectar atajos de Mac (Cmd+Shift+3 o 4)
+document.addEventListener('keyup', e => {
+  if (
+    e.key === 'PrintScreen' || e.key === 'F10' ||
+    (e.metaKey && e.shiftKey && (e.key === '3' || e.key === '4'))
+  ) {
+    activarProteccion();
+  }
+});
+
+// Detectar cambio de pestaña o minimizar
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) activarProteccion();
+});
+
+// Detectar pérdida de foco de la ventana
+window.addEventListener('blur', () => {
+  activarProteccion();
+});
+
+// Cerrar overlay al hacer clic en el fondo difuminado o en el botón
+antiCapture.addEventListener('click', e => {
+  if (e.target === antiCapture || e.target.tagName === "BUTTON") {
+    desactivarProteccion();
+  }
+});
+
 
 /* ============== VARIABLES PRINCIPALES DEL VISOR ============== */
 const container = document.getElementById('visor-container');
