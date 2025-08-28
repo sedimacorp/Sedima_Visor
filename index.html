@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VIGIMAN</title>
+  
+
   <style>
 /* ================= ESTILO GENERAL DE LA PÁGINA ================= */
     html, body {
@@ -371,6 +374,7 @@ z-index:999;">
 <script src="libs/OrbitControls.js"></script>
 <script>
 /* --- ANTICAPTURAS --- */
+
     function isMobile() {
       return /Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent) || window.innerWidth < 820;
     }
@@ -388,26 +392,33 @@ z-index:999;">
     e.key === "PrntScrn" ||
     e.key.toLowerCase() === "impr pant" ||
     e.key.toLowerCase() === "imp ptn"||
-    e.keyCode===44
+    e.keyCode===44 // PrintScreen keyCode
       ){
  
    e.preventDefault();
         antiCaptureLayer.style.display = "flex";
+       if (navigator.clipboard) {
+      navigator.clipboard.writeText(""); // Vacía portapapeles en algunos navegadores
+    } 
       }
       if (isMobile() && (e.key === "Power" || e.key === "VolumeUp")) {
         antiCaptureLayer.style.display = "flex";
       }
     });
 
-    document.addEventListener("visibilitychange", function() {
-      if (isMobile() && document.visibilityState === "hidden") {
-        antiCaptureLayer.style.display = "flex";
-      }
-    });
+  // Si la página pierde visibilidad (usuario cambia pestaña/ventana en móvil)
+document.addEventListener("visibilitychange", function() {
+  if (document.visibilityState === "hidden") {
+    antiCaptureLayer.style.display = "flex";
+  }
+});
 document.addEventListener('contextmenu', function(e) {
       e.preventDefault();
     });
     document.body.style.userSelect = 'none';
+    document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('cut', e => e.preventDefault());
+document.addEventListener('paste', e => e.preventDefault());
 
 /* ============== VARIABLES PRINCIPALES DEL VISOR ============== */
 const container = document.getElementById('visor-container');
