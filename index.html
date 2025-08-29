@@ -425,7 +425,7 @@ function esCampoEditable(target) {
     tag === 'input' ||
     tag === 'textarea' ||
     target.isContentEditable ||
-    target.closest('iframe') // permite Forms embebidos
+    target.closest('#formManttoBoxFixed') // permite Forms embebidos
   );
 }
 
@@ -456,12 +456,18 @@ document.addEventListener('keyup', e => {
 
 // Detectar cambio de pestaña o minimizar
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) activarProteccion();
+  // 👇 Solo activa protección si NO estás escribiendo en el iframe del form
+  const activoForm = document.activeElement?.closest('#formManttoBoxFixed');
+ if (document.hidden && !activoForm) {
+    activarProteccion();
+ } 
 });
-
 // Detectar pérdida de foco de la ventana
 window.addEventListener('blur', () => {
-  activarProteccion();
+  const activoForm = document.activeElement?.closest('#formManttoBoxFixed');
+  if (!activoForm) {
+    activarProteccion();
+  }
 });
 
 // Cerrar overlay al hacer clic en el fondo difuminado o en el botón
