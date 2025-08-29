@@ -372,6 +372,7 @@ z-index:999;">
 <script src="libs/GLTFLoader.js"></script>
 <script src="libs/OrbitControls.js"></script>
 <script>
+
 /* --- ANTICAPTURAS --- */
 
 // Bloquear clic derecho (excepto en el visor)
@@ -416,8 +417,21 @@ function desactivarProteccion() {
   }
 }
 
+// ======================
+// Función para permitir interacción en formularios/inputs
+function esCampoEditable(target) {
+  const tag = target.tagName.toLowerCase();
+  return (
+    tag === 'input' ||
+    tag === 'textarea' ||
+    target.isContentEditable ||
+    target.closest('iframe') // permite Forms embebidos
+  );
+}
+
 // Detectar PrintScreen, F10, combinaciones Ctrl y Snipping Tool
 document.addEventListener('keydown', e => {
+  if (esCampoEditable(e.target)) return; // ✅ NO activar en Forms ni inputs
   if (
     e.key === 'PrintScreen' || e.key === 'F10' ||
     (e.ctrlKey && ['c','x','s','p'].includes(e.key.toLowerCase())) ||
@@ -430,6 +444,8 @@ document.addEventListener('keydown', e => {
 
 // Detectar atajos de Mac (Cmd+Shift+3 o 4)
 document.addEventListener('keyup', e => {
+   if (esCampoEditable(e.target)) return; // ✅ NO activar en Forms ni inputs
+
   if (
     e.key === 'PrintScreen' || e.key === 'F10' ||
     (e.metaKey && e.shiftKey && (e.key === '3' || e.key === '4'))
