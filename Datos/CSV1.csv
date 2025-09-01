@@ -215,7 +215,7 @@ Solid1_598;"REGULADOR 2"" ";REG-201;Flujo axial;Aluminio;2 in;600;;Activos/Docum
 Solid1_599;"REGULADOR 2"" ";REG-202;Flujo axial;Aluminio;2 in;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos/Imagenes/Reguladores/REG01.png
 Solid1_24;"CONECTOR RECTO 1/2""";N/A.;Accesorios roscados;Acero inoxidable SS-316;1/2 in;N/A.;;;Activos/Imagenes/Conector/CON-01.png
 Solid1_434;"CODO 1/4""";N/A.;Conexión de tubería;Acero inoxidable SS-316;1/4 in;N/A.;;;Activos/Imagenes/Codos/CON-02.png
-Solid1_436;PILOTO DE CONTROL  ZSC-100;N/A.;Regulador auto operado;Aluminio;STD;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos/Imagenes/Reguladores/REG01.png
+Solid1_436;PILOTO DE CONTROL  ZSC-100;N/A.;Regulador auto operado;Aluminio;STD;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos\Imagenes\Reguladores\ZSC01.png
 Solid1_25;"CONECTOR RECTO 1/2""";N/A.;Accesorios roscados;Acero inoxidable SS-316;1/2 in;N/A.;;;Activos/Imagenes/Conector/CON-01.png
 Sólido6_2;LINEAS DE TUBING;N/A.;Tubería;Acero inoxidable SS-316;1/2 in;N/A.;e= 0,049 in (Espesor);;
 Sólido1_8;"SOPORTE TUBO 4""";N/A.;Soportes;Acero estructural;Según plano de ingenieria ;N/A.;Incluye wear pad;;
@@ -260,14 +260,14 @@ Solid1_130;"TEE 1/2""";N/A.;Accesorios roscados;Acero inoxidable SS-316;1/2 in;N
 Solid1_131;"TEE 1/2""";N/A.;Accesorios roscados;Acero inoxidable SS-316;1/2 in;N/A.;Minimo #3000;;Activos/Imagenes/Tuberias/TEE02.png
 Solid1_13;"CONECTOR RECTO 1/2""";N/A.;Accesorios roscados;Acero inoxidable SS-316;1/2 in;N/A.;;;Activos/Imagenes/Conector/CON-01.png
 Solid1_442;"CODO 1/4""";N/A.;Conexión de tubería;Acero inoxidable SS-316;1/4 in;N/A.;;;Activos/Imagenes/Codos/CON-02.png
-Solid1_444;PILOTO DE CONTROL  ZSC-100;N/A.;Regulador auto operado;Aluminio;STD;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos/Imagenes/Reguladores/REG01.png
+Solid1_444;PILOTO DE CONTROL  ZSC-100;N/A.;Regulador auto operado;Aluminio;STD;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos\Imagenes\Reguladores\ZSC01.png
 Solid2_5;"NIPLE ROSCADO 3/4"" DIA - 2"" LONG";N/A.;Accesorios roscados;Acero al carbono ;"3/4""DIA - 2"" LONG.";N/A.;SCH 80 / Longitud 2 in;;Activos/Imagenes/Esparrágo/Niple01.png
      3_7;"VÁLVULA DE BOLA 3/4""";;Válvula de blqueo;Carbon steel;de 2 a 12 in;;Modelo: Bola flotante / Paso: Completo /Rating: #2000 , #3000, #6000;Activos/Documentos_Técnicos/Válvulas/TF-105.pdf;Activos/Imagenes/Valvulas/VB03.png
 Solid1_105;"REDUCCIÓN BUSHING 3/4"" X 1/2""";N/A.;Accesorios roscados;Acero al carbono WPB;3/4in x 1/2 in;#600;;;Activos\Imagenes\Tuberias\CONCENTRIC1.png
 302C209-1-solid1_2;MANÓMETRO 0-1200 psig;PI-105;Manómetro bourdon;316;Dial 4.5 in;N/A.;Grado: ASME 2A / Escala: dual Psig/Bar / Conexión: 1/2 in MNPT;Activos/Documentos_Técnicos/Indicador presión/TF-106.pdf;Activos/Imagenes/Manómetros/PI01.png
 484D215-1-solid1_2;MANÓMETRO 0-1200 psig;PI-105;Manómetro bourdon;316;Dial 4.5 in;N/A.;Grado: ASME 2A / Escala: dual Psig/Bar / Conexión: 1/2 in MNPT;Activos/Documentos_Técnicos/Indicador presión/TF-106.pdf;Activos/Imagenes/Manómetros/PI01.png
-Solid1_432;PILOTO DE CONTROL  ZSC-100;N/A.;Regulador auto operado;Aluminio;STD;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos/Imagenes/Reguladores/REG01.png
-Solid1_440;PILOTO DE CONTROL  ZSC-100;N/A.;Regulador auto operado;Aluminio;STD;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos/Imagenes/Reguladores/REG01.png
+Solid1_432;PILOTO DE CONTROL  ZSC-100;N/A.;Regulador auto operado;Aluminio;STD;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos\Imagenes\Reguladores\ZSC01.png
+Solid1_440;PILOTO DE CONTROL  ZSC-100;N/A.;Regulador auto operado;Aluminio;STD;600;;Activos/Documentos_Técnicos/Regulador/TF-101.pdf;Activos\Imagenes\Reguladores\ZSC01.png
 Solid1_430;"CODO 1/4""";N/A.;Conexión de tubería;Acero inoxidable SS-316;1/4 in;N/A.;;;Activos/Imagenes/Codos/CON-02.png
 Solid1_438;"CODO 1/4""";N/A.;Conexión de tubería;Acero inoxidable SS-316;1/4 in;N/A.;;;Activos/Imagenes/Codos/CON-02.png
 Solid1_27;"CONECTOR RECTO 1/2""";N/A.;Accesorios roscados;Acero inoxidable SS-316;1/2 in;N/A.;;;Activos/Imagenes/Conector/CON-01.png
@@ -316,8 +316,8 @@ Sólido1_6;"SOPORTE TUBO 4""";N/A.;Soportes;Acero estructural;Según plano de in
 Solid3_348;"BRIDA WN 4"" ";N/A.;Accesorios soldados/ Conexión bridada.;Acero al carbono, ASTM A105 Gr. II;4 in;150;Cuello soldable y pestaña realzada. WN-RF;;Activos/Imagenes/Brida/FLG01.png
 Solid2_342;"ESPARRÁGO BRIDA 4""";N/A.;Tornillería;Acero al carbono ;Según MFR;N/A.;;;Activos/Imagenes/Esparrágo/ESP01.png
 Solid1_145;"TUBERÍA 4""";;Tubería de acero al carbono sin costuras o con costura longitudinal;API 5L Gr. B;De 2 a 12 in;;Normas de fabricación: PSL1 /PSL2 - Single or double Ramdon length;Activos/Documentos_Técnicos/Tuberías/TF-110.pdf;Activos/Imagenes/Tuberias/TUB1.png
-Sólido1_22;MEDIDOR ROTATIVO G250;FET-456;Medidor lobular de desplazamiento positivo;STD, según MFR;G-250;150;Incluir certificado calibración bajo ISO-17025;Activos\Documentos_Técnicos\Registrador\TF-111.pdf;Activos/Imagenes/REGISTRADOR/FE01.png
-Sólido1_24;MEDIDOR ROTATIVO G250;FET-456;Medidor lobular de desplazamiento positivo;STD, según MFR;G-250;150;Incluir certificado calibración bajo ISO-17025;Activos\Documentos_Técnicos\Registrador\TF-111.pdf;Activos/Imagenes/REGISTRADOR/FE01.png
+Sólido1_22;MEDIDOR ROTATIVO G250;FET-456;Medidor lobular de desplazamiento positivo;STD, según MFR;G-250;150;Incluir certificado calibración bajo ISO-17025;Activos/Documentos_Técnicos/Registrador/TF-111.pdf;Activos/Imagenes/REGISTRADOR/FE01.png
+Sólido1_24;MEDIDOR ROTATIVO G250;FET-456;Medidor lobular de desplazamiento positivo;STD, según MFR;G-250;150;Incluir certificado calibración bajo ISO-17025;Activos/Documentos_Técnicos/Registrador/TF-111.pdf;Activos/Imagenes/REGISTRADOR/FE01.png
 Solid1_136;"TUBERÍA 4""";;Tubería de acero al carbono sin costuras o con costura longitudinal;API 5L Gr. B;De 2 a 12 in;;Normas de fabricación: PSL1 /PSL2 - Single or double Ramdon length;Activos/Documentos_Técnicos/Tuberías/TF-110.pdf;Activos/Imagenes/Tuberias/TUB1.png
 Sólido1_9;"SOPORTE TUBO 4""";N/A.;Soportes;Acero estructural;Según plano de ingenieria ;N/A.;Incluye wear pad;;
 Solid2_131;"VÁLVULA DE BOLA DE 4"" (SIDE ENTRY)";VAL-111;Bola;WCB/WCC;de 2 a 4 in;150 / 600;Conexiones: FLG-RF x FLG-RF / Modelo: Side Entry;Activos/Documentos_Técnicos/Válvulas/TF-104.pdf;Activos/Imagenes/Valvulas/Valvulabola.png
