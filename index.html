@@ -442,6 +442,7 @@ function esCampoEditable(target) {
     tag === 'textarea' ||
     target.isContentEditable ||
     target.closest('#formManttoBoxFixed') // permite Forms embebidos
+    target.closest('#pdfModal')   
   );
 }
 
@@ -476,16 +477,16 @@ document.addEventListener('keyup', e => {
 document.addEventListener('visibilitychange', () => {
   if (!proteccionActiva) return;
   // 👇 Solo activa protección si NO estás escribiendo en el iframe del form
-  const activoForm = document.activeElement?.closest('#formManttoBoxFixed');
- if (document.hidden && !activoForm) {
+  const activoCampo = document.activeElement?.closest('#formManttoBoxFixed');
+ if (document.hidden && !activoCampo) {
     activarProteccion();
  } 
 });
 // Detectar pérdida de foco de la ventana
 window.addEventListener('blur', () => {
   if (!proteccionActiva) return;
-  const activoForm = document.activeElement?.closest('#formManttoBoxFixed');
-  if (!activoForm) {
+  const activoCampo = document.activeElement?.closest('#formManttoBoxFixed');
+  if (!activoCampo) {
     activarProteccion();
   }
 });
@@ -685,7 +686,6 @@ const pdfFrame = document.getElementById('pdfFrame');
 const closePdfModal = document.getElementById('closePdfModal');
 
 function openPdfModal(url) {
- desactivarProteccion(); // 👈 Desactiva el overlay anticapturas 
   pdfFrame.src = url;
   pdfModal.style.display = "flex";
 }
@@ -694,7 +694,7 @@ function openPdfModal(url) {
 closePdfModal.addEventListener('click', () => {
   pdfModal.style.display = "none";
   pdfFrame.src = "";
-   activarProteccion(); //
+  
 });
 
 /* ============== BOTÓN DE DESCARGA DOCUMENTACIÓN ============== */
