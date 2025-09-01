@@ -435,16 +435,18 @@ function desactivarProteccion() {
 
 // ======================
 // Función para permitir interacción en formularios/inputs
+
 function esCampoEditable(target) {
   const tag = target.tagName.toLowerCase();
   return (
     tag === 'input' ||
     tag === 'textarea' ||
     target.isContentEditable ||
-    target.closest('#formManttoBoxFixed')|| // permite Forms embebidos
-    target.closest('#pdfModal')   
+    target.closest('#formManttoBoxFixed') ||  // permite Forms embebidos
+    target.closest('#pdfModal')               // permite visor de PDFs
   );
 }
+
 
 // Detectar PrintScreen, F10, combinaciones Ctrl y Snipping Tool
 document.addEventListener('keydown', e => {
