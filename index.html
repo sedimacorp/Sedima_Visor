@@ -685,6 +685,7 @@ const pdfFrame = document.getElementById('pdfFrame');
 const closePdfModal = document.getElementById('closePdfModal');
 
 function openPdfModal(url) {
+ desactivarProteccion(); // 👈 Desactiva el overlay anticapturas 
   pdfFrame.src = url;
   pdfModal.style.display = "flex";
 }
@@ -693,6 +694,7 @@ function openPdfModal(url) {
 closePdfModal.addEventListener('click', () => {
   pdfModal.style.display = "none";
   pdfFrame.src = "";
+   activarProteccion(); //
 });
 
 /* ============== BOTÓN DE DESCARGA DOCUMENTACIÓN ============== */
