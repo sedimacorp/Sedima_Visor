@@ -441,7 +441,7 @@ function esCampoEditable(target) {
     tag === 'input' ||
     tag === 'textarea' ||
     target.isContentEditable ||
-    target.closest('#formManttoBoxFixed') // permite Forms embebidos
+    target.closest('#formManttoBoxFixed')|| // permite Forms embebidos
     target.closest('#pdfModal')   
   );
 }
