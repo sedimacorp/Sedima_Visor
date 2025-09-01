@@ -375,6 +375,9 @@ z-index:999;">
 
 /* --- ANTICAPTURAS --- */
 
+let proteccionActiva = false;  // <-- por defecto está activada
+
+
 // Bloquear clic derecho (excepto en el visor)
 document.addEventListener('contextmenu', e => {
   if (e.target.closest('#visor-container')) return; 
