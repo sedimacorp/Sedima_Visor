@@ -376,10 +376,23 @@ z-index:999;">
 /* --- ANTICAPTURAS --- */
 
 let proteccionActiva = false;  // <-- por defecto está activada
-
+function activarProteccion() {
+  if (!proteccionActiva) return; 
+  if (!overlayActivo) {
+    antiCapture.style.display = 'flex';
+    overlayActivo = true;
+  }
+}
+function desactivarProteccion() {
+  if (overlayActivo) {
+    antiCapture.style.display = 'none';
+    overlayActivo = false;
+  }
+}
 
 // Bloquear clic derecho (excepto en el visor)
 document.addEventListener('contextmenu', e => {
+  if (!proteccionActiva) return;
   if (e.target.closest('#visor-container')) return; 
   e.preventDefault();
 });
@@ -434,6 +447,7 @@ function esCampoEditable(target) {
 
 // Detectar PrintScreen, F10, combinaciones Ctrl y Snipping Tool
 document.addEventListener('keydown', e => {
+   if (!proteccionActiva) return;
   if (esCampoEditable(e.target)) return; // ✅ NO activar en Forms ni inputs
   if (
     e.key === 'PrintScreen' || e.key === 'F10' ||
@@ -447,6 +461,7 @@ document.addEventListener('keydown', e => {
 
 // Detectar atajos de Mac (Cmd+Shift+3 o 4)
 document.addEventListener('keyup', e => {
+  if (!proteccionActiva) return;
    if (esCampoEditable(e.target)) return; // ✅ NO activar en Forms ni inputs
 
   if (
@@ -459,6 +474,7 @@ document.addEventListener('keyup', e => {
 
 // Detectar cambio de pestaña o minimizar
 document.addEventListener('visibilitychange', () => {
+  if (!proteccionActiva) return;
   // 👇 Solo activa protección si NO estás escribiendo en el iframe del form
   const activoForm = document.activeElement?.closest('#formManttoBoxFixed');
  if (document.hidden && !activoForm) {
@@ -467,6 +483,7 @@ document.addEventListener('visibilitychange', () => {
 });
 // Detectar pérdida de foco de la ventana
 window.addEventListener('blur', () => {
+  if (!proteccionActiva) return;
   const activoForm = document.activeElement?.closest('#formManttoBoxFixed');
   if (!activoForm) {
     activarProteccion();
@@ -475,6 +492,7 @@ window.addEventListener('blur', () => {
 
 // Cerrar overlay al hacer clic en el fondo difuminado o en el botón
 antiCapture.addEventListener('click', e => {
+  if (!proteccionActiva) return;
   if (e.target === antiCapture || e.target.tagName === "BUTTON") {
     desactivarProteccion();
   }
