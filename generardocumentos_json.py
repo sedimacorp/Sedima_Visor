@@ -22,6 +22,7 @@ estructura = [
             {"nombre": "Formato Datos de Entrada"},
             {"nombre": "Estandares de Diseño para el Desarrollo de la Ingeniería"},
             {"nombre": "Cronograma General del Proyecto"}
+            
         ]
     },
     {
