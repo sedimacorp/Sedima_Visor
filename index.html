@@ -172,23 +172,35 @@ canvas {
   display: block;
 }
 /* ================= BOTÓN DE DESCARGA DEL VISOR ================= */
-   .visor-download-btn {
+/* Contenedor para botones en columna */
+.visor-download-btns-col {
   position: absolute;
   right: 22px;
-  bottom: 22px; 
+  bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 22;
+}
+
+/* Botón sin posición absoluta, para mejor control en columna */
+.visor-download-btn {
   background: #787878;
   color: #fff;
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
   cursor: pointer;
-  font-size: 10px;    
+  font-size: 10px;
   font-weight: bold;
-  z-index: 22;
   box-shadow: 0 2px 18px rgba(5, 6, 6, 0.267);
   opacity: 0.94;
   transition: opacity 0.18s;
+  width: 220px; /* O ajusta según tu gusto */
+  margin: 0;
 }
+
+/* Hover (se mantiene igual) */
 .visor-download-btn:hover {
   opacity: 1;
   background: #001d7a;
@@ -308,13 +320,15 @@ canvas {
   <!-- ============== LOGOS ============== -->
   <img id="logosedima" src="Activos/Logos/LogoSedima.png" alt="Logo Sedima" />
   <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
+  <div class="visor-download-btns-col">
    <button id="downloadProjectZip" class="visor-download-btn">
 🗂️ DESCARGAR DOCUMENTACIÓN
 </button>
- <button id="downloadProjectZip" class="visor-download-btn" style="right: 170px;">
+ <button id="downloadDossierZip" class="visor-download-btn">
 🗂️ DESCARGAR DOSSIER CONSTRUCCIÓN
 </button>
 
+</div>
 </div>
 
  <!-- Lado derecho -->
@@ -708,7 +722,7 @@ closePdfModal.addEventListener('click', () => {
 document.getElementById('downloadProjectZip').addEventListener('click', function() {
   window.location.href = 'Activos/DESCARGAR DOCUMENTACIÓN.zip'; 
 });
-document.getElementById('downloadProjectZip').addEventListener('click', function() {
+document.getElementById('downloadDossierZip').addEventListener('click', function() {
   window.location.href = 'Activos/DESCARGAR DOSSIER CONSTRUCCIÓN.zip';
 });
 
