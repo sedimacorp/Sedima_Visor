@@ -155,6 +155,9 @@ estructura = [
 
         ]
     },
+
+    {"categoria": "8 DOSSIER DE CONSTRUCCIÓN",
+     "documentos": []},
 ]   
 
 
