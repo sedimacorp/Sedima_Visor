@@ -310,17 +310,19 @@ canvas {
   <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
    <button id="downloadProjectZip" class="visor-download-btn">
 🗂️ DESCARGAR DOCUMENTACIÓN
-</button>
 
 </div>
 
  <!-- Lado derecho -->
     <div class="sidebar right" >
     <div id="docsBox">
-      <!-- Tus documentos se insertarán aquí vía JS -->
+ <!-- Tus documentos se insertarán aquí vía JS -->
     </div>
   </div>
-  </div>
+ <button id="downloadProjectZip" class="visor-download-btn">
+🗂️ DESCARGAR DOSSIER CONSTRUCCIÓN
+</button>
+</div>
 <!-- ============== MODAL VISOR DE PDF ============== -->
 <div id="pdfModal" style="display:none; 
 position:fixed; 
@@ -704,7 +706,9 @@ closePdfModal.addEventListener('click', () => {
 document.getElementById('downloadProjectZip').addEventListener('click', function() {
   window.location.href = 'Activos/DESCARGAR DOCUMENTACIÓN.zip'; 
 });
- 
+document.getElementById('downloadProjectZip').addEventListener('click', function() {
+  window.location.href = 'Activos/DESCARGAR DOSSIER CONSTRUCCIÓN.zip';
+});
 
  
 </script>
