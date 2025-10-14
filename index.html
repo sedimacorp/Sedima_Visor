@@ -568,7 +568,7 @@ fetch('Datos/CSV1.csv')
 
 function cargarModelo() {
   const loader = new THREE.GLTFLoader();
-  loader.load('Activos/Modelos/sorc3.glb', function (gltf) {
+  loader.load('Activos/Modelos/Sorc4.glb', function (gltf) {
     const model = gltf.scene;
     model.traverse(child => {
       if (child.isMesh) {
