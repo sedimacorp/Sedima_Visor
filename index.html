@@ -235,6 +235,8 @@ canvas {
       display: block;
       padding: 0px;
     }
+
+
     /* CAPA PROTECTORA PERSONALIZADA */
     #antiCaptureLayer {
       display: none;
@@ -273,6 +275,35 @@ canvas {
       border-radius:10px;
       box-shadow:0 2px 12px #0009;
     }
+
+/* ================= SPINNER DE CARGA ================= */
+#loadingOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #032480;
+}
+.spinner {
+  border: 6px solid #dcdcdc;
+  border-top: 6px solid #032480;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+    
 /* Responsive */
 @media (max-width:1200px){
   .layout-container {
@@ -320,6 +351,10 @@ canvas {
   <!-- ============== LOGOS ============== -->
   <img id="logosedima" src="Activos/Logos/LogoSedima.png" alt="Logo Sedima" />
   <img id="logocliente" src="Activos/Logos/LogoCliente.png" alt="Logo Cliente" />
+    <!-- Overlay de carga -->
+      <div id="loadingOverlay">
+        <div class="loader"></div>
+        <div id="loadingText">Cargando modelo 3D, por favor espere...</div>
   <div class="visor-download-btns-col">
    <button id="downloadProjectZip" class="visor-download-btn">
 🗂️ DESCARGAR DOCUMENTACIÓN
@@ -567,32 +602,44 @@ fetch('Datos/CSV1.csv')
   });
 
 function cargarModelo() {
-  const loader = new THREE.GLTFLoader();
-  loader.load('Activos/Modelos/modelo.glb', function (gltf) {
-    const model = gltf.scene;
-    model.traverse(child => {
-      if (child.isMesh) {
-        selectableObjects.push(child);
-      }
-    });
-    const box = new THREE.Box3().setFromObject(model);
-    const center = box.getCenter(new THREE.Vector3());
-    const size = box.getSize(new THREE.Vector3());
-    const maxDim = Math.max(size.x, size.y, size.z);
-    const scale = 2 / maxDim;
-    model.scale.set(scale, scale, scale);
-    model.position.sub(center.multiplyScalar(scale));
-    scene.add(model);
-  }, undefined, error => {
-    console.error("Error cargando modelo:", error);
-  });
-}
+  const loaderOverlay = document.getElementById('loader-overlay');
+  loaderOverlay.style.display = 'flex'; // ✅ Mostrar loader
 
-window.addEventListener('resize', () => {
-  camera.aspect = container.clientWidth / container.clientHeight;
-  camera.updateProjectionMatrix();
-  renderer.setSize(container.clientWidth, container.clientHeight);
-});
+  const loader = new THREE.GLTFLoader();
+  loader.load(
+    'Activos/Modelos/modelo.glb',
+    function (gltf) {
+      const model = gltf.scene;
+      model.traverse(child => {
+        if (child.isMesh) {
+          selectableObjects.push(child);
+        }
+      });
+      const box = new THREE.Box3().setFromObject(model);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z);
+      const scale = 2 / maxDim;
+      model.scale.set(scale, scale, scale);
+      model.position.sub(center.multiplyScalar(scale));
+      scene.add(model);
+
+      // ✅ Ocultar loader al terminar
+      loaderOverlay.style.opacity = '0';
+      setTimeout(() => loaderOverlay.style.display = 'none', 500);
+    },
+    // 🕐 Progreso opcional
+    (xhr) => {
+      const percent = (xhr.loaded / xhr.total) * 100;
+      document.querySelector('.loader-text').textContent = `Cargando modelo 3D... ${percent.toFixed(1)}%`;
+    },
+    // ❌ Error
+    (error) => {
+      console.error("Error cargando modelo:", error);
+      document.querySelector('.loader-text').textContent = "Error al cargar el modelo.";
+    }
+  );
+}
 
 
 
